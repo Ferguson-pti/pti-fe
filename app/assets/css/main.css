@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+@theme {
+    --font-lexend: "Lexend Deca", "sans-serif";
+    --color-custom-green: #042729;
+    --color-custom-gold: #e28743;
+    --color-custom-grey: #b9cdbe;
+    --color-custom-cream: #f8f5ee;
+}

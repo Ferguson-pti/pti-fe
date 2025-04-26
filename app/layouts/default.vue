@@ -18,7 +18,7 @@
 </script>
 
 <template>
-    <div ref="el"  class="relative w-full h-full overflow-y-auto overflow-x-hidden">
+    <div ref="el"  class="relative w-full h-full overflow-y-auto overflow-x-hidden bg-custom-green">
         <AppBanner/>
         <AppNavbar :visible="navbarVisible"/>
         <slot/>

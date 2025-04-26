@@ -1,7 +1,7 @@
 <template>
     <div 
         :class="`
-        flex flex-row justify-center w-full bg-[#e28743] text-white 
+        flex flex-row justify-center w-full bg-custom-gold text-white 
         text-center py-5 font-lexend text-sm font-medium tracking-widest`"
     >
         ANNOUNCEMENT: REGISTRATION FOR THE 4TH BIENNIAL ICHST WOULD SOON COMMENCE, ENSURE TO GET YOUR TICKETS.
