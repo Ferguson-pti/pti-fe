@@ -1,13 +1,13 @@
 <script setup lang="ts">
-  import { register } from 'swiper/element/bundle';
+import { register } from 'swiper/element/bundle'
 
-  register();
+register()
 </script>
 
 <template>
   <div class="relative w-[100vw] h-[100vh] overflow-hidden bg-white">
     <NuxtLayout>
-      <NuxtPage/>
+      <NuxtPage />
     </NuxtLayout>
   </div>
 </template>

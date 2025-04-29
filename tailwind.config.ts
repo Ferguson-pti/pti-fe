@@ -1,9 +1,9 @@
 export default {
-    theme: {
-      extend: {
-        fontFamily: {
-          //lexend: ['Lexend Deca'],
-        },
+  theme: {
+    extend: {
+      fontFamily: {
+        // lexend: ['Lexend Deca'],
       },
     },
-  }
+  },
+}

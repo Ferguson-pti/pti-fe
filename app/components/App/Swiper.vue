@@ -1,34 +1,37 @@
 <script setup lang="ts">
-    import { Swiper, SwiperSlide } from 'swiper/vue';
-    import 'swiper/css'
-    import 'swiper/css/pagination'
-    import 'swiper/css/autoplay'
-    import type { VNode } from 'vue';
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/autoplay'
+import type { VNode } from 'vue'
 
-    defineProps<{
-        items: VNode[]
-        styleClass: string
-    }>();
+defineProps<{
+  items: VNode[]
+  styleClass: string
+}>()
 </script>
 
 <template>
-    <Swiper
-        :slides-per-view="1.5"
-        :loop="true"
-        :pagination="true"
-        :autoplay="true"
-        :delay="5000"
-        :grab-cursor="true"
-        :direction="'horizontal'"
-        :class="styleClass"
-    >   
-        <SwiperSlide v-for="item in items" :key="item.key!">
-            <component :is="item"/>
-        </SwiperSlide>
-    </Swiper>
+  <Swiper
+    :slides-per-view="1.5"
+    :loop="true"
+    :pagination="true"
+    :autoplay="true"
+    :delay="5000"
+    :grab-cursor="true"
+    :direction="'horizontal'"
+    :class="styleClass"
+  >
+    <SwiperSlide
+      v-for="item in items"
+      :key="item.key!"
+    >
+      <component :is="item" />
+    </SwiperSlide>
+  </Swiper>
 </template>
 
-<style>    
+<style>
     .swiper-pagination-bullet {
         background-color: black;
     }
