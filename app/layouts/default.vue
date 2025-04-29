@@ -22,5 +22,6 @@
         <AppBanner/>
         <AppNavbar :visible="navbarVisible"/>
         <slot/>
+        <AppFooter/>
     </div>
 </template>

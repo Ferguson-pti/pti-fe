@@ -17,7 +17,7 @@ import Bubble2 from '../Bubble-2.vue';
                 (ICHST) is organized biennially to promote technological advancement, enhance research, and provide
                 knowledge-sharing platforms across the oil and gas industry spectrum
             </span>
-            <AppButton style-class="mt-12 bg-custom-gold text-white hover:bg-white hover:text-custom-gold duration-300">
+            <AppButton style-class="mt-12 bg-custom-gold text-white hover:bg-white hover:text-custom-gold">
                 GET TICKETS NOW
             </AppButton>
         </div>

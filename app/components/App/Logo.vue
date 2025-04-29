@@ -1,5 +1,5 @@
 <template>
-    <div class="group hover:scale-[0.98] relative cursor-pointer font-lexend text-xl rounded-md w-auto h-auto flex flex-row overflow-hidden duration-150">
+    <div class="group hover:scale-[0.98] relative cursor-pointer font-lexend text-xl rounded-md w-30 h-auto flex flex-row overflow-hidden duration-150">
         <span class="font-bold py-2 px-2 text-custom-green bg-white underline decoration-3 underline-offset-2 decoration-custom-gold">
             ICHST
         </span>
