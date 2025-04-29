@@ -7,6 +7,8 @@ import { LandingPageHero } from '#components';
     <div class="relative w-full h-[400vh] box-border">
         <LandingPageHero/>
         <LandingPageAbout/>
+        <LandingPageSpeakers/>
         <LandingPageTracks/>
+        <LandingPageHelp/>
     </div>
 </template>

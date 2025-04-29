@@ -7,6 +7,7 @@
 
     defineProps<{
         items: VNode[]
+        styleClass: string
     }>();
 </script>
 
@@ -19,7 +20,7 @@
         :delay="5000"
         :grab-cursor="true"
         :direction="'horizontal'"
-        class="absolute w-[550px] right-[0%] h-[70%]"
+        :class="styleClass"
     >   
         <SwiperSlide v-for="item in items" :key="item.key!">
             <component :is="item"/>

@@ -11,7 +11,7 @@
     // Create array of components manually
     const renderedItems = data.map((item, index) =>
         h(LandingPageAboutCard, {
-            key: index,
+            key: `aboutcard${index}`,
             title: item
         })
     )
@@ -26,6 +26,7 @@
     ">
         <div dir="rtl" class="relative w-[35%] h-full z-10 flex flex-col items-end justify-center">
             <AppSwiper
+                style-class="absolute w-[550px] right-[0%] h-[70%]"
                 :items="renderedItems"
             />
         </div>
