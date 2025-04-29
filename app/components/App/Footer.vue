@@ -17,9 +17,8 @@
         <span class="ml-10 flex flex-row items-center justiyf-end">
           <div class="w-10 h-10 flex items-center justify-center bg-black hover:bg-custom-gold duration-300 rounded-full mr-4">
             <Icon
-              name="i-lucide-twitter"
-              class="cursor-pointer size-5"
-              color="white"
+              name="fa6-brands:x-twitter"
+              class="cursor-pointer size-5 text-white"
             />
           </div>
           <div class="w-10 h-10 flex items-center justify-center bg-black hover:bg-custom-gold duration-300 rounded-full mr-4">
