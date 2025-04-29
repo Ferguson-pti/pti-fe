@@ -4,10 +4,11 @@ import { LandingPageHero } from '#components';
 </script>
 
 <template>
-    <div class="relative w-full h-[400vh] box-border">
+    <div class="relative w-full h-auto box-border">
         <LandingPageHero/>
         <LandingPageAbout/>
         <LandingPageSpeakers/>
+        <LandingPagePricing/>
         <LandingPageTracks/>
         <LandingPageHelp/>
     </div>

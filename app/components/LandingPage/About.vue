@@ -31,9 +31,9 @@
             />
         </div>
 
-        <div class="relative w-[60%] h-auto rounded-lg z-10 p-20 bg-custom-cream overflow-hidden">
-            <p class="text-6xl font-lexend font-medium mb-6 text-custom-green">What is ICHST?</p>
-            <p class="font-lexend font-light text-custom-green">
+        <div class="relative w-[60%] h-auto rounded-lg z-10 p-20 bg-custom-cream overflow-hidden font-lexend">
+            <p class="text-7xl font-medium mb-6 text-custom-green">What is ICHST?</p>
+            <p class="font-light text-custom-green">
                 ICHST <strong class="font-semibold">(INTERNATIONAL CONFERENCE ON HYDROCARBON SCIENCE & TECHNOLOGY)</strong> is where subject matter experts, leading 
                 researchers, academicians, and top players in the oil and gas industry come together to examine topical issues of great relevance 
                 to the present and future development of the sector, with a focus on technological advancements and breakthroughs.
