@@ -31,6 +31,9 @@ const renderedItems = data.map((item, index) =>
       <AppSwiper
         style-class="absolute w-[550px] right-[0%] h-[70%]"
         :items="renderedItems"
+        :pagination="true"
+        :autoplay="true"
+        color="#FCC40C"
       />
     </div>
 
@@ -38,7 +41,7 @@ const renderedItems = data.map((item, index) =>
       <p class="text-7xl font-medium mb-6 text-custom-green">
         What is ICHST?
       </p>
-      <p class="font-light text-custom-green">
+      <p class="font-light text-black">
         ICHST <strong class="font-semibold">(INTERNATIONAL CONFERENCE ON HYDROCARBON SCIENCE & TECHNOLOGY)</strong> is where subject matter experts, leading
         researchers, academicians, and top players in the oil and gas industry come together to examine topical issues of great relevance
         to the present and future development of the sector, with a focus on technological advancements and breakthroughs.

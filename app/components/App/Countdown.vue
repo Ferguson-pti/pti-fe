@@ -6,7 +6,7 @@ defineProps<{
 const ending = new Date(2025, 4, 5).getTime() // 5th May 2025 (milliseconds since epoch)
 const now = ref(Date.now())
 
-    const { remaining, start } = useCountdown(Math.floor((ending-now.value)/1000));
+const { remaining, start } = useCountdown(Math.floor((ending - now.value) / 1000))
 
 const timeLeft = reactive({
   days: '00',
@@ -23,17 +23,17 @@ watch(remaining, (newVal) => {
   timeLeft.seconds = seconds
 })
 
-    function convertSeconds(sec: number) {
-        const days = Math.floor(sec / (24 * 60 * 60));
-        sec %= 24 * 60 * 60;
+function convertSeconds(sec: number) {
+  const days = Math.floor(sec / (24 * 60 * 60))
+  sec %= 24 * 60 * 60
 
-        const hours = Math.floor(sec / (60 * 60));
-        sec %= 60 * 60;
+  const hours = Math.floor(sec / (60 * 60))
+  sec %= 60 * 60
 
-        const minutes = Math.floor(sec / 60);
-        const seconds = sec % 60;
+  const minutes = Math.floor(sec / 60)
+  const seconds = sec % 60
 
-        const pad = (n: number) => String(n).padStart(2, '0');
+  const pad = (n: number) => String(n).padStart(2, '0')
 
   return {
     days: pad(days),

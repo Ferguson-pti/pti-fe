@@ -1,0 +1,6 @@
+export const HOME_PAGE = '/'
+export const REGISTER_PAGE = '/register'
+export const ABOUT_PAGE = '/about'
+export const ABSTRACT_PAGE = '/abstract'
+export const AGENDA_PAGE = '/agenda'
+export const HELP_PAGE = '/help'

@@ -17,7 +17,7 @@ defineProps<{
 
     <span class="flex flex-row items-center justify-center mt-8">
       <span class="mx-auto line-through font-bold text-xl text-[#00000050]">{{ price }}</span>
-      <span class="mx-auto font-medium text-custom-gold ml-4">{{ `(-${percent} off)` }}</span>
+      <span class="mx-auto font-medium text-custom-red ml-4">{{ `(-${percent} off)` }}</span>
 
     </span>
     <span class="mx-auto mt-6 font-bold text-3xl">{{ discount }}</span>

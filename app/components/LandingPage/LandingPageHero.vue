@@ -10,7 +10,7 @@ import { AppButton, AppVideo } from '#components'
         pt-16 px-16 pb-0
     "
   >
-    <div class="flex flex-col items-start justify-start w-[55%] bg-[#042729] px-10 py-10 rounded-lg z-10">
+    <div class="flex flex-col items-start justify-start w-[55%] bg-custom-green px-10 py-10 rounded-lg z-10">
       <span class="font-lexend font-medium text-6xl text-white">Transforming Africa’s Hydrocarbon Sector</span>
       <span class="font-lexend mt-6 text-custom-grey">
         (ICHST) is organized biennially to promote technological advancement, enhance research, and provide
@@ -21,7 +21,7 @@ import { AppButton, AppVideo } from '#components'
       </AppButton>
     </div>
 
-    <div class="w-auto mt-20 flex flex-col items-start justify-start border border-black z-10 text-white">
+    <div class="w-auto mt-20 flex flex-col items-start justify-start z-10 text-white">
       <span class="font-lexend text-sm font-medium mb-1">OCTOBER 22-23, 2025</span>
       <span class="font-lexend text-sm font-medium mb-8">PTDF TOWERS, CENTRAL BUSINESS DISTRICT, ABUJA, NIGERIA</span>
       <AppVideo />

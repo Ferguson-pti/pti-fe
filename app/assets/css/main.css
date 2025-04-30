@@ -2,8 +2,13 @@
 
 @theme {
     --font-lexend: "Lexend Deca", "sans-serif";
-    --color-custom-green: #042729;
-    --color-custom-gold: #fac209;
+    --color-custom-gold:#FCC40C;
+    --color-custom-green:#1CA04D;
+    --color-custom-red:#D0262F;
+
+
+    /*--color-custom-green: #042729;
+    --color-custom-gold: #fac209;*/
     --color-custom-grey: #b9cdbe;
     --color-custom-slate: #d6c2d9;
     --color-custom-cream: #f8f5ee;

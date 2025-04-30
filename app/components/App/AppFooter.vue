@@ -1,5 +1,5 @@
 <template>
-  <footer class="w-full h-auto flex flex-col items-center justify-start pt-8 pb-16 px-10">
+  <footer class="w-full h-auto flex flex-col items-center justify-start pt-8 pb-16 px-10 bg-custom-green">
     <div class="w-full flex flex-row items-start justify-between font-lexend">
       <div class="w-[49%] flex flex-row items-center justify-start">
         <AppLogo />
@@ -15,30 +15,30 @@
         </p>
 
         <span class="ml-10 flex flex-row items-center justiyf-end">
-          <div class="w-10 h-10 flex items-center justify-center bg-black hover:bg-custom-gold duration-300 rounded-full mr-4">
+          <div class="w-10 h-10 flex items-center justify-center bg-black hover:bg-custom-red cursor-pointer duration-300 rounded-full mr-4">
             <Icon
               name="fa6-brands:x-twitter"
-              class="cursor-pointer size-5 text-white"
+              class="size-5 text-white"
             />
           </div>
-          <div class="w-10 h-10 flex items-center justify-center bg-black hover:bg-custom-gold duration-300 rounded-full mr-4">
+          <div class="w-10 h-10 flex items-center justify-center bg-black hover:bg-custom-red cursor-pointer duration-300 rounded-full mr-4">
             <Icon
-              name="i-lucide-facebook"
-              class="cursor-pointer size-5"
+              name="fa6-brands:facebook-f"
+              class="size-5"
               color="white"
             />
           </div>
-          <div class="w-10 h-10 flex items-center justify-center bg-black hover:bg-custom-gold duration-300 rounded-full mr-4">
+          <div class="w-10 h-10 flex items-center justify-center bg-black hover:bg-custom-red cursor-pointer duration-300 rounded-full mr-4">
             <Icon
-              name="i-lucide-instagram"
-              class="cursor-pointer size-5"
+              name="fa6-brands:instagram"
+              class="size-5"
               color="white"
             />
           </div>
-          <div class="w-10 h-10 flex items-center justify-center bg-black hover:bg-custom-gold duration-300 rounded-full mr-4">
+          <div class="w-10 h-10 flex items-center justify-center bg-black hover:bg-custom-red cursor-pointer duration-300 rounded-full mr-4">
             <Icon
-              name="i-lucide-linkedin"
-              class="cursor-pointer size-5"
+              name="fa6-brands:linkedin-in"
+              class="size-5"
               color="white"
             />
           </div>
@@ -56,19 +56,6 @@
           You may unsubscribe from these communications at any time. For more information, check out our
           <a class="underline cursor-pointer">privacy policy</a>.
         </p>
-      </div>
-
-      <div class="w-[48%] flex flex-row items-start justify-end">
-        <div class="w-full max-w-[800px] flex flex-row items-center justify-between text-custom-grey border-b border-custom-grey pb-2">
-          <input
-            type="email"
-            placeholder="Enter your email address"
-            class="w-full border-none text-lg focus:outline-none"
-          >
-          <p class="ml-4">
-            SUBSCRIBE
-          </p>
-        </div>
       </div>
     </div>
 

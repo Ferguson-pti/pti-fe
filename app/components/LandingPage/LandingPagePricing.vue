@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { AppPricingCard } from '#components'
+
 const data = [
   {
     name: 'PTI Staff/Lecturers',
@@ -29,7 +31,7 @@ const data = [
 
     <a class="text-custom-green underline text-lg mt-6 cursor-pointer">Refund Policy</a>
 
-    <p class="mt-8 mx-auto mb-4">
+    <p class="mt-8 mx-auto mb-4 text-custom-red">
       EARLY BIRD DISCOUNT ENDS IN:
     </p>
     <AppCountdown style-class="" />

@@ -1,5 +1,23 @@
 <script setup lang="ts">
 import { useScroll } from '@vueuse/core'
+import { AppFooter } from '#components'
+
+const route = useRoute()
+const color = ref('bg-custom-green')
+
+watch(route, () => {
+  console.log(route.path)
+  switch (route.path) {
+    case '/':
+      color.value = 'bg-custom-green'
+      break
+    case '/register':
+      color.value = 'bg-custom-cream'
+      break
+    default:
+      break
+  }
+}, { immediate: true })
 
 const el = useTemplateRef<HTMLElement>('el')
 const { y } = useScroll(el)
@@ -7,7 +25,7 @@ const navbarVisible = ref(true)
 
 watch(y, (newValue, oldValue) => {
   // Set navbar visibility
-  if (newValue > 52) {
+  if (newValue > 50) {
     if (newValue > oldValue) {
       navbarVisible.value = false
     }
@@ -21,7 +39,7 @@ watch(y, (newValue, oldValue) => {
 <template>
   <div
     ref="el"
-    class="relative w-full h-full overflow-y-auto overflow-x-hidden bg-custom-green"
+    :class="`relative w-full h-full overflow-y-auto overflow-x-hidden ${color}`"
   >
     <AppBanner />
     <AppNavbar :visible="navbarVisible" />
