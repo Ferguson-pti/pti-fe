@@ -8,10 +8,6 @@
 
     const { remaining, start } = useCountdown(Math.floor((ending-now.value)/1000));
 
-    /*const timeLeft = computed(()=>
-        convertMilliseconds(remaining.value)
-    );*/
-
     const timeLeft = reactive({
         days: '00',
         hours: '00',
@@ -28,10 +24,8 @@
     });
 
     function convertSeconds(sec: number) {
-        console.log(sec);
         const days = Math.floor(sec / (24 * 60 * 60));
         sec %= 24 * 60 * 60;
-        console.log(days);
 
         const hours = Math.floor(sec / (60 * 60));
         sec %= 60 * 60;

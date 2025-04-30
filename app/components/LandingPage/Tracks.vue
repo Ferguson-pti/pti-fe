@@ -43,6 +43,8 @@
             <AppSwiper
                 style-class="mt-10 w-full"
                 :items="renderedItems"
+                :autoplay="false"
+                :pagination="{ clickable: true }"
             />
         </div>
     </section>

@@ -9,7 +9,9 @@ import { LandingPageHero } from '#components';
         <LandingPageAbout/>
         <LandingPageSpeakers/>
         <LandingPagePricing/>
+        <LandingPageSnaps/>
         <LandingPageTracks/>
+        <LandingPageSponsors/>
         <LandingPageHelp/>
     </div>
 </template>

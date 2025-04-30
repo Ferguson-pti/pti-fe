@@ -28,6 +28,8 @@
             <AppSwiper
                 style-class="absolute w-[550px] right-[0%] h-[70%]"
                 :items="renderedItems"
+                :autoplay="true"
+                :pagination="{ clickable: true }"
             />
         </div>
 

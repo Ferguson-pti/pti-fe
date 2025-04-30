@@ -1,23 +1,27 @@
 <script setup lang="ts">
     import { Swiper, SwiperSlide } from 'swiper/vue';
+    import type { SwiperOptions } from 'swiper/types'
     import 'swiper/css'
     import 'swiper/css/pagination'
     import 'swiper/css/autoplay'
     import type { VNode } from 'vue';
 
-    defineProps<{
+    interface Props extends SwiperOptions{
         items: VNode[]
         styleClass: string
-    }>();
+    }
+
+    defineProps<Props>();
 </script>
 
 <template>
     <Swiper
-        :slides-per-view="1.5"
+        :slides-per-view="slidesPerView || 1.5"
         :loop="true"
-        :pagination="true"
-        :autoplay="true"
+        :pagination="pagination"
+        :autoplay="autoplay"
         :delay="5000"
+        :speed="speed || 300"
         :grab-cursor="true"
         :direction="'horizontal'"
         :class="styleClass"
