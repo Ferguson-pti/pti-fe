@@ -32,7 +32,7 @@
     </Swiper>
 </template>
 
-<style>    
+<style>
     .swiper-pagination-bullet {
         background-color: black;
     }

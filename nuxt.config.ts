@@ -1,12 +1,23 @@
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from '@tailwindcss/vite'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-11-01',
+
+  modules: [
+    '@nuxt/fonts',
+    '@vueuse/nuxt',
+    '@nuxt/eslint',
+    'reka-ui/nuxt',
+    '@nuxt/image',
+    '@nuxt/icon',
+    '@vee-validate/nuxt',
+  ],
 
   devtools: { enabled: true },
-  
+
   css: ['~/assets/css/main.css'],
+
+  future: { compatibilityVersion: 4 }, compatibilityDate: '2024-11-01',
 
   vite: {
     plugins: [
@@ -14,17 +25,11 @@ export default defineNuxtConfig({
     ],
   },
 
-  modules: [
-    '@nuxt/fonts', 
-    '@vueuse/nuxt', 
-    '@nuxt/eslint',
-    'reka-ui/nuxt',
-    '@nuxt/image',
-    '@nuxt/icon',
-    '@vee-validate/nuxt'
-  ],
-
-  future: { compatibilityVersion: 4 },
+  eslint: {
+    config: {
+      stylistic: true,
+    },
+  },
 
   fonts: {
     families: [{ name: 'Lexend Deca', provider: 'google' }],
@@ -32,5 +37,6 @@ export default defineNuxtConfig({
 
   icon: {
     mode: 'svg',
-  }
+  },
+
 })

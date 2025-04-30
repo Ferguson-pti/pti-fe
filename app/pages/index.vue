@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { LandingPageHero } from '#components';
-
+import { LandingPageHero } from '#components'
 </script>
 
 <template>
