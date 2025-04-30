@@ -4,6 +4,9 @@
 
 <template>
   <div class="relative w-full h-auto box-border">
-    <AppPricing />
+    <AgendaPageHero />
+    <LandingPageSpeakers />
+    <LandingPageTracks />
+    <AboutPageTimeline />
   </div>
 </template>

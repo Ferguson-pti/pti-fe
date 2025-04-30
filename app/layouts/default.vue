@@ -2,6 +2,10 @@
 import { useScroll } from '@vueuse/core'
 import { AppFooter } from '#components'
 
+useHead({
+  title: 'ICHST',
+})
+
 const route = useRoute()
 const color = ref('bg-custom-green')
 
