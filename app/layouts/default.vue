@@ -13,9 +13,12 @@ watch(route, () => {
   console.log(route.path)
   switch (route.path) {
     case '/':
+    case '/about':
+    case '/agenda':
       color.value = 'bg-custom-green'
       break
     case '/register':
+    case '/help':
       color.value = 'bg-custom-cream'
       break
     default:

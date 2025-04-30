@@ -7,8 +7,8 @@
     ANNOUNCEMENT: REGISTRATION FOR THE 4TH BIENNIAL ICHST WOULD SOON COMMENCE, ENSURE TO GET YOUR TICKETS.
 
     <Icon
-      name="i-lucide-x"
-      class="size-5 absolute right-10"
+      name="fa6-solid:xmark"
+      class="size-5 absolute right-10 text-white"
     />
   </div>
 </template>

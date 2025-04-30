@@ -33,6 +33,7 @@
     "@commitlint/config-conventional": "^19.8.0",
     "@commitlint/prompt-cli": "^19.8.0",
     "@iconify-json/fa6-brands": "^1.2.5",
+    "@iconify-json/fa6-solid": "^1.2.3",
     "lint-staged": "^15.5.1",
     "simple-git-hooks": "^2.13.0"
   },
