@@ -6,16 +6,21 @@ defineProps<{
 }>()
 
 const route = useRoute()
+const showMenuModal = ref(false)
+
+const toggleModal = () => {
+  showMenuModal.value = !showMenuModal.value
+}
 </script>
 
 <template>
   <div class="sticky top-0 w-full h-22 flex flex-col items-center justify-start z-50">
-    <div :class="`${visible?'top-0':'-top-24'} absolute bg-white flex flex-row justify-between items-center w-full py-5 px-10 duration-300`">
+    <div :class="`${visible?'top-0':'-top-24'} absolute bg-white flex flex-row justify-between items-center w-full py-5 px-4 md:px-8 lg:px-10 duration-300`">
       <NuxtLink :to="HOME_PAGE">
         <AppLogo />
       </NuxtLink>
 
-      <ul class="flex flex-row items-center justify-between font-lexend">
+      <ul class="hidden lg:flex flex-row items-center justify-between font-lexend">
         <AppNavbarLink
           :to="REGISTER_PAGE"
           :active="route.path===REGISTER_PAGE"
@@ -51,6 +56,25 @@ const route = useRoute()
           Help
         </AppNavbarLink>
       </ul>
+
+      <Icon
+        v-show="!showMenuModal"
+        name="fa6-solid:align-justify"
+        class="size-5 absolute right-4 md:right-8 lg:right-10 text-black flex lg:hidden"
+        :onclick="toggleModal"
+      />
+
+      <Icon
+        v-show="showMenuModal"
+        name="fa6-solid:xmark"
+        class="size-5 absolute right-4 md:right-8 lg:right-10 text-black flex lg:hidden"
+        :onclick="toggleModal"
+      />
     </div>
+
+    <AppNavbarModal
+      v-show="showMenuModal"
+      :visible="visible"
+    />
   </div>
 </template>
