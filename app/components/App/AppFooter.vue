@@ -1,20 +1,22 @@
 <template>
-  <footer class="w-full h-auto flex flex-col items-center justify-start pt-8 pb-16 px-10 bg-custom-green">
-    <div class="w-full flex flex-row items-start justify-between font-lexend">
-      <div class="w-[49%] flex flex-row items-center justify-start">
-        <AppLogo />
+  <footer class="w-full h-auto flex flex-col items-center justify-start pt-8 pb-16 px-4 md:px-10 bg-custom-green">
+    <div class="w-full flex flex-col lg:flex-row items-start justify-between font-lexend">
+      <div class="w-full lg:w-[49%] flex flex-row items-center justify-start">
+        <div class="hidden lg:flex">
+          <AppLogo />
+        </div>
 
-        <AppButton style-class="bg-custom-gold text-white hover:bg-white hover:text-custom-gold ml-6">
+        <AppButton style-class="w-full lg:w-auto bg-custom-gold text-white hover:bg-white hover:text-custom-gold ml-0 lg:ml-6">
           REGISTER NOW: OCTOBER 22-23 IN ABUJA
         </AppButton>
       </div>
 
-      <div class="w-[49%] flex flex-row items-center justify-end">
+      <div class="mt-8 lg:mt-0 w-full lg:w-[49%] flex flex-col lg:flex-row items-start lg:items-center justify-start lg:justify-end">
         <p class="font-medium text-white">
           #ICHST25
         </p>
 
-        <span class="ml-10 flex flex-row items-center justiyf-end">
+        <span class="mt-8 lg:mt-0 ml-0 lg:ml-10 flex flex-row items-center justify-end">
           <div class="w-10 h-10 flex items-center justify-center bg-black hover:bg-custom-red cursor-pointer duration-300 rounded-full mr-4">
             <Icon
               name="fa6-brands:x-twitter"
@@ -47,7 +49,7 @@
     </div>
 
     <div class="mt-10 w-full flex flex-row items-start justify-between font-lexend">
-      <div class="w-[48%] flex flex-col items-start justify-start">
+      <div class="w-full lg:w-[48%] flex flex-col items-start justify-start">
         <p class="text-white font-medium text-xl">
           Stay ahead of what’s next. Get first access to ICHST news and updates.
         </p>
@@ -59,14 +61,14 @@
       </div>
     </div>
 
-    <div class="mt-10 flex flex-row w-full text-left font-lexend">
-      <p class="text-sm text-custom-grey mr-5">
+    <div class="mt-10 flex flex-col-reverse lg:flex-row w-full text-left font-lexend">
+      <p class="text-xs md:text-sm mb-7 lg:mb-0 text-custom-grey mr-5">
         &copy; 2025 ICHST PTI
       </p>
 
-      <a class="text-sm text-white underline cursor-pointer mr-5">PTDF Towers, Central Business District, Abuja, Nigeria</a>
+      <a class="text-xs md:text-sm mb-7 lg:mb-0 text-white underline cursor-pointer mr-5">PTDF Towers, Central Business District, Abuja, Nigeria</a>
 
-      <a class="text-sm text-white underline cursor-pointer mr-5">Privacy Policy</a>
+      <a class="text-xs md:text-sm mb-7 lg:mb-0 text-white underline cursor-pointer mr-5">Privacy Policy</a>
     </div>
   </footer>
 </template>
