@@ -6,12 +6,22 @@ import { AppButton, AppVideo } from '#components'
 <template>
   <section
     class="
-        relative w-full h-[90vh] flex flex-row items-start justify-between
-        pt-16 px-16 pb-0
+        relative w-full h-auto lg:h-[90vh] flex flex-row items-start justify-between
+        py-10 md:py-16 lg:pt-16 lg:pb-0 px-4 md:px-10 lg:px-16
     "
   >
-    <div class="flex flex-col items-start justify-start w-[55%] bg-custom-green px-10 py-10 rounded-lg z-10">
-      <span class="font-lexend font-medium text-6xl text-white">Transforming Africa’s Hydrocarbon Sector</span>
+    <div class="flex flex-col items-start justify-start w-full lg:w-[55%] bg-custom-green px-4 md:px-10 py-10 rounded-lg z-10">
+      <div class="flex lg:hidden flex-col items-start justify-start text-white">
+        <span class="font-lexend text-sm font-medium mb-1">OCTOBER 22-23, 2025</span>
+        <span class="font-lexend text-sm font-medium mb-8">PTDF TOWERS, CENTRAL BUSINESS DISTRICT, ABUJA, NIGERIA</span>
+      </div>
+
+      <span class="font-lexend font-medium text-4xl md:text-5xl lg:text-6xl text-white">Transforming Africa’s Hydrocarbon Sector</span>
+
+      <AppVideo
+        style-class="mt-6 flex lg:hidden"
+      />
+
       <span class="font-lexend mt-6 text-custom-grey">
         (ICHST) is organized biennially to promote technological advancement, enhance research, and provide
         knowledge-sharing platforms across the oil and gas industry spectrum
@@ -21,7 +31,7 @@ import { AppButton, AppVideo } from '#components'
       </AppButton>
     </div>
 
-    <div class="w-auto mt-20 flex flex-col items-start justify-start z-10 text-white">
+    <div class="hidden lg:flex w-auto mt-20 flex flex-col items-start justify-start z-10 text-white">
       <span class="font-lexend text-sm font-medium mb-1">OCTOBER 22-23, 2025</span>
       <span class="font-lexend text-sm font-medium mb-8">PTDF TOWERS, CENTRAL BUSINESS DISTRICT, ABUJA, NIGERIA</span>
       <AppVideo />

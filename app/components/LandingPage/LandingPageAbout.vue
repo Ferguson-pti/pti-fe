@@ -20,8 +20,8 @@ const renderedItems = data.map((item, index) =>
 <template>
   <section
     class="
-        relative w-full h-[80vh] flex flex-row items-start justify-between
-        py-20 px-16 bg-custom-cream overflow-visible
+        relative w-full h-auto lg:h-[80vh] flex flex-col-reverse lg:flex-row items-start justify-between
+        py-20 px-4 md:px-10 lg:px-16 bg-custom-cream overflow-visible
     "
   >
     <div
@@ -37,8 +37,8 @@ const renderedItems = data.map((item, index) =>
       />
     </div>
 
-    <div class="relative w-[60%] h-auto rounded-lg z-10 p-20 bg-custom-cream overflow-hidden font-lexend">
-      <p class="text-7xl font-medium mb-6 text-custom-green">
+    <div class="relative w-full lg:w-[60%] h-auto rounded-lg z-10 p-20 bg-custom-cream overflow-hidden font-lexend">
+      <p class="text-4xl md:text-5xl lg:text-7xl font-medium mb-6 text-custom-green">
         What is ICHST?
       </p>
       <p class="font-light text-black">
