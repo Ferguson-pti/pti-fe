@@ -1,27 +1,5 @@
 <script setup lang="ts">
-import { h } from 'vue'
-import { LandingPageSpeakersCard } from '#components'
 
-const SPEAKERS = [
-  'John Doe',
-  'Alice Walter',
-  'Lionel Messi',
-  'Donald Trump',
-  'Bruce Wayne',
-  'Mary Jane',
-]
-
-const renderedItems = SPEAKERS.map((speaker, index) =>
-  h(LandingPageSpeakersCard, {
-    key: `speaker${index}`,
-  }),
-)
-
-onMounted(() => {
-  const firstSpeakerContainer = document.getElementsByClassName('speaker-container')[0]
-
-  console.log(firstSpeakerContainer)
-})
 </script>
 
 <template>
@@ -31,20 +9,20 @@ onMounted(() => {
         Featured Speakers
       </h1>
 
-      <p class="text-white w-full lg:w-[55%] mt-4 font-light text-base md:text-lg mb-14">
+      <p class="text-white w-full lg:w-[55%] mt-4 font-light text-base md:text-lg mb-10">
         ICHST lands in Abuja with its strongest program yet, themed Transforming Africa’s Hydrocarbon Sector: Balancing Growth, Environment,
         and Governance. From sustainable financing to cutting-edge tech and ethical leadership, industry visionaries will share insights to
         drive impactful change across Africa’s energy landscape.
       </p>
 
-      <AppSwiper
-        style-class="w-full md:w-full border-white border h-[500px]"
-        :items="renderedItems"
-        :pagination="true"
+      <AppSpeakersSwiper
+        style-class="w-full md:w-full h-[400px]"
+        :pagination="{ clickable: true }"
         :autoplay="false"
-        color="#FCC40C"
-        slides-per-view="auto"
+        color="white"
+        :slides-per-view="`auto`"
         :space-between="20"
+        :loop="false"
       />
 
       <div />

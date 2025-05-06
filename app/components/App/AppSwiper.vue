@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Pagination } from 'swiper/modules'
 import type { SwiperOptions } from 'swiper/types'
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -17,8 +18,10 @@ defineProps<Props>()
 
 <template>
   <Swiper
+    :modules="[Pagination]"
     :slides-per-view="slidesPerView || 1.5"
-    :loop="true"
+    :slides-per-group="1"
+    :loop="loop"
     :pagination="pagination"
     :autoplay="autoplay"
     :delay="5000"
@@ -40,7 +43,7 @@ defineProps<Props>()
 
 <style>
     .swiper-slide{
-      width:auto; height:auto; display:flex; flex-direction:column; align-items:center; justify-content:center;
+      width:auto; height:auto; display:flex; flex-direction:column; align-items:center; justify-content:start;
     }
 
     .swiper-pagination-bullet {
@@ -52,6 +55,6 @@ defineProps<Props>()
     }
 
     .swiper-pagination{
-        position:absolute; right:0; border:'1px red solid'
+        position:absolute; right:0;
     }
 </style>

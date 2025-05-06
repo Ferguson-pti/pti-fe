@@ -45,6 +45,7 @@ const renderedItems2 = slides.map((slide, index) =>
         :pagination="false"
         :autoplay="true"
         :speed="1000"
+        :loop="true"
       />
     </div>
 

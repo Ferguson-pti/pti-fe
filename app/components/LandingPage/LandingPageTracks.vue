@@ -48,6 +48,7 @@ const renderedItems = data.map((item, index) =>
         :autoplay="false"
         :pagination="{ clickable: true }"
         color="#D0262F"
+        :loop="false"
       />
     </div>
   </section>

@@ -34,6 +34,7 @@ const renderedItems = data.map((item, index) =>
         :pagination="true"
         :autoplay="true"
         color="#FCC40C"
+        :loop="true"
       />
     </div>
 
