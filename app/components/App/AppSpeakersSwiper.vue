@@ -92,7 +92,7 @@ function onSlideChange(swiper: any) {
       <SwiperSlide
         v-for="(item, index) in items"
         :key="item.key!"
-        class="speaker-slide snap-start"
+        class="speaker-slide snap-start h-[450px] md:h-[400px] "
         :data-index="index"
         @click="goToSlide"
       >
@@ -106,15 +106,15 @@ function onSlideChange(swiper: any) {
     </Swiper>
 
     <div class="mt-8 flex flex-col items-start justify-start font-lexend">
-      <span class="text-white font-medium">FEATURED</span>
-      <span class="mt-2 font-semibold text-5xl text-white">{{ SPEAKERS[activeIndex]!.name }}</span>
+      <span class="text-white text-sm md:text-md font-medium">FEATURED</span>
+      <span class="mt-2 font-semibold text-3xl md:text-5xl text-white">{{ SPEAKERS[activeIndex]!.name }}</span>
     </div>
   </div>
 </template>
 
 <style>
     .speaker-slide{
-      height:400px; display:flex; flex-direction:column; align-items:center; justify-content:center; transition-duration:300ms;
+      display:flex; flex-direction:column; align-items:center; justify-content:center; transition-duration:300ms;
     }
 
     .swiper-pagination-bullet {
@@ -123,9 +123,5 @@ function onSlideChange(swiper: any) {
 
     .swiper-pagination-bullet-active{
             background-color:var(--main-color);
-    }
-
-    .swiper-pagination{
-        position:absolute; right:0;
     }
 </style>
