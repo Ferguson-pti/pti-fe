@@ -3,7 +3,7 @@ defineProps<{
   styleClass: string
 }>()
 
-const ending = new Date(2025, 4, 5).getTime() // 5th May 2025 (milliseconds since epoch)
+const ending = new Date(2025, 6, 5).getTime() // 5th July 2025 (milliseconds since epoch)
 const now = ref(Date.now())
 
 const { remaining, start } = useCountdown(Math.floor((ending - now.value) / 1000))

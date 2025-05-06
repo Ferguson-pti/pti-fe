@@ -27,6 +27,7 @@ defineProps<Props>()
     :direction="'horizontal'"
     :class="styleClass"
     :style="{ '--main-color': color }"
+    :space-between="spaceBetween || 0"
   >
     <SwiperSlide
       v-for="item in items"
@@ -38,7 +39,11 @@ defineProps<Props>()
 </template>
 
 <style>
-.swiper-pagination-bullet {
+    .swiper-slide{
+      width:auto; height:auto; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    }
+
+    .swiper-pagination-bullet {
         background-color: black;
     }
 
