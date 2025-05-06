@@ -9,7 +9,7 @@
         Featured Speakers
       </h1>
 
-      <p class="text-white w-full lg:w-[55%] mt-4 font-light text-base md:text-lg mb-0 md:mb-10">
+      <p class="text-white w-full lg:w-[%] mt-4 font-light text-base md:text-lg mb-0 md:mb-10">
         ICHST lands in Abuja with its strongest program yet, themed Transforming Africa’s Hydrocarbon Sector: Balancing Growth, Environment,
         and Governance. From sustainable financing to cutting-edge tech and ethical leadership, industry visionaries will share insights to
         drive impactful change across Africa’s energy landscape.
@@ -24,8 +24,6 @@
         :space-between="20"
         :loop="false"
       />
-
-      <div />
     </div>
   </section>
 </template>

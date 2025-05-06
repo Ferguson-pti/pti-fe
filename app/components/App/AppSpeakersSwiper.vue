@@ -71,7 +71,6 @@ function onSlideChange(swiper: any) {
 <template>
   <div>
     <Swiper
-
       :modules="[Pagination]"
       :slides-per-view="slidesPerView"
       :slides-per-group="1"
@@ -92,7 +91,7 @@ function onSlideChange(swiper: any) {
       <SwiperSlide
         v-for="(item, index) in items"
         :key="item.key!"
-        class="speaker-slide snap-start h-[450px] md:h-[400px] "
+        class="speaker-slide snap-start h-[450px] md:h-[400px] border border-white"
         :data-index="index"
         @click="goToSlide"
       >

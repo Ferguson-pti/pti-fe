@@ -31,17 +31,17 @@ const renderedItems = data.map((item, index) =>
 </script>
 
 <template>
-  <section class="w-full py-20 px-16 bg-custom-cream flex flex-col items-start justify-start font-lexend">
-    <h1 class="text-7xl text-custom-red w-[60%] font-medium">
+  <section class="w-full py-16 md:py-20 px-4 md:px-10 lg:px-16 bg-custom-cream flex flex-col items-start justify-start font-lexend">
+    <h1 class="text-5xl md:text-7xl text-custom-red w-[60%] font-medium">
       Tracks
     </h1>
 
-    <p class="text-black w-[60%] mt-4 font-light text-lg">
+    <p class="text-black w-[90%] md:w-[70%] mt-4 font-light text-md md:text-lg">
       Get a first look at the tracks to be touched by industry experts during the course of this conference session. These topics are all
       high impact that play a key role affect Africa's Hydrocarbon Sector.
     </p>
 
-    <div class="w-full">
+    <div class="hidden lg:flex w-full">
       <AppSwiper
         style-class="mt-10 w-full"
         :items="renderedItems"
@@ -49,6 +49,19 @@ const renderedItems = data.map((item, index) =>
         :pagination="{ clickable: true }"
         color="#D0262F"
         :loop="false"
+      />
+    </div>
+
+    <div class="flex lg:hidden w-full">
+      <AppSwiper
+        style-class="mt-10 w-full"
+        :items="renderedItems"
+        :autoplay="false"
+        :space-between="10"
+        :pagination="{ clickable: true }"
+        color="#D0262F"
+        :loop="false"
+        :slides-per-view="1"
       />
     </div>
   </section>

@@ -4,20 +4,27 @@ defineProps<{
   title: string
   body: string
 }>()
+
+function wordMinimizer(word: string, length: number){
+  const arr = word.split(' ');
+  const format = arr.slice(0, length).join(' ') + (arr.length>length ? '...' : '');
+  return format;
+}
 </script>
 
 <template>
-  <div class="group relative bg-white p-14 h-[550px] mr-8 rounded-lg">
-    <p class="absolute text-[350px] bottom-0 right-10 z-0 text-[#00000010] font-bold group-hover:text-[#D0262F20] duration-300">
+  <div class="group relative bg-white md:w-[95%] lg:w-auto p-6 md:p-8 lg:p-14 h-[550px] lg:mr-8 rounded-lg border border-black mb-2">
+    <p class="absolute text-[250px] md:text-[300px] lg:text-[350px] bottom-0 right-10 z-0 text-[#00000010] font-bold group-hover:text-[#D0262F20] duration-300">
       {{ number }}
     </p>
 
-    <p class="text-4xl font-medium z-10 group-hover:text-custom-red duration-300 leading-12">
+    <p class="text-2xl md:text-4xl font-medium z-10 group-hover:text-custom-red duration-300 leadnig-auto lg:leading-12">
       {{ title }}
     </p>
 
-    <p class="mt-8 font-light z-10 group-hover:text-custom-red duration-300 leading-7">
-      {{ body }}
+    <p class="mt-4 md:mt-8 text-sm md:text-base font-light z-10 group-hover:text-custom-red duration-300 leading-6 md:leading-7">
+      <span class="flex lg:hidden">{{ wordMinimizer(body, 60) }}</span>
+      <span class="hidden lg:hidden">{{ body }}</span>
     </p>
   </div>
 </template>
