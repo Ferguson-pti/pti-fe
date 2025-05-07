@@ -33,7 +33,7 @@
           </AppButton>
         </form>
 
-        <div class="mt-8 flex flex-row item-center justify-start">
+        <div class="mt-8 lg:mt-0 flex flex-row item-center justify-start">
           <span class="flex flex-row items-center justify-start mr-12">
             <Icon
               name="fa6-solid:phone"
