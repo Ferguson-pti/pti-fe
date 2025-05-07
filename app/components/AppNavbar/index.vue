@@ -10,6 +10,7 @@ const showMenuModal = ref(false)
 
 const toggleModal = () => {
   showMenuModal.value = !showMenuModal.value
+  console.log(showMenuModal.value)
 }
 </script>
 
@@ -61,14 +62,14 @@ const toggleModal = () => {
         v-show="!showMenuModal"
         name="fa6-solid:align-justify"
         class="size-5 absolute right-4 md:right-8 lg:right-10 text-black flex lg:hidden"
-        :onclick="toggleModal"
+        @click="toggleModal"
       />
 
       <Icon
         v-show="showMenuModal"
         name="fa6-solid:xmark"
         class="size-5 absolute right-4 md:right-8 lg:right-10 text-black flex lg:hidden"
-        :onclick="toggleModal"
+        @click="toggleModal"
       />
     </div>
 
