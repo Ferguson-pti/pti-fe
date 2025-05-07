@@ -3,12 +3,12 @@
 </script>
 
 <template>
-  <section class="w-full h-auto py-20 px-16 bg-custom-red flex flex-col items-start justify-start font-lexend">
-    <div class="w-full h-auto flex flex-row items-center justify-between rounded-lg overflow-hidden border border-black p-10">
-      <div class="w-[500px] h-[600px] rounded-lg bg-custom-grey" />
+  <section class="w-full h-auto py-20 px-4 md:px-10 lg:px-16 bg-custom-red flex flex-col items-start justify-start font-lexend">
+    <div class="w-full h-auto flex flex-col-reverse lg:flex-row items-center justify-between rounded-lg overflow-hidden border border-black p-0 md:p-10">
+      <div class="mt-8 lg:mt-0 w-full md:w-[500px] h-[600px] rounded-lg bg-custom-grey" />
 
-      <div class="w-[50%]">
-        <p class="text-6xl font-medium mb-6 text-white font-medium">
+      <div class="w-full md:w-[500px] lg:w-[50%]">
+        <p class="text-3xl md:text-6xl font-medium mb-6 text-white font-medium">
           Contact us
         </p>
 

@@ -3,6 +3,7 @@ import { ABOUT_PAGE, ABSTRACT_PAGE, AGENDA_PAGE, HELP_PAGE, REGISTER_PAGE } from
 
 defineProps<{
   visible: boolean
+  hideModal: () => void
 }>()
 
 const route = useRoute()
@@ -15,6 +16,7 @@ const route = useRoute()
         :to="REGISTER_PAGE"
         :mobile="true"
         :active="route.path===REGISTER_PAGE"
+        @click="hideModal"
       >
         Register
       </AppNavbarLink>
@@ -23,6 +25,7 @@ const route = useRoute()
         :to="ABOUT_PAGE"
         :mobile="true"
         :active="route.path===ABOUT_PAGE"
+        @click="hideModal"
       >
         About
       </AppNavbarLink>
@@ -31,6 +34,7 @@ const route = useRoute()
         :to="ABSTRACT_PAGE"
         :mobile="true"
         :active="route.path===ABSTRACT_PAGE"
+        @click="hideModal"
       >
         Abstract
       </AppNavbarLink>
@@ -39,6 +43,7 @@ const route = useRoute()
         :to="AGENDA_PAGE"
         :mobile="true"
         :active="route.path===AGENDA_PAGE"
+        @click="hideModal"
       >
         Agenda & Speakers
       </AppNavbarLink>
@@ -48,6 +53,7 @@ const route = useRoute()
         :mobile="true"
         :active="route.path===HELP_PAGE"
         :last="true"
+        @click="hideModal"
       >
         Help
       </AppNavbarLink>

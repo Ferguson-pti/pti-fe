@@ -12,6 +12,10 @@ const toggleModal = () => {
   showMenuModal.value = !showMenuModal.value
   console.log(showMenuModal.value)
 }
+
+const hideModal = () => {
+  showMenuModal.value = false
+}
 </script>
 
 <template>
@@ -75,6 +79,7 @@ const toggleModal = () => {
 
     <AppNavbarModal
       v-show="showMenuModal"
+      :hide-modal="hideModal"
       :visible="visible"
     />
   </div>
