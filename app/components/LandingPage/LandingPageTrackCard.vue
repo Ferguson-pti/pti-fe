@@ -5,10 +5,10 @@ defineProps<{
   body: string
 }>()
 
-function wordMinimizer(word: string, length: number){
-  const arr = word.split(' ');
-  const format = arr.slice(0, length).join(' ') + (arr.length>length ? '...' : '');
-  return format;
+function wordMinimizer(word: string, length: number) {
+  const arr = word.split(' ')
+  const format = arr.slice(0, length).join(' ') + (arr.length > length ? '...' : '')
+  return format
 }
 </script>
 
