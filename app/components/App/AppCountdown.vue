@@ -50,24 +50,24 @@ onMounted(() => {
 
 <template>
   <div class="w-full flex flex-row items-center justify-center">
-    <div class="flex flex-col items-center justify-center mx-4">
-      <span class="text-8xl font-semibold">{{ timeLeft.days }}</span>
-      <span class="tracking-wider">DAYS</span>
+    <div class="flex flex-col items-center justify-center mx-3 md:mx-4">
+      <span class="text-5xl md:text-7xl lg:text-8xl font-semibold">{{ timeLeft.days }}</span>
+      <span class="text-xs md:text-base tracking-wider">DAYS</span>
     </div>
 
-    <div class="flex flex-col items-center justify-center mx-4">
-      <span class="text-8xl font-semibold">{{ timeLeft.hours }}</span>
-      <span class="tracking-wider">HOURS</span>
+    <div class="flex flex-col items-center justify-center mx-3 md:mx-4">
+      <span class="text-5xl md:text-7xl lg:text-8xl font-semibold">{{ timeLeft.hours }}</span>
+      <span class="text-xs md:text-base tracking-wider">HOURS</span>
     </div>
 
-    <div class="flex flex-col items-center justify-center mx-4">
-      <span class="text-8xl font-semibold">{{ timeLeft.minutes }}</span>
-      <span class="tracking-wider">MINUTES</span>
+    <div class="flex flex-col items-center justify-center mx-3 md:mx-4">
+      <span class="text-5xl md:text-7xl lg:text-8xl font-semibold">{{ timeLeft.minutes }}</span>
+      <span class="text-xs md:text-base tracking-wider">MINUTES</span>
     </div>
 
-    <div class="flex flex-col items-center justify-center mx-4">
-      <span class="text-8xl font-semibold">{{ timeLeft.seconds }}</span>
-      <span class="tracking-wider">SECONDS</span>
+    <div class="flex flex-col items-center justify-center mx-3 md:mx-4">
+      <span class="text-5xl md:text-7xl lg:text-8xl font-semibold">{{ timeLeft.seconds }}</span>
+      <span class="text-xs md:text-base tracking-wider">SECONDS</span>
     </div>
   </div>
 </template>

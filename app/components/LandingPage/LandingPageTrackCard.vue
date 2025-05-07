@@ -13,7 +13,7 @@ function wordMinimizer(word: string, length: number){
 </script>
 
 <template>
-  <div class="group relative bg-white md:w-[95%] lg:w-auto p-6 md:p-8 lg:p-14 h-[550px] lg:mr-8 rounded-lg border border-black mb-2">
+  <div class="group relative bg-white md:w-[95%] lg:w-auto p-6 md:p-8 lg:p-14 h-[550px] lg:mr-8 rounded-lg mb-2">
     <p class="absolute text-[250px] md:text-[300px] lg:text-[350px] bottom-0 right-10 z-0 text-[#00000010] font-bold group-hover:text-[#D0262F20] duration-300">
       {{ number }}
     </p>
@@ -24,7 +24,7 @@ function wordMinimizer(word: string, length: number){
 
     <p class="mt-4 md:mt-8 text-sm md:text-base font-light z-10 group-hover:text-custom-red duration-300 leading-6 md:leading-7">
       <span class="flex lg:hidden">{{ wordMinimizer(body, 60) }}</span>
-      <span class="hidden lg:hidden">{{ body }}</span>
+      <span class="hidden lg:flex">{{ body }}</span>
     </p>
   </div>
 </template>

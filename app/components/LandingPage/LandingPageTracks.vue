@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { h } from 'vue'
+import { useWindowSize } from '@vueuse/core'
 import TrackCard from './LandingPageTrackCard.vue'
+
+const { width } = useWindowSize()
 
 const data = [
   {
@@ -41,27 +44,16 @@ const renderedItems = data.map((item, index) =>
       high impact that play a key role affect Africa's Hydrocarbon Sector.
     </p>
 
-    <div class="hidden lg:flex w-full">
+    <div class="flex w-full">
       <AppSwiper
         style-class="mt-10 w-full"
         :items="renderedItems"
         :autoplay="false"
+        ::space-between="width<=400 ? 10 : 0"
         :pagination="{ clickable: true }"
         color="#D0262F"
         :loop="false"
-      />
-    </div>
-
-    <div class="flex lg:hidden w-full">
-      <AppSwiper
-        style-class="mt-10 w-full"
-        :items="renderedItems"
-        :autoplay="false"
-        :space-between="10"
-        :pagination="{ clickable: true }"
-        color="#D0262F"
-        :loop="false"
-        :slides-per-view="1"
+        :slides-per-view="width<=900 ? 1 : 1.5"
       />
     </div>
   </section>
