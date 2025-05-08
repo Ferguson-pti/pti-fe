@@ -3,16 +3,16 @@ import { h } from 'vue'
 import { LandingPageAboutCard } from '#components'
 
 const data = [
-  'Slide 1',
-  'Slide 2',
-  'Slide 3',
+  'DSC_0078.webp',
+  'DSC_0731.webp',
+  'DSC_0486.webp',
 ]
 
 // Create array of components manually
 const renderedItems = data.map((item, index) =>
   h(LandingPageAboutCard, {
     key: `aboutcard${index}`,
-    title: item,
+    src: item,
   }),
 )
 </script>

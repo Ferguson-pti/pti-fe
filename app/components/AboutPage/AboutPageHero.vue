@@ -19,6 +19,10 @@
       </AppButton>
     </div>
 
-    <div class="mt-10 bg-custom-grey w-full lg:w-[600px] h-88 rounded-lg" />
+    <NuxtImg
+      src="whoweare.webp"
+      provider="sirv"
+      class="mt-10 bg-custom-grey w-full lg:w-[500px] rounded-lg"
+    />
   </section>
 </template>

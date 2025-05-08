@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import Bubble2 from '../Bubble-2.vue'
-import { AppVideo } from '#components'
+// import { AppVideo } from '#components'
+
+/* Meant to be a video in here <AppVideo /> */
 </script>
 
 <template>
@@ -18,8 +20,10 @@ import { AppVideo } from '#components'
 
       <span class="font-lexend font-medium text-4xl md:text-5xl lg:text-6xl text-white">Transforming Africa’s Hydrocarbon Sector</span>
 
-      <AppVideo
-        style-class="mt-6 flex lg:hidden"
+      <NuxtImg
+        src="ptdf.webp"
+        provider="sirv"
+        class="mt-6 flex lg:hidden w-full lg:w-[540px] bg-custom-grey rounded-lg"
       />
 
       <span class="font-lexend mt-6 text-custom-grey">
@@ -39,7 +43,12 @@ import { AppVideo } from '#components'
     <div class="hidden lg:flex w-auto mt-20 flex flex-col items-start justify-start z-10 text-white">
       <span class="font-lexend text-sm font-medium mb-1">OCTOBER 22-23, 2025</span>
       <span class="font-lexend text-sm font-medium mb-8">PTDF TOWERS, CENTRAL BUSINESS DISTRICT, ABUJA, NIGERIA</span>
-      <AppVideo />
+
+      <NuxtImg
+        src="ptdf.webp"
+        provider="sirv"
+        class="w-full lg:w-[540px] bg-custom-grey rounded-lg"
+      />
     </div>
 
     <Bubble2 style-class="absolute left-0 -bottom-1 z-0" />

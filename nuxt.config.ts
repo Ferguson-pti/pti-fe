@@ -39,4 +39,10 @@ export default defineNuxtConfig({
     mode: 'svg',
   },
 
+  image: {
+    sirv: {
+      baseURL: 'https://rophi-ccl.sirv.com/pti/',
+    },
+  },
+
 })

@@ -9,8 +9,9 @@
     </p>
 
     <div class="mt-0 md:mt-10 w-full h-auto flex flex-row items-stretch justify-between">
-      <div
-        id="test"
+      <NuxtImg
+        src="gabriel-xavier-ZdGNogZXBa0-unsplash.webp"
+        provider="sirv"
         class="hidden md:flex md:w-[350px] lg:w-[480px] bg-custom-grey rounded-xl"
       />
 

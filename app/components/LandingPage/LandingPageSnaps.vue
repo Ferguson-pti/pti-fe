@@ -5,26 +5,33 @@ import { LandingPageSnapCard } from '#components'
 
 const { width } = useWindowSize()
 
-const slides = [
-  'slide00', 'slide01', 'slide02', 'slide03', 'slide04', 'slide05', 'slide06', 'slide07', 'slide08', 'slide09', 'slide10', 'slide11', 'slide12',
+const urls = [
+  'DSC_0265.webp',
+  'DSC_0731.webp',
+  'DSC_0018.webp',
+  'DSC_0101.webp',
+  'DSC_0078.webp',
+  'DSC_0122.webp',
+  'DSC_0162.webp',
+  'DSC_0300.webp',
 ]
 
-const renderedItems1 = slides.map((slide, index) =>
+const renderedItems1 = urls.map((url, index) =>
   h(
     LandingPageSnapCard,
     {
       key: `snapcardlane1${index}`,
-      item: slide,
+      src: url,
     },
   ),
 )
 
-const renderedItems2 = slides.map((slide, index) =>
+const renderedItems2 = urls.map((url, index) =>
   h(
     LandingPageSnapCard,
     {
       key: `snapcardlane2${index}`,
-      item: slide,
+      src: url,
     },
   ),
 )
