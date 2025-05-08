@@ -5,8 +5,8 @@ import AboutPageCallup from '~/components/AboutPage/AboutPageCallup.vue'
 
 <template>
   <div class="relative w-full h-auto box-border">
-    <AboutPageHero />
     <LandingPageAbout />
+    <AboutPageHero />
     <LandingPageSponsors />
     <AboutPageCallup />
   </div>

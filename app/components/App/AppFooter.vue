@@ -2,13 +2,11 @@
   <footer class="w-full h-auto flex flex-col items-center justify-start pt-8 pb-16 px-4 md:px-10 bg-custom-green">
     <div class="w-full flex flex-col lg:flex-row items-start justify-between font-lexend">
       <div class="w-full lg:w-[49%] flex flex-row items-center justify-start">
-        <div class="hidden lg:flex">
-          <AppLogo />
-        </div>
-
-        <AppButton style-class="w-full lg:w-auto bg-custom-gold text-white hover:bg-white hover:text-custom-gold ml-0 lg:ml-6">
-          REGISTER NOW: OCTOBER 22-23 IN ABUJA
-        </AppButton>
+        <NuxtImg
+          src="/ichst-white.png"
+          alt="logo"
+          height="56"
+        />
       </div>
 
       <div class="mt-8 lg:mt-0 w-full lg:w-[49%] flex flex-col lg:flex-row items-start lg:items-center justify-start lg:justify-end">

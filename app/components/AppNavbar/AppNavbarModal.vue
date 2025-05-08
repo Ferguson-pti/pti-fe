@@ -52,11 +52,14 @@ const route = useRoute()
         :to="HELP_PAGE"
         :mobile="true"
         :active="route.path===HELP_PAGE"
-        :last="true"
         @click="hideModal"
       >
         Help
       </AppNavbarLink>
+
+      <AppButton style-class="bg-custom-red border text-white hover:bg-white hover:text-custom-red hover:border-custom-red my-6">
+        GET TICKETS NOW
+      </AppButton>
     </ul>
   </div>
 </template>

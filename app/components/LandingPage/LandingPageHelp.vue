@@ -4,7 +4,7 @@
 
 <template>
   <section class="w-full h-auto  py-4 md:py-10 lg:py-20 px-4 md:px-10 lg:px-16 bg-custom-red flex flex-col items-start justify-start font-lexend">
-    <div class="border border-white w-full h-auto lg:h-80 flex flex-col-reverse lg:flex-row items-center justify-center rounded-xl overflow-hidden">
+    <div class="w-full h-auto lg:h-80 flex flex-col-reverse lg:flex-row items-center justify-center rounded-xl overflow-hidden">
       <div class="w-full lg:w-[50%] p-4 md:p-10">
         <p class="text-3xl md:text-5xl lg:text-6xl font-medium mb-6 text-white font-medium">
           Help Center

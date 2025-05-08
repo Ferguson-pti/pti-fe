@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Bubble2 from '../Bubble-2.vue'
-import { AppButton, AppVideo } from '#components'
+import { AppVideo } from '#components'
 </script>
 
 <template>
@@ -26,9 +26,14 @@ import { AppButton, AppVideo } from '#components'
         (ICHST) is organized biennially to promote technological advancement, enhance research, and provide
         knowledge-sharing platforms across the oil and gas industry spectrum
       </span>
-      <AppButton style-class="mt-12 bg-custom-gold text-white hover:bg-white hover:text-custom-gold">
-        GET TICKETS NOW
-      </AppButton>
+
+      <div class="mt-6 md:mt-12 mb-4 text-custom-gold text-xl font-medium font-lexend">
+        THE CONFERENCE BEGINS IN
+      </div>
+      <AppCountdown
+        style-class="sm"
+        text-color="text-custom-gold"
+      />
     </div>
 
     <div class="hidden lg:flex w-auto mt-20 flex flex-col items-start justify-start z-10 text-white">

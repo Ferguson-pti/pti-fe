@@ -91,7 +91,7 @@ function onSlideChange(swiper: any) {
       <SwiperSlide
         v-for="(item, index) in items"
         :key="item.key!"
-        class="speaker-slide snap-start h-[450px] md:h-[400px] border border-white"
+        class="speaker-slide snap-start h-[450px] md:h-[400px]"
         :data-index="index"
         @click="goToSlide"
       >

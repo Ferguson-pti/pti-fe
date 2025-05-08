@@ -1,7 +1,11 @@
 <script setup lang="ts">
-defineProps<{
-  styleClass: string
-}>()
+withDefaults(defineProps<{
+  styleClass?: 'sm' | 'default'
+  textColor?: string
+}>(), {
+  styleClass: 'default',
+  textColor: 'text-black',
+})
 
 const ending = new Date(2025, 6, 5).getTime() // 5th July 2025 (milliseconds since epoch)
 const now = ref(Date.now())
@@ -46,27 +50,43 @@ function convertSeconds(sec: number) {
 onMounted(() => {
   start()
 })
+
+const styles = {
+  sm: {
+    container: 'flex flex-col items-center mx-4 md:mx-0 md:block mr-2 md:mr-4',
+    numbers: 'text-3xl md:text-5xl lg:text-6xl md:mr-2',
+  },
+  default: {
+    container: 'flex flex-col items-center justify-center mx-3 md:mx-4',
+    numbers: 'text-5xl md:text-7xl lg:text-8xl',
+  },
+}
 </script>
 
 <template>
-  <div class="w-full flex flex-row items-center justify-center">
-    <div class="flex flex-col items-center justify-center mx-3 md:mx-4">
-      <span class="text-5xl md:text-7xl lg:text-8xl font-semibold">{{ timeLeft.days }}</span>
+  <div
+    :class="`w-full flex flex-row items-center
+    ${styleClass==='sm'?'justify-center md:justify-start':'justify-center'}
+    ${textColor}
+    font-lexend`"
+  >
+    <div :class="`${styles[styleClass]['container']}`">
+      <span :class="`${styles[styleClass]['numbers']} font-semibold`">{{ timeLeft.days }}</span>
       <span class="text-xs md:text-base tracking-wider">DAYS</span>
     </div>
 
-    <div class="flex flex-col items-center justify-center mx-3 md:mx-4">
-      <span class="text-5xl md:text-7xl lg:text-8xl font-semibold">{{ timeLeft.hours }}</span>
+    <div :class="`${styles[styleClass]['container']}`">
+      <span :class="`${styles[styleClass]['numbers']} font-semibold`">{{ timeLeft.hours }}</span>
       <span class="text-xs md:text-base tracking-wider">HOURS</span>
     </div>
 
-    <div class="flex flex-col items-center justify-center mx-3 md:mx-4">
-      <span class="text-5xl md:text-7xl lg:text-8xl font-semibold">{{ timeLeft.minutes }}</span>
+    <div :class="`${styles[styleClass]['container']}`">
+      <span :class="`${styles[styleClass]['numbers']} font-semibold`">{{ timeLeft.minutes }}</span>
       <span class="text-xs md:text-base tracking-wider">MINUTES</span>
     </div>
 
-    <div class="flex flex-col items-center justify-center mx-3 md:mx-4">
-      <span class="text-5xl md:text-7xl lg:text-8xl font-semibold">{{ timeLeft.seconds }}</span>
+    <div :class="`${styles[styleClass]['container']}`">
+      <span :class="`${styles[styleClass]['numbers']} font-semibold`">{{ timeLeft.seconds }}</span>
       <span class="text-xs md:text-base tracking-wider">SECONDS</span>
     </div>
   </div>

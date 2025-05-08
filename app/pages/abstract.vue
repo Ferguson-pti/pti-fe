@@ -3,5 +3,7 @@
 </script>
 
 <template>
-  <div class="relative w-full h-auto box-border" />
+  <div class="relative w-full h-auto box-border">
+    <AbstractPage />
+  </div>
 </template>

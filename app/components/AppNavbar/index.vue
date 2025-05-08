@@ -10,7 +10,6 @@ const showMenuModal = ref(false)
 
 const toggleModal = () => {
   showMenuModal.value = !showMenuModal.value
-  console.log(showMenuModal.value)
 }
 
 const hideModal = () => {
@@ -20,9 +19,13 @@ const hideModal = () => {
 
 <template>
   <div class="sticky top-0 w-full h-22 flex flex-col items-center justify-start z-50">
-    <div :class="`${visible?'top-0':'-top-24'} absolute bg-white flex flex-row justify-between items-center w-full py-5 px-4 md:px-8 lg:px-10 duration-300`">
+    <div :class="`${visible?'top-0':'-top-24'} absolute bg-white flex flex-row justify-between items-center w-full py-4.5 px-4 md:px-8 lg:px-10 duration-300`">
       <NuxtLink :to="HOME_PAGE">
-        <AppLogo />
+        <NuxtImg
+          src="/ichst-black.png"
+          alt="logo"
+          class="h-12 md:h-14"
+        />
       </NuxtLink>
 
       <ul class="hidden lg:flex flex-row items-center justify-between font-lexend">
@@ -61,6 +64,10 @@ const hideModal = () => {
           Help
         </AppNavbarLink>
       </ul>
+
+      <AppButton style-class="hidden lg:flex bg-custom-red border text-white hover:bg-white hover:text-custom-red hover:border-custom-red">
+        GET TICKETS NOW
+      </AppButton>
 
       <Icon
         v-show="!showMenuModal"

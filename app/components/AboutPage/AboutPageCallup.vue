@@ -7,7 +7,7 @@
     <div class="w-full h-auto lg:h-96 flex flex-col-reverse lg:flex-row items-center justify-center rounded-lg overflow-hidden bg-custom-red">
       <div class="w-full lg:w-[50%] py-8 px-4 md:p-8 lg:p-10">
         <p class="text-3xl md:text-5xl lg:text-6xl font-medium mb-6 text-white font-medium">
-          Your Growth Moment is Here
+          Join the Energy Evolution
         </p>
 
         <p class="mb-10 text-white text-sm md:text-lg leading-6 md:leading-7">
