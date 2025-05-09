@@ -9,60 +9,24 @@
     </p>
 
     <div class="w-full flex flex-col-reverse lg:flex-row items-start justify-between">
-      <div class="mt-10 lg:mt-0 w-full lg:w-[60%] flex flex-col items-start justify-start font-light">
+      <div class="mt-10 lg:mt-0 w-full lg:w-[50%] flex flex-col items-start justify-start font-light">
         <span class="text-sm md:text-base">We invite you to submit papers in the following categories</span>
 
-        <ol class="mt-4">
-          <li class="mb-2 text-sm md:text-base">
-            . Exploration, Production, and Operations (Upstream, Midstream, Downstream)
-          </li>
-          <li class="mb-2 text-sm md:text-base">
-            . Offshore Drilling and Subsea Engineering
-          </li>
-          <li class="mb-2 text-sm md:text-base">
-            . Unconventional Resources and Energy Security
-          </li>
-          <li class="mb-2 text-sm md:text-base">
-            . Transportation, Logistics, and Gas Flare Commercialization
-          </li>
-          <li class="mb-2 text-sm md:text-base">
-            . Innovations in R&D, Digital Tech, and AI/Robotics
-          </li>
-          <li class="mb-2 text-sm md:text-base">
-            . Asset Protection, SCADA, IoT, and Remote Monitoring
-          </li>
-          <li class="mb-2 text-sm md:text-base">
-            . Energy Trading, Risk Management, and Financing
-          </li>
-          <li class="mb-2 text-sm md:text-base">
-            . Sustainability, Environmental Management, and CCUS
-          </li>
-          <li class="mb-2 text-sm md:text-base">
-            . Geology, Geophysics, and Resource Management
-          </li>
-          <li class="mb-2 text-sm md:text-base">
-            . Health, Safety, and Environmental (HSE) Management
-          </li>
-          <li class="mb-2 text-sm md:text-base">
-            . Human Capital and Workforce Development
-          </li>
-          <li class="mb-2 text-sm md:text-base">
-            . Regulatory, Legal, and Policy Frameworks
-          </li>
-          <li class="mb-2 text-sm md:text-base">
-            . Market Trends and Strategic Outlook
-          </li>
-          <li class="mb-2 text-sm md:text-base">
-            . Renewable Energy Integration and Technologies
-          </li>
-          <li class="mb-2 text-sm md:text-base">
-            . Collaboration and Industry Partnerships
-          </li>
-        </ol>
+        <p class="w-full ">
+          We are excited to invite researchers, practitioners, and thought leaders to submit original papers for
+          <span class="text-custom-red font-medium">ICHST 2025</span>, taking place on
+          <span class="text-custom-red font-medium">22-23 OCTOBER 2025</span>. This is your opportunity to contribute to the conversation,
+          share your insights, and shape the future of <span class="text-custom-red font-medium">Africa's Hydrocarbon Sector</span>.
+        </p>
 
-        <AppButton style-class="mt-8 text-white border border-custom-red bg-custom-red hover:bg-white hover:text-custom-red">
-          DOWNLOAD ABSTRACT INSTRUCTIONS
-        </AppButton>
+        <a
+          href="/uploads/ichst_2025_call_for_abstract.pdf"
+          download
+        >
+          <AppButton style-class="mt-8 text-white border border-custom-red bg-custom-red hover:bg-white hover:text-custom-red">
+            DOWNLOAD ABSTRACT INSTRUCTIONS
+          </AppButton>
+        </a>
 
         <span class="text-custom-red underline mt-8 font-normal text-base md:text-lg">DEADLINES</span>
         <span class="mt-2 text-sm md:text-base">Deadline for Abstract submission - June 26th, 2025</span>
