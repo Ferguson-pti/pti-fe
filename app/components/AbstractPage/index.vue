@@ -4,12 +4,12 @@
 
 <template>
   <section class="w-full h-auto py-20 px-4 md:px-10 lg:px-16 bg-custom-cream flex flex-col items-start justify-start font-lexend">
-    <p class="text-3xl md:text-5xl lg:text-6xl font-medium mb-10 text-custom-green font-medium">
-      Call for Abstract
-    </p>
-
     <div class="w-full flex flex-col-reverse lg:flex-row items-start justify-between">
       <div class="mt-10 lg:mt-0 w-full lg:w-[50%] flex flex-col items-start justify-start font-light">
+        <p class="text-3xl md:text-5xl lg:text-6xl font-medium mb-10 text-custom-green font-medium">
+          Call for Abstract
+        </p>
+
         <span class="text-sm md:text-base">We invite you to submit papers in the following categories</span>
 
         <p class="w-full ">

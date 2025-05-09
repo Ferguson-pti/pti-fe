@@ -8,7 +8,7 @@
       <NuxtImg
         src="pexels-davidmcelwee-11142768.webp"
         provider="sirv"
-        class-name="mt-8 lg:mt-0 w-auto md:w-auto h-[700px] rounded-lg bg-custom-grey"
+        class="mt-8 lg:mt-0 w-auto md:w-auto h-[700px] rounded-lg bg-custom-grey"
       />
 
       <div class="w-full md:w-[500px] lg:w-[50%]">
