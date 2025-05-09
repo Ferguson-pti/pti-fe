@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: pti
+    env: node
+    region: frankfurt
+    plan: starter
+    branch: main
+    buildCommand: npm i && npm run build
+    startCommand: node .output/server/index.mjs
+    envVars:
+      - key: NITRO_PRESET
+        value: render-com
