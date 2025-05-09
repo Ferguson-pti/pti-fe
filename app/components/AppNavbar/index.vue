@@ -23,6 +23,7 @@ const hideModal = () => {
       <NuxtLink :to="HOME_PAGE">
         <NuxtImg
           src="/ichst-black.png"
+          provider="sirv"
           alt="logo"
           class="h-12 md:h-14"
         />

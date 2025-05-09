@@ -4,6 +4,7 @@
       <div class="w-full lg:w-[49%] flex flex-row items-center justify-start">
         <NuxtImg
           src="/ichst-white.png"
+          provider="sirv"
           alt="logo"
           height="56"
         />
