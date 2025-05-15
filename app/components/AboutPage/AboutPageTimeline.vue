@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <section class="font-lexend relative w-full h-auto box-border flex flex-col items-start justify-start bg-custom-red py-20 px-4 md:px-10 lg:px-16">
+  <section class="font-lexend relative w-full h-auto box-border flex flex-col items-start justify-start bg-custom-red py-20 px-4 md:px-10 xl:px-16">
     <p class="text-4xl md:text-7xl font-medium mb-6 text-white">
       Timeline
     </p>

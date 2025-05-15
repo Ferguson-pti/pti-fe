@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <section class="w-full h-auto py-10 lg:py-20 px-4 md:px-10 lg:px-16 bg-custom-green flex flex-col items-start justify-start font-lexend">
+  <section class="w-full h-auto py-10 lg:py-20 px-4 md:px-10 xl:px-16 bg-custom-green flex flex-col items-start justify-start font-lexend">
     <div class="w-full h-auto flex flex-col lg:flex-row items-center justify-between rounded-lg overflow-hidden p-0 md:p-10">
       <div class="w-full lg:w-[55%] p-4 md:p-0">
         <p class="text-4xl md:text-7xl font-medium mb-6 text-white">

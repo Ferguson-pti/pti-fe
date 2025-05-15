@@ -24,7 +24,7 @@ const data = [
 </script>
 
 <template>
-  <section class="w-full py-20 px-4 md:px-10 lg:px-16 bg-custom-cream flex flex-col items-start justify-start font-lexend">
+  <section class="w-full py-20 px-4 md:px-10 xl:px-16 bg-custom-cream flex flex-col items-start justify-start font-lexend">
     <h1 class="text-4xl md:text-5xl lg:text-7xl text-custom-green w-[60%] font-medium">
       Secure Your Spot
     </h1>
