@@ -54,7 +54,6 @@ const onSubmit = handleSubmit(async (values) => {
 
     const documentId = fileResponse[0]!.id
 
-    console.log(values.upload[0])
     const { data: result }: AbstractPostResponse = await $fetch('http://localhost:1337/api/abstracts', {
       method: 'POST',
       body: {
@@ -69,11 +68,7 @@ const onSubmit = handleSubmit(async (values) => {
       },
     })
 
-    console.log(result)
-
-    const response1 = await $fetch(`/email/abstract/${result.documentId}`)
-
-    console.log(response1)
+    await $fetch(`/email/abstract/${result.documentId}`)
 
     toast.success({ title: 'Success!', message: 'Abstract submitted successfully.' })
 
@@ -153,7 +148,7 @@ const onSubmit = handleSubmit(async (values) => {
       <Icon
         v-show="loading"
         name="svg-spinners:180-ring"
-        class="size-4 text-white"
+        class="size-4"
       />
     </AppButton>
   </form>

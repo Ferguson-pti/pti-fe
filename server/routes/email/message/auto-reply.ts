@@ -1,6 +1,6 @@
 import { Resend } from 'resend'
 import { render } from '@vue-email/render'
-import AutoReply from '~~/emails/abstract/AutoReply.vue'
+import AutoReply from '~~/emails/message/AutoReply.vue'
 
 type RequestBody = {
   email: string
@@ -27,7 +27,7 @@ export default defineEventHandler(async (event) => {
   const mailOptions = {
     from: `${config.resendName} <${config.resendEmail}>`, // 'CypherCrescent Venture Studio <venturestudio@cyphercrescent.com>',
     to: email,
-    subject: 'Abstract Received: ICHST 2025',
+    subject: 'Message Received: ICHST 2025',
     html: templateHtml,
     text: templateText,
   }

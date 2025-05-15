@@ -1,5 +1,52 @@
 <script setup lang="ts">
+import { object, string } from 'zod'
 
+const loading = ref(false)
+const toast = useToast()
+
+const validationSchema = toTypedSchema(object({
+  name: string().nonempty('Name field is required').min(2, 'Enter a valid name'),
+  email: string().nonempty('Email field is required').email('Enter a valid email'),
+  message: string().nonempty('Message field is required').min(20, 'Minimum of 30 characters').max(500, 'Maximum of 800 characters'),
+}))
+
+const { handleSubmit, errors, resetForm } = useForm({
+  validationSchema,
+})
+
+const { value: name } = useField<string>('name')
+const { value: email } = useField<string>('email')
+const { value: message } = useField<string>('message')
+
+const onSubmit = handleSubmit(async (values) => {
+  try {
+    loading.value = true
+
+    const { data: result }: MessagePostResponse = await $fetch('http://localhost:1337/api/messages', {
+      method: 'POST',
+      body: {
+        data: {
+          name: values.name,
+          email: values.email,
+          message: values.message,
+        },
+      },
+    })
+
+    await $fetch(`/email/message/${result.documentId}`)
+
+    toast.success({ title: 'Success!', message: 'Message sent successfully.' })
+
+    resetForm()
+  }
+  catch (e) {
+    console.log(`An error occured: \n${e}`)
+    toast.error({ title: 'Error!', message: 'An error occured during form submission. Try again later.' })
+  }
+  finally {
+    loading.value = false
+  }
+})
 </script>
 
 <template>
@@ -16,24 +63,41 @@
           Contact us
         </p>
 
-        <form class="bg-white flex flex-col items-start justify-start p-8  rounded-lg">
+        <form
+          class="bg-white flex flex-col items-start justify-start p-8  rounded-lg"
+          @submit.prevent="onSubmit"
+        >
           <label class="text-sm mb-1.5">Name</label>
           <AppInput
+            v-model="name"
             style-class=""
             type="text"
           />
+          <span class="mt-1 text-red-700 text-xs">{{ errors.name }}</span>
 
-          <label class="text-sm mb-1.5">Email</label>
+          <label class="text-sm mb-1.5 mt-5">Email</label>
           <AppInput
+            v-model="email"
             style-class=""
             type="email"
           />
+          <span class="mt-1 text-red-700 text-xs">{{ errors.email }}</span>
 
-          <label class="text-sm mb-1.5">Message</label>
-          <textarea class="resize-none w-full h-32 mb-5 px-2.5 py-2 border border-slate-400 rounded-md" />
+          <label class="text-sm mb-1.5 mt-5">Message</label>
+          <textarea
+            v-model="message"
+            class="resize-none w-full h-32 px-2.5 py-2 border border-slate-400 rounded-md"
+          />
+          <span class="mt-1 text-red-700 text-xs mb-5">{{ errors.message }}</span>
 
-          <AppButton style-class="mt-6 text-custom-red border border-custom-red bg-white hover:bg-custom-red hover:text-white">
-            SEND MESSAGE
+          <AppButton style-class="w-40 mt-6 text-custom-red border border-custom-red bg-white hover:bg-custom-red hover:text-white flex items-center justify-center">
+            <span v-show="!loading">SEND MESSAGE</span>
+
+            <Icon
+              v-show="loading"
+              name="svg-spinners:180-ring"
+              class="size-4"
+            />
           </AppButton>
         </form>
 

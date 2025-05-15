@@ -55,3 +55,18 @@ interface PopulatedAbstractResponse extends AbstractPostResponse {
     }
   }
 }
+
+interface StrapiMessageData {
+  createdAt: string
+  documentId: string
+  email: string
+  id: number
+  message: string
+  name: string
+  publishedAt: string
+  updatedAt: string
+}
+
+interface MessagePostResponse {
+  data: StrapiMessageData
+}
