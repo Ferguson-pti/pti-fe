@@ -4,7 +4,7 @@
 
 <template>
   <section class="w-full h-auto py-20 px-4 md:px-10 xl:px-16 bg-custom-red flex flex-col items-start justify-start font-lexend">
-    <div class="w-full h-auto flex flex-col-reverse lg:flex-row items-center justify-between rounded-lg overflow-hidden p-0 md:p-10">
+    <div class="w-full h-auto flex flex-col-reverse lg:flex-row items-center justify-between rounded-lg overflow-hidden p-0 md:p-10 lg:p-0 xl:p-10 gap-10">
       <NuxtImg
         src="pexels-davidmcelwee-11142768.webp"
         provider="sirv"
@@ -16,7 +16,7 @@
           Contact us
         </p>
 
-        <form class="bg-white flex flex-col items-start justify-start p-8 rounded-lg">
+        <form class="bg-white flex flex-col items-start justify-start p-8  rounded-lg">
           <label class="text-sm mb-1.5">Name</label>
           <AppInput
             style-class=""

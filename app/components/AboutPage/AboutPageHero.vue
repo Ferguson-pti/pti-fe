@@ -22,7 +22,7 @@
     <NuxtImg
       src="whoweare.webp"
       provider="sirv"
-      class="mt-10 bg-custom-grey w-full lg:w-[500px] rounded-lg"
+      class="mt-10 bg-custom-grey w-full lg:w-[400px] xl:w-[500px] rounded-lg"
     />
   </section>
 </template>

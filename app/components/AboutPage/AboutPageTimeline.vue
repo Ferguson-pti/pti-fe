@@ -12,10 +12,10 @@
       <NuxtImg
         src="gabriel-xavier-ZdGNogZXBa0-unsplash.webp"
         provider="sirv"
-        class="hidden md:flex md:w-[350px] lg:w-[480px] bg-custom-grey rounded-xl"
+        class="hidden md:flex md:w-[350px] lg:w-[400px] xl:w-[480px] bg-custom-grey rounded-xl"
       />
 
-      <div class="md:w-[46%] lg:w-[55%] flex flex-col items-start justify-start">
+      <div class="w-full md:w-[46%] lg:w-[55%] flex flex-col items-start justify-start">
         <div class="w-full flex flex-row items-start justify-between border-b border-white py-8 px-5">
           <p class="text-5xl md:text-6xl font-bold text-white">
             1
