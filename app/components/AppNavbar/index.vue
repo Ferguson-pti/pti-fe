@@ -15,6 +15,18 @@ const toggleModal = () => {
 const hideModal = () => {
   showMenuModal.value = false
 }
+
+const testing = async () => {
+  const res = await $fetch('/api/abstract', {
+    method: 'POST',
+    body: {
+      email: 'chukwurophi@gmail.com',
+      message: 'Yo just a message',
+    },
+  })
+
+  console.log(res)
+}
 </script>
 
 <template>
@@ -66,7 +78,10 @@ const hideModal = () => {
         </AppNavbarLink>
       </ul>
 
-      <AppButton style-class="hidden lg:flex bg-custom-red border text-white hover:bg-white hover:text-custom-red hover:border-custom-red">
+      <AppButton
+        style-class="hidden lg:flex bg-custom-red border text-white hover:bg-white hover:text-custom-red hover:border-custom-red"
+        @click="testing()"
+      >
         GET TICKETS NOW
       </AppButton>
 

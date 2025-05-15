@@ -10,6 +10,8 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/icon',
     '@vee-validate/nuxt',
+    '@nuxtjs/strapi',
+    'nuxt-toast',
   ],
 
   devtools: { enabled: true },

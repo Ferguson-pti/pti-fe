@@ -4,8 +4,8 @@
 
 <template>
   <section class="w-full h-auto  py-4 md:py-10 lg:py-20 px-4 md:px-10 lg:px-16 bg-custom-red flex flex-col items-start justify-start font-lexend">
-    <div class="w-full h-auto lg:h-80 flex flex-col-reverse lg:flex-row items-center justify-between rounded-xl overflow-hidden">
-      <div class="w-full lg:w-[50%] p-4 md:p-10">
+    <div class="relative w-full h-auto lg:h-80 flex flex-col-reverse lg:flex-row-reverse items-center justify-between rounded-xl overflow-hidden">
+      <div class="absolute left-0 bg-custom-red w-full lg:w-[50%] h-full p-4 md:p-10">
         <p class="text-3xl md:text-5xl lg:text-6xl font-medium mb-6 text-white font-medium">
           Help Center
         </p>

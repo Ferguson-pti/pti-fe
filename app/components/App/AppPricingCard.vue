@@ -8,10 +8,10 @@ defineProps<{
 </script>
 
 <template>
-  <article class="rounded-xl h-90 bg-white p-10 flex flex-col items-center cursor-pointer hover:shadow-lg duration-300">
+  <article class="rounded-xl h-90 bg-white p-10 lg:p-8 xl:p-10 flex flex-col items-center cursor-pointer hover:shadow-lg duration-300">
     <span class="text-custom-gold mx-auto text-sm font-medium mb-6 underline underline-offset-4">DISCOUNT ACTIVE</span>
 
-    <h1 class="text-2xl font-medium">
+    <h1 class="text-2xl lg:text-xl xl:text-2xl font-medium">
       {{ name }}
     </h1>
 
