@@ -9,7 +9,7 @@ import Bubble2 from '../Bubble-2.vue'
   <section
     class="
         relative w-full h-auto lg:h-[90vh] flex flex-row items-start justify-between
-        py-10 md:py-16 lg:pt-16 lg:pb-0 px-4 md:px-10 lg:px-16
+        py-10 md:py-16 lg:pt-16 lg:pb-0 px-4 md:px-10 xl:px-16
     "
   >
     <div class="flex flex-col items-start justify-start w-full lg:w-[55%] bg-custom-green px-4 md:px-10 py-10 rounded-lg z-10">

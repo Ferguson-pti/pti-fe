@@ -21,7 +21,7 @@ const renderedItems = data.map((item, index) =>
   <section
     class="
       relative w-full h-auto lg:h-[80vh] flex flex-col-reverse lg:flex-row items-start justify-between
-      py-20 px-4 md:px-10 lg:px-16 bg-custom-cream overflow-visible
+      py-20 px-4 md:px-10 xl:px-16 bg-custom-cream overflow-visible
     "
   >
     <div

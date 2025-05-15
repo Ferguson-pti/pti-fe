@@ -3,8 +3,8 @@
 </script>
 
 <template>
-  <section class="w-full py-10 lg:py-20 px-4 md:px-10 lg:px-16 bg-custom-red flex flex-col items-center justify-center font-lexend">
-    <div class="w-full p-4 md:p-10 rounded-lg">
+  <section class="w-full py-10 lg:py-20 px-4 md:px-10 xl:px-16 bg-custom-red flex flex-col items-center justify-center font-lexend">
+    <div class="w-full py-4 md:py-10 rounded-lg">
       <h1 class="text-4xl md:text-5xl lg:text-7xl text-white w-[55%] mb-6 font-medium">
         Featured Speakers
       </h1>

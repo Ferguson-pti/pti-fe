@@ -66,9 +66,13 @@ const hideModal = () => {
         </AppNavbarLink>
       </ul>
 
-      <AppButton style-class="hidden lg:flex bg-custom-red border text-white hover:bg-white hover:text-custom-red hover:border-custom-red">
-        GET TICKETS NOW
-      </AppButton>
+      <NuxtLink :to="REGISTER_PAGE">
+        <AppButton
+          style-class="hidden lg:flex bg-custom-red border text-white hover:bg-white hover:text-custom-red hover:border-custom-red"
+        >
+          GET TICKETS NOW
+        </AppButton>
+      </NuxtLink>
 
       <Icon
         v-show="!showMenuModal"
