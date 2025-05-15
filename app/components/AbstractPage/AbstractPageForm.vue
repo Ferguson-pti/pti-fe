@@ -2,6 +2,7 @@
 import { object, string, any } from 'zod'
 import { toTypedSchema } from '@vee-validate/zod'
 
+const loading = ref(false)
 const toast = useToast()
 
 const CATEGORIES = [
@@ -42,6 +43,7 @@ const { value: upload } = useField<FileList>('upload')
 
 const onSubmit = handleSubmit(async (values) => {
   try {
+    loading.value = true
     const fileForm = new FormData()
     fileForm.append('files', values.upload[0])
 
@@ -53,7 +55,7 @@ const onSubmit = handleSubmit(async (values) => {
     const documentId = fileResponse[0]!.id
 
     console.log(values.upload[0])
-    const response = await $fetch('http://localhost:1337/api/abstracts', {
+    const { data: result }: AbstractPostResponse = await $fetch('http://localhost:1337/api/abstracts', {
       method: 'POST',
       body: {
         data: {
@@ -67,7 +69,11 @@ const onSubmit = handleSubmit(async (values) => {
       },
     })
 
-    console.log(response)
+    console.log(result)
+
+    const response1 = await $fetch(`/email/abstract/${result.documentId}`)
+
+    console.log(response1)
 
     toast.success({ title: 'Success!', message: 'Abstract submitted successfully.' })
 
@@ -77,6 +83,9 @@ const onSubmit = handleSubmit(async (values) => {
   catch (e) {
     console.log(`An error occured: \n${e}`)
     toast.error({ title: 'Error!', message: 'An error occured during form submission. Try again later.' })
+  }
+  finally {
+    loading.value = false
   }
 })
 </script>
@@ -138,8 +147,14 @@ const onSubmit = handleSubmit(async (values) => {
     />
     <span class="mt-1 text-red-700 text-xs">{{ errors.upload }}</span>
 
-    <AppButton style-class="mt-12 text-white border border-custom-red bg-custom-red hover:bg-white hover:text-custom-red">
-      SUBMIT
+    <AppButton style-class="mt-12 text-white border border-custom-red bg-custom-red hover:bg-white hover:text-custom-red flex items-center justify-center">
+      <span v-show="!loading">SUBMIT</span>
+
+      <Icon
+        v-show="loading"
+        name="svg-spinners:180-ring"
+        class="size-4 text-white"
+      />
     </AppButton>
   </form>
 </template>

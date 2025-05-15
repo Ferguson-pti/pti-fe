@@ -13,3 +13,45 @@ interface DocumentUploadResponse {
   createdAt: string
   updatedAt: string
 }
+
+interface StrapiAbstractData {
+  category: string
+  createdAt: string
+  documentId: string
+  email: string
+  id: string
+  name: string
+  organisation: string
+  phone: string
+  publishedAt: string
+  updatedAt: string
+}
+
+interface AbstractPostResponse {
+  data: StrapiAbstractData
+}
+
+interface PopulatedAbstractResponse extends AbstractPostResponse {
+  data: AbstractPostResponse['data'] & {
+    upload: {
+      alternativeText: null
+      caption: null
+      createdAt: string
+      documentId: string
+      ext: string
+      formats: null
+      hash: string
+      height: null
+      id: number
+      mime: string
+      name: string
+      previewUrl: null
+      provider: string
+      provider_metadata: string | null
+      publishedAt: string
+      size: number
+      updatedAt: string
+      url: string
+    }
+  }
+}
