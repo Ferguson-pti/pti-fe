@@ -8,8 +8,8 @@ import Bubble2 from '../Bubble-2.vue'
 <template>
   <section
     class="
-        relative w-full h-auto lg:h-[90vh] flex flex-row items-start justify-between
-        py-10 md:py-16 lg:pt-16 lg:pb-0 px-4 md:px-10 xl:px-16
+        relative w-full h-auto xl:h-[90vh] flex flex-row items-start justify-between
+        py-10 md:py-16 px-4 md:px-10 xl:px-16
     "
   >
     <div class="flex flex-col items-start justify-start w-full lg:w-[55%] bg-custom-green px-4 md:px-10 py-10 rounded-lg z-10">
@@ -18,7 +18,7 @@ import Bubble2 from '../Bubble-2.vue'
         <span class="font-lexend text-sm font-medium mb-8">PTDF TOWERS, CENTRAL BUSINESS DISTRICT, ABUJA, NIGERIA</span>
       </div>
 
-      <span class="font-lexend font-medium text-4xl md:text-5xl lg:text-6xl text-white">Transforming Africa’s Hydrocarbon Sector</span>
+      <span class="font-lexend font-medium text-4xl md:text-5xl xl:text-6xl text-white">Transforming Africa’s Hydrocarbon Sector</span>
 
       <NuxtImg
         src="ptdf.webp"
@@ -27,11 +27,12 @@ import Bubble2 from '../Bubble-2.vue'
       />
 
       <span class="font-lexend mt-6 text-custom-grey">
-        (ICHST) is organized biennially to promote technological advancement, enhance research, and provide
-        knowledge-sharing platforms across the oil and gas industry spectrum
+        International Conference on Hydrocarbon Science and Technology (ICHST) is organized by the Petroleum Training Institute, the foremost
+        petroleum technological institute in Sub-Saharan Africa. It is organized biennially to promote technological advancement, enhance
+        research, and provide knowledge-sharing platforms across the oil and gas industry spectrum.
       </span>
 
-      <div class="mt-6 md:mt-12 mb-4 text-custom-gold text-xl font-medium font-lexend">
+      <div class="mt-6 md:mt-12 mb-4 text-custom-gold font-medium font-lexend">
         THE CONFERENCE BEGINS IN
       </div>
       <AppCountdown

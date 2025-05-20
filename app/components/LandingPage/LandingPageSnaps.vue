@@ -40,11 +40,11 @@ const renderedItems2 = urls.map((url, index) =>
 <template>
   <section class="w-full py-20 px-4 md:px-10 xl:px-16 bg-custom-green flex flex-col items-start justify-start font-lexend">
     <p class="text-4xl font-medium text-white">
-      Snaps from ICHST 2024
+      Snaps from ICHST 2023
     </p>
 
     <p class="mt-6 text-custom-grey">
-      Relive some favorite moments from INBOUND 2024
+      Relive yourself with some favorite moments from INBOUND 2023
     </p>
 
     <div class="mt-10 w-full">

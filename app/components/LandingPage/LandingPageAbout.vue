@@ -20,7 +20,7 @@ const renderedItems = data.map((item, index) =>
 <template>
   <section
     class="
-      relative w-full h-auto lg:h-[80vh] flex flex-col-reverse lg:flex-row items-start justify-between
+      relative w-full h-auto xl:h-[80vh] flex flex-col-reverse lg:flex-row items-start justify-between
       py-20 px-4 md:px-10 xl:px-16 bg-custom-cream overflow-visible
     "
   >
@@ -43,9 +43,11 @@ const renderedItems = data.map((item, index) =>
         What is ICHST?
       </p>
       <p class="font-light text-black">
-        ICHST <strong class="font-semibold">(INTERNATIONAL CONFERENCE ON HYDROCARBON SCIENCE & TECHNOLOGY)</strong> is where subject matter experts, leading
-        researchers, academicians, and top players in the oil and gas industry come together to examine topical issues of great relevance
-        to the present and future development of the sector, with a focus on technological advancements and breakthroughs.
+        <strong class="font-semibold">International Conference on Hydrocarbon Science and Technology (ICHST)</strong> is where subject matter
+        experts, leading researchers, academicians, and top players in the oil and gas industry come together to examine topical issues of great
+        relevance to the present and future development of the sector, with a focus on technological advancements and breakthroughs. The first and
+        second edition was held at the Petroleum Training Institute, Effurun, in 2019 and 2021, respectively. The third edition was held at the '
+        PTDF Towers, Abuja, in 2023. The fourth edition is also scheduled to be held at the PTDF towers, Abuja on the 22nd and 23rd of October, 2025.
       </p>
 
       <Bubble4 style-class="absolute -bottom-4 -right-28 md:bottom-0 md:right-0" />

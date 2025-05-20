@@ -3,7 +3,7 @@ import { AppPricingCard } from '#components'
 
 const data = [
   {
-    name: 'PTI Staff/Lecturers',
+    name: 'Academia',
     price: '₦60,000',
     discount: '₦50,000',
     percent: '16%',
@@ -18,6 +18,12 @@ const data = [
     name: 'Students',
     price: '₦25,000',
     discount: '₦20,000',
+    percent: '20%',
+  },
+  {
+    name: 'International',
+    price: '$150',
+    discount: '$150',
     percent: '20%',
   },
 ]

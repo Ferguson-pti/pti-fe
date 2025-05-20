@@ -25,7 +25,7 @@ const hideModal = () => {
           src="/ichst-black.png"
           provider="sirv"
           alt="logo"
-          class="h-12 md:h-14"
+          class="h-10 md:h-14"
         />
       </NuxtLink>
 

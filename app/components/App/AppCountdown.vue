@@ -7,7 +7,7 @@ withDefaults(defineProps<{
   textColor: 'text-black',
 })
 
-const ending = new Date(2025, 6, 5).getTime() // 5th July 2025 (milliseconds since epoch)
+const ending = new Date(2025, 7, 22).getTime() // 22nd August 2025 (milliseconds since epoch)
 const now = ref(Date.now())
 
 const { remaining, start } = useCountdown(Math.floor((ending - now.value) / 1000))
