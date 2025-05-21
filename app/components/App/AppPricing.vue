@@ -40,7 +40,9 @@ const data = [
     <p class="mt-8 mx-auto mb-4 text-custom-red">
       EARLY BIRD DISCOUNT ENDS IN:
     </p>
-    <AppCountdown />
+    <AppCountdown
+      :deadline="new Date(2025, 7, 22).getTime() /*22nd August 2025*/"
+    />
 
     <div class="mt-10 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-1 gap-8 lg:gap-6 xl:gap-20">
       <AppPricingCard

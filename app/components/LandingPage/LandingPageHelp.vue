@@ -14,9 +14,11 @@
           Have questions about ICHST? Check out our Help Center for everything you need to know about joining us in Abuja.
         </p>
 
-        <AppButton style-class="text-white border border-white bg-custom-red hover:bg-white hover:text-custom-red">
-          VISIT THE HELP CENTER
-        </AppButton>
+        <NuxtLink href="/help">
+          <AppButton style-class="text-white border border-white bg-custom-red hover:bg-white hover:text-custom-red">
+            VISIT THE HELP CENTER
+          </AppButton>
+        </NuxtLink>
       </div>
 
       <NuxtImg

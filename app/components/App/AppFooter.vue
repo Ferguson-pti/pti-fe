@@ -3,7 +3,7 @@
     <div class="w-full flex flex-col lg:flex-row items-start justify-between font-lexend">
       <div class="w-full lg:w-[49%] flex flex-row items-center justify-start">
         <NuxtImg
-          src="/ichst-white.png"
+          src="/logo-white.png"
           provider="sirv"
           alt="logo"
           height="56"
@@ -16,33 +16,60 @@
         </p>
 
         <span class="mt-8 lg:mt-0 ml-0 lg:ml-10 flex flex-row items-center justify-end">
-          <div class="w-10 h-10 flex items-center justify-center bg-black hover:bg-custom-red cursor-pointer duration-300 rounded-full mr-4">
+          <NuxtLink
+            href="https://x.com/ICHST_PTI"
+            target="_blank"
+            class="w-10 h-10 flex items-center justify-center bg-black hover:bg-custom-red cursor-pointer duration-300 rounded-full mr-4"
+          >
             <Icon
               name="fa6-brands:x-twitter"
               class="size-5 text-white"
             />
-          </div>
-          <div class="w-10 h-10 flex items-center justify-center bg-black hover:bg-custom-red cursor-pointer duration-300 rounded-full mr-4">
+          </NuxtLink>
+          <NuxtLink
+            href="https://www.facebook.com/ICHST.PTI"
+            target="_blank"
+            class="w-10 h-10 flex items-center justify-center bg-black hover:bg-custom-red cursor-pointer duration-300 rounded-full mr-4"
+          >
             <Icon
               name="fa6-brands:facebook-f"
               class="size-5"
               color="white"
             />
-          </div>
-          <div class="w-10 h-10 flex items-center justify-center bg-black hover:bg-custom-red cursor-pointer duration-300 rounded-full mr-4">
+          </NuxtLink>
+          <NuxtLink
+            href="https://www.instagram.com/ichst_pti"
+            target="_blank"
+            class="w-10 h-10 flex items-center justify-center bg-black hover:bg-custom-red cursor-pointer duration-300 rounded-full mr-4"
+          >
             <Icon
               name="fa6-brands:instagram"
               class="size-5"
               color="white"
             />
-          </div>
-          <div class="w-10 h-10 flex items-center justify-center bg-black hover:bg-custom-red cursor-pointer duration-300 rounded-full mr-4">
+          </NuxtLink>
+          <NuxtLink
+            href="https://www.linkedin.com/company/international-conference-on-hydrocarbon-science-and-technology-ichst/"
+            target="_blank"
+            class="w-10 h-10 flex items-center justify-center bg-black hover:bg-custom-red cursor-pointer duration-300 rounded-full mr-4"
+          >
             <Icon
               name="fa6-brands:linkedin-in"
               class="size-5"
               color="white"
             />
-          </div>
+          </NuxtLink>
+          <NuxtLink
+            href="https://youtube.com/@ichstpti6732?si=02Us6PGSIKnJF3-K"
+            target="_blank"
+            class="w-10 h-10 flex items-center justify-center bg-black hover:bg-custom-red cursor-pointer duration-300 rounded-full mr-4"
+          >
+            <Icon
+              name="fa6-brands:youtube"
+              class="size-5"
+              color="white"
+            />
+          </NuxtLink>
         </span>
       </div>
     </div>

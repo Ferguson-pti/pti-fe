@@ -36,6 +36,7 @@ import Bubble2 from '../Bubble-2.vue'
         THE CONFERENCE BEGINS IN
       </div>
       <AppCountdown
+        :deadline="new Date(2025, 9, 22).getTime() /*22nd October 2025*/"
         style-class="sm"
         text-color="text-custom-gold"
       />

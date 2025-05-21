@@ -22,10 +22,10 @@ const hideModal = () => {
     <div :class="`${visible?'top-0':'-top-24'} absolute bg-white flex flex-row justify-between items-center w-full py-4.5 px-4 md:px-8 lg:px-10 duration-300`">
       <NuxtLink :to="HOME_PAGE">
         <NuxtImg
-          src="/ichst-black.png"
+          src="/logo-black.png"
           provider="sirv"
           alt="logo"
-          class="h-10 md:h-14"
+          class="h-10 md:h-16"
         />
       </NuxtLink>
 
@@ -76,7 +76,7 @@ const hideModal = () => {
 
       <Icon
         v-show="!showMenuModal"
-        name="fa6-solid:align-justify"
+        name="solar:hamburger-menu-broken"
         class="size-5 absolute right-4 md:right-8 lg:right-10 text-black flex lg:hidden"
         @click="toggleModal"
       />

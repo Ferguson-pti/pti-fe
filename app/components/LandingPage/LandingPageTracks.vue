@@ -7,16 +7,16 @@ const { width } = useWindowSize()
 
 const data = [
   {
+    title: 'Ethical Leadership and Transparency in the Hydrocarbon Sector: A Governance Imperative',
+    body: 'This sub-theme explores the evolving role of corporate governance in the hydrocarbon sector, highlighting the need for companies to adapt their governance practices in response to innovation, emerging risks, and the increasing demand for accountability. It emphasizes the importance of ethical leadership and transparency, ensuring companies uphold high standards of decision-making, compliance, and stakeholder accountability. The discussions will focus on the integration of sustainable growth strategies, digitalization, and risk management practices that drive long-term value creation. Additionally, it will explore how governance frameworks can promote ethical corporate cultures, strengthen public trust, and support the industry\'s resilience amid global market changes, environmental challenges, and societal expectations.',
+  },
+  {
     title: 'Financing Sustainable Hydrocarbon Projects: Balancing Investment, ESG Compliance, and Africa’s Development Imperatives',
     body: 'Africa’s hydrocarbon sector requires massive investments to unlock its potential, estimated at 125 billion barrels of oil and 620 trillion cubic feet of natural gas. However, global pressures to divest from fossil fuels, tightening Environmental, Social, and Governance (ESG) standards, and Africa’s urgent need for energy access and industrialization create a financing paradox. This sub-theme explores innovative funding mechanisms, policy frameworks, and partnerships to attract capital for hydrocarbon projects that align with sustainability goals and Africa’s socioeconomic priorities.',
   },
   {
     title: 'Redefining Hydrocarbon Energy: Leveraging Transformative Technologies to Safeguard the Environment',
-    body: 'This theme explores how emerging technologies are transforming the hydrocarbon industry, enabling companies to mitigate environmental risks. It focuses on innovations such as cleaner hydrocarbon extraction methods, zero-emission technologies, and environmental monitoring systems that reduce the sector\'s carbon footprint and enhance sustainability in fossil energy production.',
-  },
-  {
-    title: 'Ethical Leadership and Transparency in the Hydrocarbon Sector: A Governance Imperative',
-    body: 'This theme explores the evolving role of corporate governance in the hydrocarbon sector, highlighting the need for companies to adapt their governance practices in response to innovation, emerging risks, and the increasing demand for accountability. It emphasizes the importance of ethical leadership and transparency, ensuring companies uphold high standards of decision-making, compliance, and stakeholder accountability. The discussions will focus on the integration of sustainable growth strategies, digitalization, and risk management practices that drive long-term value creation. Additionally, it will explore how governance frameworks can promote ethical corporate cultures, strengthen public trust, and support the industry\'s resilience amid global market changes, environmental challenges, and societal expectations.',
+    body: 'This sub-theme explores how emerging technologies are transforming the hydrocarbon industry, enabling companies to mitigate environmental risks. It focuses on innovations such as cleaner hydrocarbon extraction methods, zero-emission technologies, and environmental monitoring systems that reduce the sector\'s carbon footprint and enhance sustainability in fossil energy production.',
   },
 ]
 

@@ -2,6 +2,10 @@
 import { useScroll } from '@vueuse/core'
 import { AppFooter } from '#components'
 
+const el = useTemplateRef<HTMLElement>('el')
+const { y } = useScroll(el)
+const navbarVisible = ref(true)
+
 useHead({
   title: 'ICHST',
 })
@@ -25,11 +29,11 @@ watch(route, () => {
     default:
       break
   }
-}, { immediate: true })
 
-const el = useTemplateRef<HTMLElement>('el')
-const { y } = useScroll(el)
-const navbarVisible = ref(true)
+  if (el.value) {
+    el.value.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+}, { immediate: true })
 
 watch(y, (newValue, oldValue) => {
   // Set navbar visibility

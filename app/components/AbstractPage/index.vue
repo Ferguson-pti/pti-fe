@@ -17,6 +17,10 @@
           <span class="text-custom-red font-medium">ICHST 2025</span>, taking place on
           <span class="text-custom-red font-medium">22-23 OCTOBER 2025</span>. This is your opportunity to contribute to the conversation,
           share your insights, and shape the future of <span class="text-custom-red font-medium">Africa's Hydrocarbon Sector</span>.
+          <br>
+          We invite you to submit your abstract first in any of the categories indicated in the abstract submission guide.
+          <br>
+          Kindly take note of the deadlines for each submission.
         </p>
 
         <a
