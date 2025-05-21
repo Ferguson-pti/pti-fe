@@ -1,5 +1,5 @@
 <template>
-  <footer class="w-full h-auto flex flex-col items-center justify-start pt-8 pb-16 px-4 md:px-8 lg:px-10 xl:px-20 2xl:px-48 bg-custom-green">
+  <footer class="w-full h-auto flex flex-col items-center justify-start pt-8 pb-4 md:pb-16 px-4 md:px-8 lg:px-10 xl:px-20 2xl:px-48 bg-custom-green">
     <div class="w-full flex flex-col lg:flex-row items-start justify-between font-lexend">
       <div class="w-full lg:w-[49%] flex flex-row items-center justify-start">
         <NuxtImg
@@ -81,8 +81,7 @@
         </p>
         <p class="mt-4 text-custom-grey text-xs">
           We’re committed to your privacy. PTI uses the information you provide to us to contact you about PTI content and events.
-          You may unsubscribe from these communications at any time. For more information, check out our
-          <a class="underline cursor-pointer">privacy policy</a>.
+          You may unsubscribe from these communications at any time. For more information, check out our privacy policy below.
         </p>
       </div>
     </div>

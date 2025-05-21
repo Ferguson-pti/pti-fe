@@ -9,7 +9,8 @@ import Bubble2 from '../Bubble-2.vue'
   <AppSectionWrapper>
     <div
       class="
-        relative w-full h-auto xl:h-[800px] flex flex-row items-start justify-between lg:pt-10 xl:pt-20 pb-16 lg:pb-20 xl:pb-32
+        relative w-full h-auto xl:h-[800px] 2xl:h-[850px] flex flex-row items-start justify-between
+        lg:pt-10 xl:pt-20 pb-16 lg:pb-20 xl:pb-32 2xl:pb-40
     "
     >
       <div class="flex flex-col items-start justify-start w-full lg:w-[55%] bg-custom-green px-4 md:px-10 py-6 md:py-10 rounded-lg z-10">
@@ -18,9 +19,9 @@ import Bubble2 from '../Bubble-2.vue'
           <span class="font-lexend text-xs md:text-sm font-medium mb-8">PTDF TOWERS, CENTRAL BUSINESS DISTRICT, ABUJA, NIGERIA</span>
         </div>
 
-        <span class="font-lexend font-medium text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl text-white">
+        <p class="font-lexend font-medium text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl text-white">
           Transforming Africa’s Hydrocarbon Sector: <span class="text-custom-red">Balancing Growth, Environment and Governance</span>
-        </span>
+        </p>
 
         <NuxtImg
           src="ptdf.webp"
@@ -34,7 +35,7 @@ import Bubble2 from '../Bubble-2.vue'
           research, and provide knowledge-sharing platforms across the oil and gas industry spectrum.
         </span>
 
-        <div class="w-full text-center md:text-left mt-6 md:mt-10 mb-2 text-xs md:text-base text-custom-gold font-medium font-lexend ">
+        <div class="w-full text-center md:text-left mt-6 md:mt-10 mb-3 text-xs md:text-base text-custom-gold font-medium font-lexend ">
           THE CONFERENCE BEGINS IN
         </div>
 
@@ -44,8 +45,8 @@ import Bubble2 from '../Bubble-2.vue'
           container-class="w-full h-auto flex md:hidden flex-row items-center justify-center md:justify-start"
           style-class="flex flex-col md:flex-row items-center md:items-end justify-center md:gap-2"
           text-color="text-custom-gold"
-          number-size="text-base md:text-4xl"
-          text-size="text-xs md:text-lg"
+          number-size="text-xl md:text-4xl"
+          text-size="text-sm md:text-lg"
           :abbrev="true"
         />
 
