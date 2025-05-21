@@ -39,20 +39,20 @@ const renderedItems2 = urls.map((url, index) =>
 
 <template>
   <AppSectionWrapper>
-    <div class="w-full py-14 md:py-20 lg:py-24 bg-custom-green flex flex-col items-start justify-start font-lexend">
-      <p class="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl font-medium text-white">
+    <div class="w-full py-14 md:py-20 lg:py-24 bg-custom-green flex flex-col items-center justify-start font-lexend">
+      <p class="w-full text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl font-medium text-white">
         Snaps from ICHST 2023
       </p>
 
-      <p class="mt-6 text-sm md:text-base 2xl:text-xl text-custom-grey">
+      <p class="w-full mt-6 text-sm md:text-base 2xl:text-xl text-custom-grey">
         Relive yourself with some favorite moments from INBOUND 2023
       </p>
 
-      <div class="mt-10 w-full">
+      <div class="mt-10 w-[100vw]">
         <AppSwiper
           :items="renderedItems1"
           style-class=""
-          :slides-per-view="width<=400 ? 1.2 : width<=900 ? 2.1 : width<=1024 ? 2.8 : 3.7"
+          :slides-per-view="width<=400 ? 1.3 : width<=900 ? 2.3 : width<=1024 ? 3.2 : width<=1440 ? 3.8 : 4.5"
           :pagination="false"
           :autoplay="true"
           :speed="1000"
@@ -62,12 +62,12 @@ const renderedItems2 = urls.map((url, index) =>
 
       <div
         dir="rtl"
-        class="mt-4 w-full"
+        class="mt-2 md:mt-4 lg:mt-1 xl:mt-8 2xl:mt-10 w-[100vw]"
       >
         <AppSwiper
           :items="renderedItems2"
           style-class=""
-          :slides-per-view="width<=400 ? 1.2 : width<=900 ? 2.1 : width<=1024 ? 2.8 : 3.7"
+          :slides-per-view="width<=400 ? 1.3 : width<=900 ? 2.3 : width<=1024 ? 3.2 : width<=1440 ? 3.8 : 4.5"
           :pagination="false"
           :autoplay="true"
           :speed="1000"
