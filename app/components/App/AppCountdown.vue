@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const { deadline, abbrev } = withDefaults(defineProps<{
   deadline: number //  (milliseconds since epoch)
+  containerClass?: string
   styleClass?: string
   textColor?: string
   numberSize?: string
@@ -58,8 +59,7 @@ onMounted(() => {
 
 <template>
   <div
-    :class="`w-auto flex flex-row items-center gap-5
-    ${styleClass==='sm'?'justify-center md:justify-start':'justify-center'}
+    :class="`${containerClass} gap-5
     ${textColor}
     font-lexend`"
   >

@@ -18,6 +18,7 @@ const hide = () => {
       <!-- For mobile -->
       <AppCountdown
         :deadline="new Date(2025, 9, 22).getTime() /*22nd October 2025*/"
+        container-class="w-auto flex flex-row items-center justify-center"
         style-class="flex md:hidden flex-col md:flex-row justify-center items-center md:gap-1"
         text-color="w-full mt-1 md:mt-0 text-white"
         text-size="text-xs md:text-sm 2xl:text-lg"
@@ -28,6 +29,7 @@ const hide = () => {
       <!-- For larger screens -->
       <AppCountdown
         :deadline="new Date(2025, 9, 22).getTime() /*22nd October 2025*/"
+        container-class="w-auto flex flex-row items-center"
         style-class="hidden md:flex flex-col md:flex-row justify-center items-center md:gap-1"
         text-color="w-full mt-1 md:mt-0 text-white"
         text-size="text-xs md:text-sm 2xl:text-lg"
