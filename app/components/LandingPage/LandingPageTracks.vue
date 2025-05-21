@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { h } from 'vue'
 import { useWindowSize } from '@vueuse/core'
+import AppSectionWrapper from '../App/AppSectionWrapper.vue'
 import TrackCard from './LandingPageTrackCard.vue'
 
 const { width } = useWindowSize()
@@ -34,27 +35,29 @@ const renderedItems = data.map((item, index) =>
 </script>
 
 <template>
-  <section class="w-full py-16 md:py-20 px-4 md:px-10 xl:px-16 bg-custom-cream flex flex-col items-start justify-start font-lexend">
-    <h1 class="text-5xl md:text-7xl text-custom-red w-[60%] font-medium">
-      Tracks
-    </h1>
+  <AppSectionWrapper bg="bg-custom-cream">
+    <div class="w-full py-16 md:py-20 flex flex-col items-start justify-start font-lexend">
+      <h1 class="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl text-custom-red w-[60%] font-medium">
+        Tracks
+      </h1>
 
-    <p class="text-black w-[90%] md:w-[70%] mt-4 font-light text-md md:text-lg">
-      Get a first look at the tracks to be touched by industry experts during the course of this conference session. These topics are all
-      high impact that play a key role affect Africa's Hydrocarbon Sector.
-    </p>
+      <p class="text-black w-[90%] md:w-[70%] mt-4 font-light text-sm md:text-base 2xl:text-xl">
+        Get a first look at the tracks to be touched by industry experts during the course of this conference session. These topics are all
+        high impact that play a key role affect Africa's Hydrocarbon Sector.
+      </p>
 
-    <div class="flex w-full">
-      <AppSwiper
-        style-class="mt-10 w-full"
-        :items="renderedItems"
-        :autoplay="false"
-        ::space-between="width<=400 ? 10 : 0"
-        :pagination="{ clickable: true }"
-        color="#D0262F"
-        :loop="false"
-        :slides-per-view="width<=900 ? 1 : 1.5"
-      />
+      <div class="flex w-full lg:w-[100vw]">
+        <AppSwiper
+          style-class="mt-10 w-full"
+          :items="renderedItems"
+          :autoplay="false"
+          ::space-between="width<=400 ? 10 : 0"
+          :pagination="{ clickable: true }"
+          color="#D0262F"
+          :loop="false"
+          :slides-per-view="width<=900 ? 1 : width<=1050 ? 1.3 : width<=1600 ? 1.5 : 1.8"
+        />
+      </div>
     </div>
-  </section>
+  </AppSectionWrapper>
 </template>

@@ -22,7 +22,7 @@ const renderedItems = data.map((item, index) =>
     <div
       class="
       relative w-full h-auto xl:h-auto flex flex-col-reverse lg:flex-row items-start justify-between
-      py-20 overflow-visible
+      py-16 md:py-20 overflow-visible
     "
     >
       <div

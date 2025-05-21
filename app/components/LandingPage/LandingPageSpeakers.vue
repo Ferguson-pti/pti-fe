@@ -5,7 +5,7 @@
 <template>
   <AppSectionWrapper bg="bg-custom-red">
     <section class="w-full lg:py-10 bg-custom-red flex flex-col items-center justify-center font-lexend">
-      <div class="w-full py-4 md:py-20 rounded-lg">
+      <div class="w-full py-14 md:py-20 rounded-lg">
         <p class="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl text-white mb-6 font-medium">
           Featured Speakers
         </p>

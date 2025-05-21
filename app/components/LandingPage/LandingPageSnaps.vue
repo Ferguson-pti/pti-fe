@@ -38,39 +38,41 @@ const renderedItems2 = urls.map((url, index) =>
 </script>
 
 <template>
-  <section class="w-full py-20 px-4 md:px-10 xl:px-16 bg-custom-green flex flex-col items-start justify-start font-lexend">
-    <p class="text-4xl font-medium text-white">
-      Snaps from ICHST 2023
-    </p>
+  <AppSectionWrapper>
+    <div class="w-full py-14 md:py-20 lg:py-24 bg-custom-green flex flex-col items-start justify-start font-lexend">
+      <p class="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl font-medium text-white">
+        Snaps from ICHST 2023
+      </p>
 
-    <p class="mt-6 text-custom-grey">
-      Relive yourself with some favorite moments from INBOUND 2023
-    </p>
+      <p class="mt-6 text-sm md:text-base 2xl:text-xl text-custom-grey">
+        Relive yourself with some favorite moments from INBOUND 2023
+      </p>
 
-    <div class="mt-10 w-full">
-      <AppSwiper
-        :items="renderedItems1"
-        style-class=""
-        :slides-per-view="width<=400 ? 1.2 : width<=900 ? 2.1 : width<=1024 ? 2.8 : 3.7"
-        :pagination="false"
-        :autoplay="true"
-        :speed="1000"
-        :loop="true"
-      />
+      <div class="mt-10 w-full">
+        <AppSwiper
+          :items="renderedItems1"
+          style-class=""
+          :slides-per-view="width<=400 ? 1.2 : width<=900 ? 2.1 : width<=1024 ? 2.8 : 3.7"
+          :pagination="false"
+          :autoplay="true"
+          :speed="1000"
+          :loop="true"
+        />
+      </div>
+
+      <div
+        dir="rtl"
+        class="mt-4 w-full"
+      >
+        <AppSwiper
+          :items="renderedItems2"
+          style-class=""
+          :slides-per-view="width<=400 ? 1.2 : width<=900 ? 2.1 : width<=1024 ? 2.8 : 3.7"
+          :pagination="false"
+          :autoplay="true"
+          :speed="1000"
+        />
+      </div>
     </div>
-
-    <div
-      dir="rtl"
-      class="mt-4 w-full"
-    >
-      <AppSwiper
-        :items="renderedItems2"
-        style-class=""
-        :slides-per-view="width<=400 ? 1.2 : width<=900 ? 2.1 : width<=1024 ? 2.8 : 3.7"
-        :pagination="false"
-        :autoplay="true"
-        :speed="1000"
-      />
-    </div>
-  </section>
+  </AppSectionWrapper>
 </template>
