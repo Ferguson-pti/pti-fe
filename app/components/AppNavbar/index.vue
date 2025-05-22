@@ -15,12 +15,20 @@ const toggleModal = () => {
 const hideModal = () => {
   showMenuModal.value = false
 }
+
+const something = () => {
+  console.log('something')
+  hideModal()
+}
 </script>
 
 <template>
-  <div class="sticky top-0 w-full h-22 flex flex-col items-center justify-start z-50">
+  <div class="sticky top-0 w-full h-18 flex flex-col items-center justify-start z-50">
     <div :class="`${visible?'top-0':'-top-24'} absolute bg-white flex flex-row justify-between items-center w-full py-4.5 px-4 md:px-8 lg:px-10 xl:px-20 2xl:px-48 duration-300`">
-      <NuxtLink :to="HOME_PAGE">
+      <NuxtLink
+        :to="HOME_PAGE"
+        @click="something()"
+      >
         <NuxtImg
           src="/logo-black.png"
           provider="sirv"
