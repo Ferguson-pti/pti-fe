@@ -40,11 +40,11 @@ const renderedItems2 = urls.map((url, index) =>
 <template>
   <AppSectionWrapper>
     <div class="w-full py-14 md:py-20 lg:py-24 bg-custom-green flex flex-col items-center justify-start font-lexend">
-      <p class="w-full text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl font-medium text-white">
+      <p class="w-full text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl font-medium text-white z-10">
         Snaps from ICHST 2023
       </p>
 
-      <p class="w-full mt-6 text-sm md:text-base 2xl:text-xl text-custom-grey">
+      <p class="w-full mt-6 text-sm md:text-base 2xl:text-xl text-custom-grey z-10">
         Relive yourself with some favorite moments from INBOUND 2023
       </p>
 
@@ -73,6 +73,18 @@ const renderedItems2 = urls.map((url, index) =>
           :speed="1000"
         />
       </div>
+
+      <NuxtImg
+        src="circle.svg"
+        provider="sirv"
+        class="absolute w-[300px] md:w-[450px] -rotate-100 -left-40 lg:-left-28 -top-20 z-0"
+      />
     </div>
+
+    <NuxtImg
+      src="circle.svg"
+      provider="sirv"
+      class="absolute w-[300px] md:w-[450px] -rotate-100 -right-20 lg:-right-28 -bottom-40 z-0"
+    />
   </AppSectionWrapper>
 </template>

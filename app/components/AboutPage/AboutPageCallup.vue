@@ -5,7 +5,7 @@
 <template>
   <AppSectionWrapper>
     <section class="w-full h-auto py-14 md:py-20 bg-custom-cream flex flex-col items-start justify-start font-lexend">
-      <div class="relative w-full  h-[450px] md:h-[650px] lg:h-96 flex flex-col-reverse lg:flex-row-reverse items-center justify-between rounded-lg overflow-hidden bg-custom-red">
+      <div class="relative w-full  h-[450px] md:h-[650px] lg:h-96 flex flex-col-reverse lg:flex-row-reverse items-center justify-between rounded-lg overflow-hidden bg-custom-red z-10">
         <div class="absolute left-0 bg-custom-red w-full lg:w-[50%] lg:h-full py-8 px-4 md:p-8 lg:p-10 z-10">
           <p class="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl font-medium mb-6 text-white font-medium">
             Join the Energy Evolution
@@ -28,5 +28,17 @@
         />
       </div>
     </section>
+
+    <NuxtImg
+      src="circle.svg"
+      provider="sirv"
+      class="absolute w-[300px] md:w-[400px] rotate-180 left-20 lg:left-60 xl:left-120 -top-40 z-0"
+    />
+
+    <NuxtImg
+      src="circle.svg"
+      provider="sirv"
+      class="absolute w-[300px] md:w-[400px] rotate-180 -right-20 -bottom-40 z-0"
+    />
   </AppSectionWrapper>
 </template>

@@ -1,16 +1,9 @@
-<script setup lang="ts">
-import Bubble2 from '../Bubble-2.vue'
-// import { AppVideo } from '#components'
-
-/* Meant to be a video in here <AppVideo /> */
-</script>
-
 <template>
   <AppSectionWrapper>
     <div
       class="
         relative w-full h-auto xl:h-[800px] 2xl:h-[850px] flex flex-row items-start justify-between
-        lg:pt-10 xl:pt-20 pb-16 lg:pb-20 xl:pb-32 2xl:pb-40
+        pt-10 xl:pt-20 pb-16 lg:pb-20 xl:pb-32 2xl:pb-40
     "
     >
       <div class="flex flex-col items-start justify-start w-full lg:w-[55%] bg-custom-green px-4 md:px-10 py-6 md:py-10 rounded-lg z-10">
@@ -71,7 +64,18 @@ import Bubble2 from '../Bubble-2.vue'
           class="w-full lg:w-[540px] bg-custom-grey rounded-lg"
         />
       </div>
+
+      <NuxtImg
+        src="circle.svg"
+        provider="sirv"
+        class="absolute w-[450px] -right-36 -top-28 z-0"
+      />
     </div>
-    <Bubble2 style-class="absolute left-0 -bottom-1 z-0" />
+
+    <NuxtImg
+      src="circle.svg"
+      provider="sirv"
+      class="absolute w-[300px] md:w-[450px] -rotate-10 -left-28 -bottom-20 z-0"
+    />
   </AppSectionWrapper>
 </template>

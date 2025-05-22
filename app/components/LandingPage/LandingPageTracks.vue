@@ -37,11 +37,11 @@ const renderedItems = data.map((item, index) =>
 <template>
   <AppSectionWrapper bg="bg-custom-cream">
     <div class="w-full py-16 md:py-20 flex flex-col items-start justify-start font-lexend">
-      <h1 class="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl text-custom-red w-[60%] font-medium">
+      <h1 class="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl text-custom-red w-[60%] font-medium z-10">
         Tracks
       </h1>
 
-      <p class="text-black w-[90%] md:w-[70%] mt-4 font-light text-sm md:text-base 2xl:text-xl">
+      <p class="text-black w-[90%] md:w-[70%] mt-4 font-light text-sm md:text-base 2xl:text-xl z-10">
         Get a first look at the tracks to be touched by industry experts during the course of this conference session. These topics are all
         high impact that play a key role affect Africa's Hydrocarbon Sector.
       </p>
@@ -59,5 +59,17 @@ const renderedItems = data.map((item, index) =>
         />
       </div>
     </div>
+
+    <NuxtImg
+      src="circle.svg"
+      provider="sirv"
+      class="absolute rotate-60 w-[300px] md:w-[400px] 2xl:w-[600px] rotate-0 -right-20 lg:-right-28 -top-40 z-0"
+    />
+
+    <NuxtImg
+      src="circle.svg"
+      provider="sirv"
+      class="absolute w-[300px] md:w-[400px] 2xl:w-[600px] rotate-0 -left-20 lg:-left-28 -bottom-40 z-0"
+    />
   </AppSectionWrapper>
 </template>

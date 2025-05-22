@@ -4,9 +4,9 @@
 
 <template>
   <AppSectionWrapper>
-    <div class="w-full h-auto py-14 lg:py-20 bg-custom-green flex flex-col items-start justify-start font-lexend border border-white">
+    <div class="w-full h-auto py-14 lg:py-20 bg-custom-green flex flex-col items-start justify-start font-lexend">
       <div class="w-full h-auto flex flex-col lg:flex-row items-center justify-between rounded-lg overflow-hidden">
-        <div class="w-full lg:w-[55%] py-8 px-6 md:p-20 lg:p-14 border border-white rounded-lg">
+        <div class="w-full lg:w-[55%] py-8 px-6 md:p-20 lg:p-14 rounded-lg z-10 bg-custom-green">
           <p class="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl font-medium mb-6 text-white">
             Agenda & Speakers
           </p>
@@ -25,9 +25,21 @@
         <NuxtImg
           src="DSC_0162.webp"
           provider="sirv"
-          class="mt-10 lg:mt-0 w-full lg:w-[400px] xl:w-[500px] bg-custom-grey rounded-lg"
+          class="mt-10 lg:mt-0 w-full lg:w-[400px] xl:w-[500px] bg-custom-grey rounded-lg z-10"
         />
       </div>
     </div>
+
+    <NuxtImg
+      src="circle.svg"
+      provider="sirv"
+      class="absolute w-[300px] md:w-[350px] 2xl:w-[500px] rotate-60 -right-20 lg:-right-28 -top-40 z-0"
+    />
+
+    <NuxtImg
+      src="circle.svg"
+      provider="sirv"
+      class="absolute w-[300px] md:w-[350px] 2xl:w-[500px] rotate-60 -left-20 lg:-left-28 -bottom-40 z-0"
+    />
   </AppSectionWrapper>
 </template>

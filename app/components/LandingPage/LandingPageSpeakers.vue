@@ -4,8 +4,8 @@
 
 <template>
   <AppSectionWrapper bg="bg-custom-red">
-    <section class="w-full lg:py-10 bg-custom-red flex flex-col items-center justify-center font-lexend">
-      <div class="w-full py-14 md:py-20 rounded-lg">
+    <div class="w-full lg:py-10 bg-custom-red flex flex-col items-center justify-center font-lexend">
+      <div class="w-full py-14 md:py-20 rounded-lg z-10">
         <p class="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl text-white mb-6 font-medium">
           Featured Speakers
         </p>
@@ -26,7 +26,19 @@
           :loop="false"
         />
       </div>
-    </section>
+
+      <NuxtImg
+        src="circle.svg"
+        provider="sirv"
+        class="absolute w-[300px] md:w-[400px] -rotate-110 -right-32 -top-20 z-0"
+      />
+    </div>
+
+    <NuxtImg
+      src="circle.svg"
+      provider="sirv"
+      class="absolute w-[450px] -rotate-170 -left-28 -bottom-20 z-0"
+    />
   </AppSectionWrapper>
 </template>
 

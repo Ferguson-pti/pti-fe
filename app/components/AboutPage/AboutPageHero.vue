@@ -4,8 +4,8 @@
 
 <template>
   <AppSectionWrapper bg="bg-custom-green">
-    <section class="w-full py-14 md:py-20 bg-custom-green flex flex-col lg:flex-row items-start justify-between font-lexend">
-      <div class="w-full lg:w-[60%] font-lexend border border-white py-8 px-6 md:p-20 lg:p-14 rounded-lg">
+    <div class="w-full py-14 md:py-20 bg-custom-green flex flex-col lg:flex-row items-start justify-between font-lexend">
+      <div class="w-full lg:w-[60%] bg-custom-green font-lexend py-8 px-6 md:p-20 lg:p-14 rounded-lg z-10">
         <p class="font-medium text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl text-white">
           Who We Are
         </p>
@@ -23,8 +23,20 @@
       <NuxtImg
         src="whoweare.webp"
         provider="sirv"
-        class="mt-10 bg-custom-grey w-full lg:w-[400px] xl:w-[500px] rounded-lg"
+        class="mt-10 bg-custom-grey  w-full lg:w-[400px] xl:w-[500px] rounded-lg z-10"
       />
-    </section>
+    </div>
+
+    <NuxtImg
+      src="circle.svg"
+      provider="sirv"
+      class="absolute w-[300px] md:w-[400px] rotate-0 -left-20 lg:-left-40 -bottom-40 z-0"
+    />
+
+    <NuxtImg
+      src="circle.svg"
+      provider="sirv"
+      class="absolute w-[300px] md:w-[400px] rotate-0 left-20 lg:left-60 xl:left-140 -top-40 z-0"
+    />
   </AppSectionWrapper>
 </template>
