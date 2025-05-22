@@ -7,7 +7,7 @@ defineProps<{
 <template>
   <button
     v-bind="$attrs"
-    :class="`px-4.5 py-3.5 text-xs font-lexend tracking-widest font-medium rounded-lg cursor-pointer duration-300 ${styleClass}`"
+    :class="`px-4.5 py-3.5 text-xs 2xl:text-sm font-lexend tracking-widest font-medium rounded-lg cursor-pointer duration-300 ${styleClass}`"
   >
     <slot />
   </button>

@@ -6,51 +6,72 @@ import Bubble2 from '../Bubble-2.vue'
 </script>
 
 <template>
-  <section
-    class="
-        relative w-full h-auto lg:h-[90vh] flex flex-row items-start justify-between
-        py-10 md:py-16 lg:pt-16 lg:pb-0 px-4 md:px-10 xl:px-16
+  <AppSectionWrapper>
+    <div
+      class="
+        relative w-full h-auto xl:h-[800px] 2xl:h-[850px] flex flex-row items-start justify-between
+        lg:pt-10 xl:pt-20 pb-16 lg:pb-20 xl:pb-32 2xl:pb-40
     "
-  >
-    <div class="flex flex-col items-start justify-start w-full lg:w-[55%] bg-custom-green px-4 md:px-10 py-10 rounded-lg z-10">
-      <div class="flex lg:hidden flex-col items-start justify-start text-white">
+    >
+      <div class="flex flex-col items-start justify-start w-full lg:w-[55%] bg-custom-green px-4 md:px-10 py-6 md:py-10 rounded-lg z-10">
+        <div class="flex lg:hidden flex-col items-start justify-start text-white">
+          <span class="font-lexend text-xs md:text-sm font-medium mb-1">OCTOBER 22-23, 2025</span>
+          <span class="font-lexend text-xs md:text-sm font-medium mb-8">PTDF TOWERS, CENTRAL BUSINESS DISTRICT, ABUJA, NIGERIA</span>
+        </div>
+
+        <p class="font-lexend font-medium text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl text-white">
+          Transforming Africa’s Hydrocarbon Sector: <span class="text-custom-red">Balancing Growth, Environment and Governance</span>
+        </p>
+
+        <NuxtImg
+          src="ptdf.webp"
+          provider="sirv"
+          class="mt-6 flex lg:hidden w-full bg-custom-grey rounded-lg"
+        />
+
+        <span class="font-lexend text-sm md:text-base 2xl:text-xl mt-6 text-custom-grey">
+          International Conference on Hydrocarbon Science and Technology (ICHST) is organized by the Petroleum Training Institute, the foremost
+          petroleum technological institute in Sub-Saharan Africa. It is organized biennially to promote technological advancement, enhance
+          research, and provide knowledge-sharing platforms across the oil and gas industry spectrum.
+        </span>
+
+        <div class="w-full text-center md:text-left mt-6 md:mt-10 mb-3 text-xs md:text-base text-custom-gold font-medium font-lexend ">
+          THE CONFERENCE BEGINS IN
+        </div>
+
+        <!-- Mobile View -->
+        <AppCountdown
+          :deadline="new Date(2025, 9, 22).getTime() /*22nd October 2025*/"
+          container-class="w-full h-auto flex md:hidden flex-row items-center justify-center md:justify-start"
+          style-class="flex flex-col md:flex-row items-center md:items-end justify-center md:gap-2"
+          text-color="text-custom-gold"
+          number-size="text-xl md:text-4xl"
+          text-size="text-sm md:text-lg"
+          :abbrev="true"
+        />
+
+        <!-- Larger Screen View -->
+        <AppCountdown
+          :deadline="new Date(2025, 9, 22).getTime() /*22nd October 2025*/"
+          container-class="w-full h-auto hidden md:flex flex-row items-center justify-center md:justify-start"
+          style-class="flex flex-col md:flex-row items-center md:items-end justify-center md:gap-2"
+          text-color="text-custom-gold"
+          number-size="text-base md:text-4xl"
+          text-size="text-xs md:text-lg"
+        />
+      </div>
+
+      <div class="hidden lg:flex w-auto mt-20 flex flex-col items-start justify-start z-10 text-white">
         <span class="font-lexend text-sm font-medium mb-1">OCTOBER 22-23, 2025</span>
         <span class="font-lexend text-sm font-medium mb-8">PTDF TOWERS, CENTRAL BUSINESS DISTRICT, ABUJA, NIGERIA</span>
+
+        <NuxtImg
+          src="ptdf.webp"
+          provider="sirv"
+          class="w-full lg:w-[540px] bg-custom-grey rounded-lg"
+        />
       </div>
-
-      <span class="font-lexend font-medium text-4xl md:text-5xl lg:text-6xl text-white">Transforming Africa’s Hydrocarbon Sector</span>
-
-      <NuxtImg
-        src="ptdf.webp"
-        provider="sirv"
-        class="mt-6 flex lg:hidden w-full lg:w-[540px] bg-custom-grey rounded-lg"
-      />
-
-      <span class="font-lexend mt-6 text-custom-grey">
-        (ICHST) is organized biennially to promote technological advancement, enhance research, and provide
-        knowledge-sharing platforms across the oil and gas industry spectrum
-      </span>
-
-      <div class="mt-6 md:mt-12 mb-4 text-custom-gold text-xl font-medium font-lexend">
-        THE CONFERENCE BEGINS IN
-      </div>
-      <AppCountdown
-        style-class="sm"
-        text-color="text-custom-gold"
-      />
     </div>
-
-    <div class="hidden lg:flex w-auto mt-20 flex flex-col items-start justify-start z-10 text-white">
-      <span class="font-lexend text-sm font-medium mb-1">OCTOBER 22-23, 2025</span>
-      <span class="font-lexend text-sm font-medium mb-8">PTDF TOWERS, CENTRAL BUSINESS DISTRICT, ABUJA, NIGERIA</span>
-
-      <NuxtImg
-        src="ptdf.webp"
-        provider="sirv"
-        class="w-full lg:w-[540px] bg-custom-grey rounded-lg"
-      />
-    </div>
-
     <Bubble2 style-class="absolute left-0 -bottom-1 z-0" />
-  </section>
+  </AppSectionWrapper>
 </template>

@@ -3,7 +3,7 @@ import { AppPricingCard } from '#components'
 
 const data = [
   {
-    name: 'PTI Staff/Lecturers',
+    name: 'Academia',
     price: '₦60,000',
     discount: '₦50,000',
     percent: '16%',
@@ -20,31 +20,59 @@ const data = [
     discount: '₦20,000',
     percent: '20%',
   },
+  {
+    name: 'International',
+    price: '$150',
+    discount: '$150',
+    percent: '20%',
+  },
 ]
 </script>
 
 <template>
-  <section class="w-full py-20 px-4 md:px-10 xl:px-16 bg-custom-cream flex flex-col items-start justify-start font-lexend">
-    <h1 class="text-4xl md:text-5xl lg:text-7xl text-custom-green w-[60%] font-medium">
-      Secure Your Spot
-    </h1>
+  <AppSectionWrapper bg="bg-custom-cream">
+    <div class="w-full py-14 md:py-20 flex flex-col items-start justify-start font-lexend">
+      <h1 class="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl text-custom-green w-auto font-medium">
+        Secure Your Spot
+      </h1>
 
-    <a class="text-custom-green underline text-lg mt-6 cursor-pointer">Refund Policy</a>
+      <a class="text-custom-green underline text-sm md:text-base 2xl:text-xl mt-6 cursor-pointer">Refund Policy</a>
 
-    <p class="mt-8 mx-auto mb-4 text-custom-red">
-      EARLY BIRD DISCOUNT ENDS IN:
-    </p>
-    <AppCountdown />
+      <p class="mt-8 mx-auto mb-4 xl:mb-8 text-custom-red">
+        EARLY BIRD DISCOUNT ENDS IN:
+      </p>
 
-    <div class="mt-10 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-1 gap-8 lg:gap-6 xl:gap-20">
-      <AppPricingCard
-        v-for="(item, index) in data"
-        :key="`pricingcard${index}`"
-        :name="item.name"
-        :price="item.price"
-        :discount="item.discount"
-        :percent="item.percent"
+      <!-- Mobile view -->
+      <AppCountdown
+        :deadline="new Date(2025, 7, 22).getTime() /*22nd August 2025*/"
+        container-class="w-full flex md:hidden flex-row items-center justify-center gap-7"
+        style-class="flex flex-col items-center justify-center"
+        number-size="text-3xl"
+        text-size="text-base"
+        :abbrev="true"
       />
+
+      <!-- Larger screens -->
+      <AppCountdown
+        :deadline="new Date(2025, 7, 22).getTime() /*22nd August 2025*/"
+        container-class="w-full hidden md:flex w-full flex flex-row items-center justify-center gap-5"
+        style-class="w-24 flex flex-col items-center justify-center"
+        number-size="text-5xl 2xl:text-6xl"
+        text-size="text-lg 2xl:text-xl"
+      />
+
+      <div class="w-full flex flex-col items-center justify-start">
+        <div class="mt-10 w-full lg:w-[800px] 2xl:w-[1000px] grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-6 xl:gap-10">
+          <AppPricingCard
+            v-for="(item, index) in data"
+            :key="`pricingcard${index}`"
+            :name="item.name"
+            :price="item.price"
+            :discount="item.discount"
+            :percent="item.percent"
+          />
+        </div>
+      </div>
     </div>
-  </section>
+  </AppSectionWrapper>
 </template>

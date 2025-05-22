@@ -2,8 +2,7 @@
 defineProps<{
   question: string
   answer: string
-  list?: string[]
-  dockedSize: string
+  list: string[]
   last: boolean
 }>()
 
@@ -17,13 +16,13 @@ const toggleFaq = () => {
 <template>
   <div
     :class="`
-      w-full ${isOpen ? dockedSize : 'h-18 md:h-14'} overflow-hidden flex flex-col items-start justify-start pt-5
+      w-full ${isOpen ? 'h-96 md:h-72 lg:h-54' : 'h-18 md:h-14'} overflow-hidden flex flex-col items-start justify-start pt-5
       ${!last && 'border-b'} cursor-pointer font-lexend duration-300
     `"
     @click="toggleFaq"
   >
     <div class="w-full flex flex-row items-center justify-between">
-      <p class="h-10 md:h-auto flex flex-col items-center justify-center text-sm md:text-base px-2.5">
+      <p class="text-sm md:text-base px-2.5">
         {{ question }}
       </p>
 
@@ -33,17 +32,17 @@ const toggleFaq = () => {
       />
     </div>
 
-    <div class="mt-3 font-light w-full bg-white p-3 text-sm leading-6 md:text-base md:leading-7">
+    <div class="mt-3 font-light bg-white p-3 text-sm leading-6 md:text-base md:leading-7">
       {{ answer }}
 
-      <ul class="list-disc pl-4">
+      <ol>
         <li
           v-for="(item, index) in list"
           :key="`list${index}`"
         >
           {{ item }}
         </li>
-      </ul>
+      </ol>
     </div>
   </div>
 </template>
