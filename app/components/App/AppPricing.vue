@@ -31,7 +31,7 @@ const data = [
 
 <template>
   <AppSectionWrapper bg="bg-custom-cream">
-    <div class="w-full py-14 md:py-20 flex flex-col items-start justify-start font-lexend">
+    <div class="w-full py-14 md:py-20 flex flex-col items-start justify-start font-lexend z-10">
       <h1 class="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl text-custom-green w-auto font-medium">
         Secure Your Spot
       </h1>
@@ -74,5 +74,17 @@ const data = [
         </div>
       </div>
     </div>
+
+    <NuxtImg
+      src="circleyellow.svg"
+      provider="sirv"
+      class="absolute w-[300px] md:w-[400px] 2xl:w-[600px] rotate-0 -left-20 lg:-left-28 -top-40 z-0"
+    />
+
+    <NuxtImg
+      src="circleyellow.svg"
+      provider="sirv"
+      class="absolute w-[500px] md:w-[600px] 2xl:w-[800px] rotate-0 -right-20 lg:-right-28 -bottom-40 z-0"
+    />
   </AppSectionWrapper>
 </template>

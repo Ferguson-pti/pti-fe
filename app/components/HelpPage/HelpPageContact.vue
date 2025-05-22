@@ -56,10 +56,10 @@ const onSubmit = handleSubmit(async (values) => {
         <NuxtImg
           src="pexels-davidmcelwee-11142768.webp"
           provider="sirv"
-          class="mt-8 lg:mt-0 w-auto md:w-auto h-[700px] rounded-lg bg-custom-grey"
+          class="hidden lg:flex mt-8 lg:mt-0 w-auto md:w-auto h-[700px] rounded-lg bg-custom-grey z-10"
         />
 
-        <div class="w-full md:w-[500px] lg:w-[50%]">
+        <div class="w-full md:w-[500px] lg:w-[50%] z-10">
           <p class="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl font-medium mb-6 text-white font-medium">
             Contact us
           </p>
@@ -124,5 +124,17 @@ const onSubmit = handleSubmit(async (values) => {
         </div>
       </div>
     </div>
+
+    <NuxtImg
+      src="circle.svg"
+      provider="sirv"
+      class="absolute w-[300px] md:w-[400px] 2xl:w-[600px] rotate-0 -left-20 lg:-left-28 -top-40 z-0"
+    />
+
+    <NuxtImg
+      src="circle.svg"
+      provider="sirv"
+      class="absolute w-[300px] md:w-[400px] 2xl:w-[600px] rotate-0 -right-20 lg:-right-28 -bottom-40 z-0"
+    />
   </AppSectionWrapper>
 </template>

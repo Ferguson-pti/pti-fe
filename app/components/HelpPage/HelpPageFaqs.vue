@@ -79,7 +79,7 @@ const items = [
 <template>
   <AppSectionWrapper>
     <div class="w-full h-auto py-14 lg:py-20 bg-custom-cream flex flex-col items-center justify-start font-lexend">
-      <p class="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl font-medium mb-2 md:mb-6 text-custom-green font-medium">
+      <p class="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl font-medium mb-2 md:mb-6 text-custom-green font-medium z-10">
         FAQs
       </p>
 
@@ -95,5 +95,17 @@ const items = [
         />
       </div>
     </div>
+
+    <NuxtImg
+      src="circleyellow.svg"
+      provider="sirv"
+      class="absolute w-[300px] md:w-[400px] 2xl:w-[600px] rotate-0 -left-20 lg:-left-28 -top-40 z-0"
+    />
+
+    <NuxtImg
+      src="circleyellow.svg"
+      provider="sirv"
+      class="absolute w-[300px] md:w-[400px] 2xl:w-[600px] rotate-0 -right-20 lg:-right-28 -bottom-40 z-0"
+    />
   </AppSectionWrapper>
 </template>

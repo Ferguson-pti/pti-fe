@@ -75,7 +75,7 @@
       provider="sirv"
       class="absolute w-[300px] md:w-[400px] 2xl:w-[600px] rotate-0 -left-20 lg:-left-28 top-40 z-0"
     />
-    
+
     <NuxtImg
       src="circle.svg"
       provider="sirv"
