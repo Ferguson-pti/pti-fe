@@ -5,7 +5,7 @@
 <template>
   <AppSectionWrapper bg="bg-custom-green">
     <section class="w-full py-14 md:py-20 bg-custom-green flex flex-col lg:flex-row items-start justify-between font-lexend">
-      <div class="w-full lg:w-[60%] font-lexend border border-white py-8 px-6 md:p-20 rounded-lg">
+      <div class="w-full lg:w-[60%] font-lexend border border-white py-8 px-6 md:p-20 lg:p-14 rounded-lg">
         <p class="font-medium text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl text-white">
           Who We Are
         </p>

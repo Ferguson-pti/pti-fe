@@ -39,7 +39,7 @@ const renderedItems = data.map((item, index) =>
         />
       </div>
 
-      <div class="relative w-full lg:w-[60%] h-auto rounded-lg z-10 py-8 px-6 md:p-20 bg-custom-cream overflow-hidden font-lexend">
+      <div class="relative w-full lg:w-[60%] h-auto rounded-lg z-10 py-8 px-6 md:p-20 lg:p-14 bg-custom-cream overflow-hidden font-lexend">
         <p class="w-full text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl font-medium mb-6 text-custom-green">
           What is ICHST?
         </p>

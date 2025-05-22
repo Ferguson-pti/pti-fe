@@ -3,29 +3,31 @@
 </script>
 
 <template>
-  <section class="w-full h-auto py-10 lg:py-20 px-4 md:px-10 xl:px-16 bg-custom-green flex flex-col items-start justify-start font-lexend">
-    <div class="w-full h-auto flex flex-col lg:flex-row items-center justify-between rounded-lg overflow-hidden p-0 md:p-10 lg:p-0 xl:p-10">
-      <div class="w-full lg:w-[55%] p-4 md:p-0">
-        <p class="text-4xl md:text-7xl font-medium mb-6 text-white">
-          Agenda & <br> Speakers
-        </p>
+  <AppSectionWrapper>
+    <div class="w-full h-auto py-14 lg:py-20 bg-custom-green flex flex-col items-start justify-start font-lexend border border-white">
+      <div class="w-full h-auto flex flex-col lg:flex-row items-center justify-between rounded-lg overflow-hidden">
+        <div class="w-full lg:w-[55%] py-8 px-6 md:p-20 lg:p-14 border border-white rounded-lg">
+          <p class="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl font-medium mb-6 text-white">
+            Agenda & Speakers
+          </p>
 
-        <p class="mb-10 text-white text-base md:text-lg font-light">
-          Dive into ICHST's most powerful moments—where extraordinary voices share groundbreaking strategies. As we prepare to bring this
-          transformative energy to San Francisco in September, get inspired by the world-class speakers who have shared the INBOUND stage and see
-          why leaders across industries choose INBOUND as their launchpad for what’s next.
-        </p>
+          <p class="mb-10 text-white text-sm md:text-base 2xl:text-xl font-light">
+            Dive into ICHST's most powerful moments—where extraordinary voices share groundbreaking strategies. As we prepare to bring this
+            transformative energy to San Francisco in September, get inspired by the world-class speakers who have shared the INBOUND stage and see
+            why leaders across industries choose INBOUND as their launchpad for what’s next.
+          </p>
 
-        <AppButton style-class="text-white bg-custom-red hover:bg-white hover:text-custom-red">
-          REGISTER NOW
-        </AppButton>
+          <AppButton style-class="text-white bg-custom-red hover:bg-white hover:text-custom-red">
+            REGISTER NOW
+          </AppButton>
+        </div>
+
+        <NuxtImg
+          src="DSC_0162.webp"
+          provider="sirv"
+          class="mt-10 lg:mt-0 w-full lg:w-[400px] xl:w-[500px] bg-custom-grey rounded-lg"
+        />
       </div>
-
-      <NuxtImg
-        src="DSC_0162.webp"
-        provider="sirv"
-        class="mt-10 lg:mt-0 w-full lg:w-[400px] xl:w-[500px] bg-custom-grey rounded-lg"
-      />
     </div>
-  </section>
+  </AppSectionWrapper>
 </template>
