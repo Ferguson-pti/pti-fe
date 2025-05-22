@@ -59,7 +59,7 @@ const onSubmit = handleSubmit(async (values) => {
       />
 
       <div class="w-full md:w-[500px] lg:w-[50%]">
-        <p class="text-3xl md:text-6xl font-medium mb-6 text-white font-medium">
+        <p class="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl font-medium mb-6 text-white font-medium">
           Contact us
         </p>
 
@@ -90,7 +90,7 @@ const onSubmit = handleSubmit(async (values) => {
           />
           <span class="mt-1 text-red-700 text-xs mb-5">{{ errors.message }}</span>
 
-          <AppButton style-class="w-40 mt-6 text-custom-red border border-custom-red bg-white hover:bg-custom-red hover:text-white flex items-center justify-center">
+          <AppButton style-class="w-44 mt-6 text-custom-red border border-custom-red bg-white hover:bg-custom-red hover:text-white flex items-center justify-center">
             <span v-show="!loading">SEND MESSAGE</span>
 
             <Icon
