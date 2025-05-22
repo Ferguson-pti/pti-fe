@@ -86,7 +86,7 @@ const footerText = {
         </Section>
         <Section :style="footer">
           <Text :style="footerText">
-            CypherCrescent © 2025 | Plot 76A Fiddil Avenue, Off Ordinance Road,Trans Amadi Industrial Layout Port Harcourt, Nigeria. | www.cyphercresent.com
+            ICHST © 2025 | PTDF TOWERS, CENTRAL BUSINESS DISTRICT, ABUJA, NIGERIA. | ichst@pti.edu.ng
           </Text>
         </Section>
       </Container>

@@ -50,10 +50,18 @@ const renderedItems = data.map((item, index) =>
           second edition was held at the Petroleum Training Institute, Effurun, in 2019 and 2021, respectively. The third edition was held at the '
           PTDF Towers, Abuja, in 2023. The fourth edition is also scheduled to be held at the PTDF towers, Abuja on the 22nd and 23rd of October, 2025.
         </p>
-
-        <Bubble4 style-class="absolute -bottom-4 -right-28 md:bottom-0 md:right-0" />
       </div>
     </div>
-    <Bubble3 style-class="absolute top-0 right-0" />
+    <NuxtImg
+      src="circle.svg"
+      provider="sirv"
+      class="absolute w-[300px] rotate-60 bottom-50 -right-40 z-0"
+    />
+
+    <NuxtImg
+      src="circle.svg"
+      provider="sirv"
+      class="absolute w-[400px] rotate-60 -top-40 md:left-0 lg:left-40 xl:left-80 2xl:left-120 z-0"
+    />
   </AppSectionWrapper>
 </template>

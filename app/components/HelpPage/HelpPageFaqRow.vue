@@ -18,7 +18,7 @@ const toggleFaq = () => {
   <div
     :class="`
       w-full ${isOpen ? dockedSize : 'h-18 md:h-14'} overflow-hidden flex flex-col items-start justify-start pt-5
-      ${!last && 'border-b'} cursor-pointer font-lexend duration-300
+      ${!last && 'border-b'} cursor-pointer font-lexend duration-300 z-10
     `"
     @click="toggleFaq"
   >

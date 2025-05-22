@@ -5,7 +5,7 @@
 <template>
   <AppSectionWrapper bg="bg-white">
     <section class="w-full py-14 md:py-20 flex flex-col items-center justify-start font-lexend">
-      <span class="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl font-medium text-custom-gold">Partners</span>
+      <span class="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl font-medium text-custom-green">Partners</span>
 
       <div class="mt-12 w-full flex flex-col items-center justify-start gap-4 md:gap-10 flex-wrap">
         <div class="flex flex-row items-center justify-center gap-4 md:gap-10 flex-wrap">
