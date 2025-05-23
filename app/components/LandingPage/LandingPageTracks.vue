@@ -32,6 +32,19 @@ const renderedItems = data.map((item, index) =>
     },
   ),
 )
+
+renderedItems.push(
+  h(
+    TrackCard,
+    {
+      key: `trackcard${renderedItems.length}`,
+      number: renderedItems.length,
+      title: '',
+      body: '',
+      class: 'invisible',
+    },
+  ),
+)
 </script>
 
 <template>
@@ -47,7 +60,7 @@ const renderedItems = data.map((item, index) =>
       </p>
 
       <div class="flex w-full lg:w-[100vw]">
-        <AppSwiper
+        <AppTracksSwiper
           style-class="mt-10 w-full"
           :items="renderedItems"
           :autoplay="false"

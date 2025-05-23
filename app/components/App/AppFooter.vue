@@ -1,5 +1,5 @@
 <template>
-  <footer class="w-full h-auto flex flex-col items-center justify-start pt-8 pb-4 md:pb-16 px-4 md:px-8 lg:px-10 xl:px-20 2xl:px-48 bg-custom-green">
+  <footer class="w-full h-auto flex flex-col items-center justify-start pt-8 md:pt-12 pb-4 md:pb-16 px-4 md:px-8 lg:px-10 xl:px-20 2xl:px-48 bg-custom-green">
     <div class="w-full flex flex-col lg:flex-row items-start justify-between font-lexend">
       <div class="w-full lg:w-[49%] flex flex-row items-center justify-start">
         <NuxtImg
