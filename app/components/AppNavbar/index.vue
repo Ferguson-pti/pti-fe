@@ -85,14 +85,14 @@ const something = () => {
       <Icon
         v-show="!showMenuModal"
         name="solar:hamburger-menu-broken"
-        class="size-5 md:size-8 absolute right-4 md:right-8 lg:right-10 text-black flex lg:hidden"
+        class="size-6 md:size-9 absolute right-4 md:right-8 lg:right-10 text-black flex lg:hidden"
         @click="toggleModal"
       />
 
       <Icon
         v-show="showMenuModal"
         name="fa6-solid:xmark"
-        class="size-5 md:size-8 absolute right-4 md:right-8 lg:right-10 text-black flex lg:hidden"
+        class="size-6 md:size-9 absolute right-4 md:right-8 lg:right-10 text-black flex lg:hidden"
         @click="toggleModal"
       />
     </div>

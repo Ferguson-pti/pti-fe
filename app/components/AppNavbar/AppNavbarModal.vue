@@ -10,7 +10,7 @@ const route = useRoute()
 </script>
 
 <template>
-  <div :class="`flex lg:hidden absolute ${visible?'top-18':'top-0'} bg-white w-full duration-300 px-4 md:px-8`">
+  <div :class="`flex lg:hidden absolute ${visible?'top-18 md:top-24':'top-0'} bg-white w-full duration-300 px-4 md:px-8`">
     <ul class="w-full flex flex-col items-start justify-start font-lexend">
       <AppNavbarLink
         :to="REGISTER_PAGE"
