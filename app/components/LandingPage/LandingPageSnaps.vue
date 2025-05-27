@@ -45,7 +45,7 @@ const renderedItems2 = urls.map((url, index) =>
       </p>
 
       <p class="w-full mt-6 text-sm md:text-base 2xl:text-xl text-custom-grey z-10">
-        Relive yourself with some favorite moments from INBOUND 2023
+        Relive yourself with some favorite moments from ICHST 2023
       </p>
 
       <div class="mt-10 w-[100vw]">

@@ -70,3 +70,19 @@ interface StrapiMessageData {
 interface MessagePostResponse {
   data: StrapiMessageData
 }
+
+interface PaystackResponseError {
+  error: string
+}
+
+interface PaystackResponseSuccess {
+  status: boolean
+  message: string
+  data: {
+    access_code: string
+    authorization_url: string
+    reference: string
+  }
+}
+
+type PaystackResponse = PaystackResponseSuccess | PaystackResponseError

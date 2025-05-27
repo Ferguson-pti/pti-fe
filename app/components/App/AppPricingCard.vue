@@ -1,10 +1,20 @@
 <script setup lang="ts">
-defineProps<{
+import { useShowPaymentModalStore } from '~~/stores/useShowPaymentModalStore'
+
+const { name, price, discount } = defineProps<{
   name: string
   price: string
   discount: string
   percent: string
 }>()
+
+const paymentModal = useShowPaymentModalStore()
+
+const showDetailsForm = () => {
+  // Vary it based on if the discount is up or not
+  paymentModal.setCard({ price: price, name: name })
+  paymentModal.showModal()
+}
 </script>
 
 <template>
@@ -22,7 +32,10 @@ defineProps<{
     </span>
     <span class="mx-auto mt-6 font-bold text-3xl">{{ discount }}</span>
 
-    <AppButton style-class="w-full mt-10 border border-custom-gold text-white bg-custom-gold hover:text-custom-gold hover:bg-white duration-300">
+    <AppButton
+      style-class="w-full mt-10 border border-custom-gold text-white bg-custom-gold hover:text-custom-gold hover:bg-white duration-300"
+      @click="showDetailsForm"
+    >
       MAKE PAYMENT
     </AppButton>
   </article>

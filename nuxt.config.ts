@@ -14,6 +14,8 @@ export default defineNuxtConfig({
     '@nuxtjs/strapi',
     'nuxt-toast',
     '@vue-email/nuxt',
+    '@nuxtjs/ngrok',
+    '@pinia/nuxt',
   ],
 
   devtools: { enabled: true },
@@ -33,6 +35,7 @@ export default defineNuxtConfig({
     resendEmail: process.env.NUXT_RESEND_EMAIL,
     resendName: process.env.NUXT_RESEND_NAME,
     strapiUrl: process.env.NUXT_STRAPI_BACKEND_URL,
+    paystackSecretKey: process.env.PAYSTACK_SECRET_KEY,
   },
 
   future: { compatibilityVersion: 4 }, compatibilityDate: '2024-11-01',
@@ -45,6 +48,9 @@ export default defineNuxtConfig({
   },
 
   vite: {
+    server: {
+      allowedHosts: ['.ngrok-free.app'],
+    },
     plugins: [
       tailwindcss(),
     ],
@@ -68,5 +74,9 @@ export default defineNuxtConfig({
     sirv: {
       baseURL: 'https://rophi-ccl.sirv.com/pti/',
     },
+  },
+
+  ngrok: {
+    authtoken: process.env.NGROK_AUTHTOKEN,
   },
 })

@@ -1,10 +1,17 @@
 <script setup lang="ts">
 import { useScroll } from '@vueuse/core'
 import { AppFooter } from '#components'
+import { useShowPaymentModalStore } from '~~/stores/useShowPaymentModalStore'
+import { useShowConfirmPaymentModal } from '~~/stores/useShowConfirmPaymentModal'
+
+const paymentmodal = useShowPaymentModalStore()
+const confirmPaymentModal = useShowConfirmPaymentModal()
 
 const el = useTemplateRef<HTMLElement>('el')
 const { y } = useScroll(el)
 const navbarVisible = ref(true)
+
+console.log('<>' + paymentmodal.visible)
 
 useHead({
   title: 'ICHST',
@@ -57,5 +64,13 @@ watch(y, (newValue, oldValue) => {
     <AppNavbar :visible="navbarVisible" />
     <slot />
     <AppFooter />
+
+    <AppPaymentModal
+      v-if="paymentmodal.visible"
+    />
+
+    <AppConfirmPaymentModal
+      v-show="confirmPaymentModal.visible"
+    />
   </div>
 </template>

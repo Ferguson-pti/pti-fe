@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { AppPricingCard } from '#components'
-
 const data = [
   {
     name: 'Academia',
@@ -32,11 +30,9 @@ const data = [
 <template>
   <AppSectionWrapper bg="bg-custom-cream">
     <div class="w-full py-14 md:py-20 flex flex-col items-start justify-start font-lexend z-10">
-      <h1 class="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl text-custom-green w-auto font-medium">
+      <h1 class="w-full text-center text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl text-custom-green w-auto font-medium">
         Secure Your Spot
       </h1>
-
-      <a class="text-custom-green underline text-sm md:text-base 2xl:text-xl mt-6 cursor-pointer">Refund Policy</a>
 
       <p class="mt-8 mx-auto mb-4 xl:mb-8 text-custom-red">
         EARLY BIRD DISCOUNT ENDS IN:
@@ -73,6 +69,8 @@ const data = [
           />
         </div>
       </div>
+
+      <a class="text-custom-green underline text-sm md:text-base 2xl:text-xl mx-auto mt-6 cursor-pointer">Refund Policy</a>
     </div>
 
     <NuxtImg
