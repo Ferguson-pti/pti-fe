@@ -99,7 +99,7 @@ watch(category, () => {
     class="w-[100vw] h-[100vh] fixed top-0 left-0 z-50 flex flex-row items-center justify-center bg-[#00000090] font-lexend"
   >
     <form
-      class="relative w-[400px] h-auto bg-white rounded-lg p-8 flex flex-col items-start justify-start"
+      class="relative w-full md:w-[400px] h-auto bg-white rounded-lg p-8 flex flex-col items-start justify-start"
       @submit.prevent="onSubmit"
       @click.stop
     >
@@ -163,7 +163,7 @@ watch(category, () => {
           placeholder="Select a price category"
         />
 
-        <div class="border border-black w-40 ml-4 text-right font-bold text-custom-red">{{ price ? price : '' }}</div>
+        <div class="w-40 ml-4 text-right font-bold text-custom-red">{{ price ? price : '' }}</div>
       </span>
       <span class="mt-1 text-red-700 text-xs">{{ errors.category }}</span>
 
