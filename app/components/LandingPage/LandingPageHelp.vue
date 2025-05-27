@@ -5,7 +5,7 @@
 <template>
   <AppSectionWrapper bg="bg-custom-red">
     <div class="w-full h-auto py-14 md:py-20 bg-custom-red flex flex-col items-start justify-start font-lexend">
-      <div class="relative bg-custom-red w-full h-[450px] md:h-[650px] lg:h-80 flex flex-col-reverse lg:flex-row-reverse items-center justify-between rounded-xl overflow-hidden z-10">
+      <div class="relative bg-custom-red w-full h-[450px] md:h-[650px] lg:h-80 xl:h-88 flex flex-col-reverse lg:flex-row-reverse items-center justify-between rounded-xl overflow-hidden z-10">
         <div class="absolute left-0 bg-custom-red w-full lg:w-[50%] lg:h-full p-4 pb-8 md:p-10 z-10">
           <p class="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl font-medium mb-6 text-white font-medium">
             Help Center

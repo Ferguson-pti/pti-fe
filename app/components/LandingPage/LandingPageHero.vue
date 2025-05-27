@@ -2,8 +2,8 @@
   <AppSectionWrapper>
     <div
       class="
-        relative w-full h-auto xl:h-[800px] 2xl:h-[850px] flex flex-row items-start justify-between
-        pt-10 md:pt-20 pb-16 lg:pb-20 xl:pb-32 2xl:pb-40
+        relative w-full h-auto xl:h-[800px] 2xl:h-auto flex flex-row items-start justify-between
+        pt-10 md:pt-20 pb-16 lg:pb-20
     "
     >
       <div class="flex flex-col items-start justify-start w-full lg:w-[55%] bg-custom-green px-4 md:px-10 py-6 md:py-10 rounded-lg z-10">

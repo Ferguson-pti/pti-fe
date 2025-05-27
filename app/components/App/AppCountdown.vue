@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { deadline, abbrev } = withDefaults(defineProps<{
+const { deadline, styleClass = 'default', textColor = 'text-black', abbrev = false } = defineProps<{
   deadline: number //  (milliseconds since epoch)
   containerClass?: string
   styleClass?: string
@@ -7,11 +7,7 @@ const { deadline, abbrev } = withDefaults(defineProps<{
   numberSize?: string
   textSize?: string
   abbrev?: boolean
-}>(), {
-  styleClass: 'default',
-  textColor: 'text-black',
-  abbrev: false,
-})
+}>()
 
 const now = ref(Date.now())
 

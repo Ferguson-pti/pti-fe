@@ -6,7 +6,7 @@ const loading = ref(false)
 const toast = useToast()
 
 const CATEGORIES = [
-  { placeholder: 'PTI Staff/Lecturers', value: 'PTI Staff/Lecturers' },
+  { placeholder: 'Academia', value: 'Academia' },
   { placeholder: 'Industry/Others', value: 'Industry/Others' },
   { placeholder: 'Student', value: 'Student' },
 ]
@@ -14,7 +14,7 @@ const CATEGORIES = [
 const validationSchema = toTypedSchema(object({
   name: string().nonempty('Name field is required').min(2, 'Enter a valid name').regex(/^[A-Za-z\s'-]+$/, 'Name can only contain letters, spaces, hyphens, and apostrophes'),
   email: string().nonempty('Email field is required').email('Invalid email'),
-  phone: string().nonempty('Phone field is required').regex(/^(?:(?:\+?\d{1,4}[-.\s]?)?(?:\(?\d{3,4}\)?[-.\s]?)*\d{3,4}[-.\s]?\d{3,4})$/, 'Enter a valid phone number i.e. 08031234567, 0803-123-4567, +2348031234567, +234 803 123 4567, +1-800-555-1212, (234) 803 123 4567, +44 20 7946 0958'),
+  phone: string().nonempty('Phone field is required').regex(/^(?:(?:\+?\d{1,4}[-.\s]?)?(?:\(?\d{3,4}\)?[-.\s]?)*\d{3,4}[-.\s]?\d{3,4})$/, 'Enter a valid phone number'),
   category: string().nonempty('Category field is required'),
   organisation: string().nonempty('Organisation field is required').min(5, 'Enter a valid organisation'),
   upload: any()
