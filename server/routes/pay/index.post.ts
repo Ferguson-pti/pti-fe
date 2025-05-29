@@ -5,14 +5,14 @@ interface FormData {
   name: string
   email: string
   phone: string
-  residence: string
-  profession: string
+  nationality: string
+  affiliation: string
   category: string // price ID
 }
 // paystackSecretKey
 
 export default defineEventHandler(async (event) => {
-  const { name, email, phone, residence, profession, category } = await readBody<FormData>(event)
+  const { name, email, phone, nationality, affiliation, category } = await readBody<FormData>(event)
   const config = useRuntimeConfig()
 
   // Get price and create a paystack ticket
@@ -28,10 +28,10 @@ export default defineEventHandler(async (event) => {
 
   const params = JSON.stringify({
     email: email,
-    amount: '10000', // parsedPrice,
+    amount: parsedPrice, // '50000',
     currency: priceData.currencyCode,
     metadata: {
-      name, email, phone, residence, profession,
+      name, email, phone, nationality, affiliation,
       priceId: priceData.id,
       priceTier: priceData.name,
     },
@@ -62,7 +62,14 @@ export default defineEventHandler(async (event) => {
 
       response.on('end', () => {
         console.log('end')
-        resolve({ ...JSON.parse(data) })
+        try {
+          resolve({ ...JSON.parse(data) })
+        }
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        catch (e: any) {
+          console.log(e)
+          resolve({ error: `An error occured while parsing payment link` })
+        }
       })
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     }).on('error', (error: any) => {

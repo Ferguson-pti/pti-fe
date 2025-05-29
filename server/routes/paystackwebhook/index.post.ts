@@ -1,4 +1,4 @@
-import generator from 'generate-password'
+import { nanoid } from 'nanoid'
 
 export default defineEventHandler(async (event) => {
   console.log(`Entry detected`)
@@ -11,73 +11,38 @@ export default defineEventHandler(async (event) => {
       const data = body.data
       const parsedPrice = data.currency + ' ' + data.amount.toString().slice(0, -2)
 
-      const paymentPayload = {
-        reference: data.reference,
+      const nano_password = nanoid()
+
+      const payload = {
+        transactionRef: data.reference,
         email: data.metadata.email,
+        password: nano_password,
+        passcode: nano_password,
         phone: data.metadata.phone,
-        name: data.metadata.name,
-        profession: data.metadata.profession,
-        residence: data.metadata.residence,
-        price_tier: data.metadata.priceTier,
-        amount_paid: parsedPrice,
-        paid_at: data.paid_at,
+        username: data.metadata.name,
+        affiliation: data.metadata.affiliation,
+        nationality: data.metadata.nationality,
+        category: data.metadata.priceTier,
+        amountPaid: parsedPrice,
+        paidAt: data.paid_at,
       }
 
-      const response1 = await $fetch(`${config.strapiUrl}/api/payments`, {
+      const response = await $fetch(`${config.strapiUrl}/api/auth/local/register`, {
         method: 'POST',
-        body: {
-          data: paymentPayload,
+        headers: {
+          'Content-Type': 'application/json',
         },
-      })
-
-      console.log(response1)
-
-      const password = generator.generate({
-        length: 16,
-        numbers: true,
-        symbols: true,
-        uppercase: true,
-        lowercase: true,
-        excludeSimilarCharacters: true,
-      })
-
-      const accountPayload = {
-        email: data.metadata.email,
-        phone: data.metadata.phone,
-        name: data.metadata.name,
-        profession: data.metadata.profession,
-        residence: data.metadata.residence,
-        price_tier: data.metadata.priceTier,
-        password: password,
-      }
-
-      const response2 = await $fetch(`${config.strapiUrl}/api/accounts`, {
-        method: 'POST',
-        body: {
-          data: accountPayload,
-        },
+        body: JSON.stringify(payload),
       })
 
       // Send email
-      console.log(response2)
-
-      await $fetch(
-        '/email/account_created',
-        {
-          method: 'POST',
-          body: {
-            name: data.metadata.name,
-            email: data.metadata.email,
-            price: parsedPrice,
-            tier: data.metadata.priceTier,
-            password: password,
-          },
-        },
-      )
+      console.log(response)
     }
   }
-  catch (e) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  catch (e: any) {
     console.log(`An error occured\n${e}`)
+    console.log(e!.data!.error!.details!.errors)
   }
 
   setResponseStatus(event, 200)
