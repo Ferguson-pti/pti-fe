@@ -20,13 +20,13 @@ const validationSchema = toTypedSchema(object({
   phone: string({ message: 'Phone field is required' }).nonempty('Phone field is required')
     .regex(/^(?:(?:\+?\d{1,4}[-.\s]?)?(?:\(?\d{3,4}\)?[-.\s]?)*\d{3,4}[-.\s]?\d{3,4})$/, 'Enter a valid phone number'),
 
-  residence: string({ message: 'Residence field is required' }).nonempty('Residence field is required')
-    .min(10, { message: 'Residence must be at least 10 characters long' })
+  nationality: string({ message: 'Nationality field is required' }).nonempty('Nationality field is required')
+    .min(2, { message: 'Nationality must be at least 2 characters long' })
     .regex(/^[a-zA-Z0-9\s,.']+$/, { message: 'Only letters, numbers, commas, periods, apostrophes, and hyphens are allowed' }),
 
-  profession: string({ message: 'Profession field is required' }).nonempty('Profession field is required')
-    .min(6, { message: 'Profession must be at least 6 characters long' })
-    .max(50, { message: 'Profession must be at most 50 characters long' }).regex(/^[a-zA-Z\s]+$/, { message: 'Only letters, spaces, and hyphens allowed' }),
+  affiliation: string({ message: 'Affiliation field is required' }).nonempty('Affiliation field is required')
+    .min(6, { message: 'Affiliation must be at least 6 characters long' })
+    .max(50, { message: 'Affiliation must be at most 50 characters long' }).regex(/^[a-zA-Z\s]+$/, { message: 'Only letters, spaces, and hyphens allowed' }),
 
   category: string({ message: 'Category field is required' }).nonempty('Category field is required'),
 }))
@@ -38,8 +38,8 @@ const { handleSubmit, errors/* , resetForm */ } = useForm({
 const { value: name } = useField<string>('name')
 const { value: email } = useField<string>('email')
 const { value: phone } = useField<string>('phone')
-const { value: residence } = useField<string>('residence')
-const { value: profession } = useField<string>('profession')
+const { value: nationality } = useField<string>('nationality')
+const { value: affiliation } = useField<string>('affiliation')
 const { value: category } = useField<string>('category')
 
 onMounted(async () => {
@@ -137,21 +137,21 @@ watch(category, () => {
       />
       <span class="mt-1 text-red-700 text-xs">{{ errors.phone }}</span>
 
-      <label class="text-xs mt-4">Residence</label>
+      <label class="text-xs mt-4">Nationality</label>
       <AppInput
-        v-model="residence"
+        v-model="nationality"
         style-class="font-light text-sm"
         type="text"
       />
-      <span class="mt-1 text-red-700 text-xs">{{ errors.residence }}</span>
+      <span class="mt-1 text-red-700 text-xs">{{ errors.nationality }}</span>
 
-      <label class="text-xs mt-4">Profession</label>
+      <label class="text-xs mt-4">Affiliation</label>
       <AppInput
-        v-model="profession"
+        v-model="affiliation"
         style-class="font-light text-sm"
         type="text"
       />
-      <span class="mt-1 text-red-700 text-xs">{{ errors.profession }}</span>
+      <span class="mt-1 text-red-700 text-xs">{{ errors.affiliation }}</span>
 
       <label class="text-xs mt-4">Price Category</label>
       <span class="w-full flex flex-row items-center justify-between">
