@@ -11,7 +11,7 @@ interface StateProps {
 
 export const useShowPaymentModalStore = defineStore('paymentModal', {
   state: (): StateProps => ({
-    visible: true,
+    visible: false,
     card: null,
     email: null,
   }),

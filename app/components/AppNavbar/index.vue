@@ -17,7 +17,6 @@ const hideModal = () => {
 }
 
 const something = () => {
-  console.log('something')
   hideModal()
 }
 </script>
