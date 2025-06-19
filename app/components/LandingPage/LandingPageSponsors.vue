@@ -8,14 +8,14 @@
       <span class="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl font-medium text-custom-green">Partners</span>
 
       <div class="mt-12 w-full flex flex-col items-center justify-start gap-4 md:gap-10 flex-wrap">
-        <div class="flex flex-row items-center justify-center gap-4 md:gap-10 flex-wrap"> 
+        <div class="flex flex-row items-center justify-center gap-4 md:gap-10 flex-wrap">
           <NuxtImg
             src="/partner4.webp"
             provider="sirv"
             alt="logo"
             class="h-16 md:h-24 xl:h-24"
           />
-          
+
           <NuxtImg
             src="/partner2.webp"
             provider="sirv"

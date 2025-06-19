@@ -34,27 +34,15 @@ const data = [
         Secure Your Spot
       </h1>
 
-      <p class="mt-8 mx-auto mb-4 xl:mb-8 text-custom-red">
-        EARLY BIRD DISCOUNT ENDS IN:
-      </p>
-
-      <!-- Mobile view -->
-      <AppCountdown
+      <AppDiscountCountdown
         :deadline="new Date(2025, 7, 22).getTime() /*22nd August 2025*/"
-        container-class="w-full flex md:hidden flex-row items-center justify-center gap-7"
-        style-class="flex flex-col items-center justify-center"
-        number-size="text-3xl"
-        text-size="text-base"
-        :abbrev="true"
-      />
-
-      <!-- Larger screens -->
-      <AppCountdown
-        :deadline="new Date(2025, 7, 22).getTime() /*22nd August 2025*/"
-        container-class="w-full hidden md:flex w-full flex flex-row items-center justify-center gap-5"
-        style-class="w-24 flex flex-col items-center justify-center"
-        number-size="text-5xl 2xl:text-6xl"
-        text-size="text-lg 2xl:text-xl"
+        late-text="EARLY BIRD DISCOUNT HAS ENDED"
+        container-class="mt-8 mx-auto flex flex-col items-center justify-center"
+        title-class="mb-4 xl:mb-8 text-custom-red"
+        time-container-class="w-full flex flex-row items-center justify-center gap-7 md:gap-5"
+        time-unit-class="w-auto md:w-24 flex flex-col items-center justify-center"
+        number-size="text-3xl md:text-5xl 2xl:text-6xl"
+        text-size="text-base md:text-lg 2xl:text-xl"
       />
 
       <div class="w-full flex flex-col items-center justify-start">

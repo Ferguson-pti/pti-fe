@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ABOUT_PAGE, ABSTRACT_PAGE, AGENDA_PAGE, HELP_PAGE, REGISTER_PAGE } from '~/routes'
+import { ABOUT_PAGE, ABSTRACT_PAGE, AGENDA_PAGE, HELP_PAGE, REGISTER_PAGE } from '~/utils/routes'
 
 defineProps<{
   visible: boolean

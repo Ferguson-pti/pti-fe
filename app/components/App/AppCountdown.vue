@@ -1,8 +1,9 @@
 <script setup lang="ts">
-const { deadline, styleClass = 'default', textColor = 'text-black', abbrev = false } = defineProps<{
-  deadline: number //  (milliseconds since epoch)
-  containerClass?: string
-  styleClass?: string
+const { deadline, timeUnitClass = 'default', textColor = 'text-black', abbrev = false, lateText } = defineProps<{
+  deadline: number //  (milliseconds since epoch for deadline)
+  lateText: string
+  timeContainerClass?: string
+  timeUnitClass?: string
   textColor?: string
   numberSize?: string
   textSize?: string
@@ -13,6 +14,9 @@ const now = ref(Date.now())
 
 const { remaining, start } = useCountdown(Math.floor((deadline - now.value) / 1000))
 
+const isMounted = ref(false)
+const isLate = ref(false)
+
 const timeLeft = reactive({
   days: '00',
   hours: '00',
@@ -21,11 +25,20 @@ const timeLeft = reactive({
 })
 
 watch(remaining, (newVal) => {
+  if (newVal <= 0) {
+    isLate.value = true
+    stop()
+  }
+
   const { days, hours, minutes, seconds } = convertSeconds(newVal)
   timeLeft.days = days
   timeLeft.hours = hours
   timeLeft.minutes = minutes
   timeLeft.seconds = seconds
+
+  if (!isMounted.value) {
+    isMounted.value = true
+  }
 })
 
 function convertSeconds(sec: number) {
@@ -55,28 +68,50 @@ onMounted(() => {
 
 <template>
   <div
-    :class="`${containerClass} gap-5
+    :class="`${timeContainerClass} gap-5
     ${textColor}
     font-lexend`"
   >
-    <div :class="`${styleClass}`">
+    <Icon
+      v-show="!isMounted && !isLate"
+      name="svg-spinners:3-dots-move"
+      :class="`size-8 ${textColor}`"
+    />
+
+    <div
+      v-show="isMounted && !isLate"
+      :class="`${timeUnitClass}`"
+    >
       <span :class="`${numberSize} font-semibold`">{{ timeLeft.days }}</span>
       <span :class="`${textSize} tracking-wider font-semibold`">DAYS</span>
     </div>
 
-    <div :class="`${styleClass}`">
+    <div
+      v-show="isMounted && !isLate"
+      :class="`${timeUnitClass}`"
+    >
       <span :class="`${numberSize} font-semibold`">{{ timeLeft.hours }}</span>
       <span :class="`${textSize} tracking-wider font-semibold`">{{ abbrev ? 'HRS' : 'HOURS' }}</span>
     </div>
 
-    <div :class="`${styleClass}`">
+    <div
+      v-show="isMounted && !isLate"
+      :class="`${timeUnitClass}`"
+    >
       <span :class="`${numberSize} font-semibold`">{{ timeLeft.minutes }}</span>
       <span :class="`${textSize} tracking-wider font-semibold`">{{ abbrev ? 'MINS' : 'MINUTES' }}</span>
     </div>
 
-    <div :class="`${styleClass}`">
+    <div
+      v-show="isMounted && !isLate"
+      :class="`${timeUnitClass}`"
+    >
       <span :class="`${numberSize} font-semibold`">{{ timeLeft.seconds }}</span>
       <span :class="`${textSize} tracking-wider font-semibold`">{{ abbrev ? 'SECS' : 'SECONDS' }}</span>
+    </div>
+
+    <div v-show="isLate">
+      {{ lateText }}
     </div>
   </div>
 </template>

@@ -28,29 +28,17 @@
           research, and provide knowledge-sharing platforms across the oil and gas industry spectrum.
         </span>
 
-        <div class="w-full text-center md:text-left mt-6 md:mt-10 mb-3 text-xs md:text-base text-custom-gold font-medium font-lexend ">
-          THE CONFERENCE BEGINS IN
-        </div>
-
-        <!-- Mobile View -->
-        <AppCountdown
+        <AppConferenceCountdown
           :deadline="new Date(2025, 9, 22).getTime() /*22nd October 2025*/"
-          container-class="w-full h-auto flex md:hidden flex-row items-center justify-center md:justify-start"
-          style-class="flex flex-col md:flex-row items-center md:items-end justify-center md:gap-2"
+          late-text="THE CONFERENCE HAS BEGUN!!!"
+          container-class="w-full md:w-auto flex flex-col items-start justify-start"
+          title-class="w-full text-center md:text-left mt-6 md:mt-10 mb-3 text-xs md:text-base text-custom-gold font-medium font-lexend"
+          time-container-class="w-full h-auto flex flex-row items-center justify-center md:justify-start"
+          time-unit-class="flex flex-col md:flex-row items-center md:items-end justify-center md:gap-2"
           text-color="text-custom-gold"
           number-size="text-xl md:text-4xl"
           text-size="text-sm md:text-lg"
           :abbrev="true"
-        />
-
-        <!-- Larger Screen View -->
-        <AppCountdown
-          :deadline="new Date(2025, 9, 22).getTime() /*22nd October 2025*/"
-          container-class="w-full h-auto hidden md:flex flex-row items-center justify-center md:justify-start"
-          style-class="flex flex-col md:flex-row items-center md:items-end justify-center md:gap-2"
-          text-color="text-custom-gold"
-          number-size="text-base md:text-4xl"
-          text-size="text-xs md:text-lg"
         />
       </div>
 
