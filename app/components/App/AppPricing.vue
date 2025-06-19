@@ -22,9 +22,26 @@ const data = [
     name: 'International',
     price: '$150',
     discount: '$150',
-    percent: '20%',
+    percent: '0%',
   },
 ]
+
+const now = ref(Date.now())
+const deadline = new Date(2025, 7, 22).getTime() /* 22nd August 2025 */
+
+const { remaining, start } = useCountdown(Math.floor((deadline - now.value) / 1000))
+const isEarlyBird = ref(true)
+
+watch(remaining, (newVal) => {
+  if (newVal < 0) {
+    isEarlyBird.value = false
+    stop()
+  }
+}, { immediate: true })
+
+onMounted(() => {
+  start()
+})
 </script>
 
 <template>
@@ -35,7 +52,7 @@ const data = [
       </h1>
 
       <AppDiscountCountdown
-        :deadline="new Date(2025, 7, 22).getTime() /*22nd August 2025*/"
+        :deadline="deadline"
         late-text="EARLY BIRD DISCOUNT HAS ENDED"
         container-class="mt-8 mx-auto flex flex-col items-center justify-center"
         title-class="mb-4 xl:mb-8 text-custom-red"
@@ -52,8 +69,9 @@ const data = [
             :key="`pricingcard${index}`"
             :name="item.name"
             :price="item.price"
-            :discount="item.discount"
+            :discount="isEarlyBird ? item.discount : null"
             :percent="item.percent"
+            :is-early="isEarlyBird"
           />
         </div>
       </div>

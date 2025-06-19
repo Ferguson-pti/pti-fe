@@ -1,5 +1,15 @@
 <script setup lang="ts">
-
+/**
+   * <AppSpeakersSwiper
+          style-class="w-full md:w-full h-[380px] md:h-[400px]"
+          :pagination="{ clickable: true }"
+          :autoplay="false"
+          color="white"
+          :slides-per-view="`auto`"
+          :space-between="20"
+          :loop="false"
+        />
+   */
 </script>
 
 <template>
@@ -16,15 +26,9 @@
           drive impactful change across Africa’s energy landscape.
         </p>
 
-        <AppSpeakersSwiper
-          style-class="w-full md:w-full h-[380px] md:h-[400px]"
-          :pagination="{ clickable: true }"
-          :autoplay="false"
-          color="white"
-          :slides-per-view="`auto`"
-          :space-between="20"
-          :loop="false"
-        />
+        <div class="mt-20 text-white font-semibold text-3xl">
+          To be revealed soon...
+        </div>
       </div>
 
       <NuxtImg

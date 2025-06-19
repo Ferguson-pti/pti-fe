@@ -1,4 +1,5 @@
 import * as https from 'https'
+import { isEarlyBird } from '~~/helpers/constants'
 import { PriceList } from '~~/server/models/pricelist'
 
 interface FormData {
@@ -24,7 +25,8 @@ export default defineEventHandler(async (event) => {
 
   // Varies (between price and discount) if early bird discount is over
   // Add '00' to the end of the string
-  const parsedPrice = priceData.price.slice(1).split(',').join('') + '00'
+  const price = isEarlyBird ? priceData.discount : priceData.price
+  const parsedPrice = price.slice(1).split(',').join('') + '00'
 
   const params = JSON.stringify({
     email: email,

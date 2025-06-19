@@ -17,7 +17,7 @@
         </p>
 
         <NuxtImg
-          src="ptdf.webp"
+          src="ptdfbuilding.webp"
           provider="sirv"
           class="mt-6 flex lg:hidden w-full bg-custom-grey rounded-lg"
         />
@@ -47,7 +47,7 @@
         <span class="font-lexend text-sm font-medium mb-8">PTDF TOWERS, CENTRAL BUSINESS DISTRICT, ABUJA, NIGERIA</span>
 
         <NuxtImg
-          src="ptdf.webp"
+          src="ptdfbuilding.webp"
           provider="sirv"
           class="w-full lg:w-[540px] bg-custom-grey rounded-lg"
         />
