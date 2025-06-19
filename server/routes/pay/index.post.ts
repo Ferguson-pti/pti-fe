@@ -1,5 +1,5 @@
 import * as https from 'https'
-import { isEarlyBird } from '~~/helpers/constants'
+import { isEarlyBird } from '~~/helpers/functions'
 import { PriceList } from '~~/server/models/pricelist'
 
 interface FormData {

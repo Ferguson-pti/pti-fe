@@ -9,6 +9,7 @@ const CATEGORIES = [
   { placeholder: 'Academia', value: 'Academia' },
   { placeholder: 'Industry/Others', value: 'Industry/Others' },
   { placeholder: 'Student', value: 'Student' },
+  { placeholder: 'International', value: 'International' },
 ]
 
 const validationSchema = toTypedSchema(object({
@@ -42,19 +43,21 @@ const { value: organisation } = useField<string>('organisation')
 const { value: upload } = useField<FileList>('upload')
 
 const onSubmit = handleSubmit(async (values) => {
+  const config = useRuntimeConfig()
+
   try {
     loading.value = true
     const fileForm = new FormData()
     fileForm.append('files', values.upload[0])
 
-    const fileResponse: DocumentUploadResponse[] = await $fetch('http://localhost:1337/api/upload', {
+    const fileResponse: DocumentUploadResponse[] = await $fetch(`${config.public.strapiurl}/api/upload`, {
       method: 'POST',
       body: fileForm,
     })
 
     const documentId = fileResponse[0]!.id
 
-    const { data: result }: AbstractPostResponse = await $fetch('http://localhost:1337/api/abstracts', {
+    const { data: result }: AbstractPostResponse = await $fetch(`${config.public.strapiurl}/api/abstracts`, {
       method: 'POST',
       body: {
         data: {

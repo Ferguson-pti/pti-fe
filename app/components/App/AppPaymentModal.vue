@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { object, string } from 'zod'
-import { isEarlyBird } from '~~/helpers/constants'
+import { isEarlyBird } from '~~/helpers/functions'
 import { useShowConfirmPaymentModal } from '~~/stores/useShowConfirmPaymentModal'
 import { useShowPaymentModalStore } from '~~/stores/useShowPaymentModalStore'
 

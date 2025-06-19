@@ -36,6 +36,10 @@ export default defineNuxtConfig({
     resendName: process.env.NUXT_RESEND_NAME,
     strapiUrl: process.env.NUXT_STRAPI_BACKEND_URL,
     paystackSecretKey: process.env.PAYSTACK_SECRET_KEY,
+
+    public: {
+      strapiurl: process.env.NUXT_PUBLIC_STRAPIURL,
+    },
   },
 
   future: { compatibilityVersion: 4 }, compatibilityDate: '2024-11-01',
