@@ -22,9 +22,26 @@ const data = [
     name: 'International',
     price: '$150',
     discount: '$150',
-    percent: '20%',
+    percent: '0%',
   },
 ]
+
+const now = ref(Date.now())
+const deadline = new Date(2025, 7, 22).getTime() /* 22nd August 2025 */
+
+const { remaining, start } = useCountdown(Math.floor((deadline - now.value) / 1000))
+const isEarlyBird = ref(true)
+
+watch(remaining, (newVal) => {
+  if (newVal < 0) {
+    isEarlyBird.value = false
+    stop()
+  }
+}, { immediate: true })
+
+onMounted(() => {
+  start()
+})
 </script>
 
 <template>
@@ -34,27 +51,15 @@ const data = [
         Secure Your Spot
       </h1>
 
-      <p class="mt-8 mx-auto mb-4 xl:mb-8 text-custom-red">
-        EARLY BIRD DISCOUNT ENDS IN:
-      </p>
-
-      <!-- Mobile view -->
-      <AppCountdown
-        :deadline="new Date(2025, 7, 22).getTime() /*22nd August 2025*/"
-        container-class="w-full flex md:hidden flex-row items-center justify-center gap-7"
-        style-class="flex flex-col items-center justify-center"
-        number-size="text-3xl"
-        text-size="text-base"
-        :abbrev="true"
-      />
-
-      <!-- Larger screens -->
-      <AppCountdown
-        :deadline="new Date(2025, 7, 22).getTime() /*22nd August 2025*/"
-        container-class="w-full hidden md:flex w-full flex flex-row items-center justify-center gap-5"
-        style-class="w-24 flex flex-col items-center justify-center"
-        number-size="text-5xl 2xl:text-6xl"
-        text-size="text-lg 2xl:text-xl"
+      <AppDiscountCountdown
+        :deadline="deadline"
+        late-text="EARLY BIRD DISCOUNT HAS ENDED"
+        container-class="mt-8 mx-auto flex flex-col items-center justify-center"
+        title-class="mb-4 xl:mb-8 text-custom-red"
+        time-container-class="w-full flex flex-row items-center justify-center gap-7 md:gap-5"
+        time-unit-class="w-auto md:w-24 flex flex-col items-center justify-center"
+        number-size="text-3xl md:text-5xl 2xl:text-6xl"
+        text-size="text-base md:text-lg 2xl:text-xl"
       />
 
       <div class="w-full flex flex-col items-center justify-start">
@@ -64,8 +69,9 @@ const data = [
             :key="`pricingcard${index}`"
             :name="item.name"
             :price="item.price"
-            :discount="item.discount"
+            :discount="isEarlyBird ? item.discount : null"
             :percent="item.percent"
+            :is-early="isEarlyBird"
           />
         </div>
       </div>

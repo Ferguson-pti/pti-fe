@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ABOUT_PAGE, ABSTRACT_PAGE, AGENDA_PAGE, HELP_PAGE, REGISTER_PAGE } from '~/routes'
+import { ABOUT_PAGE, ABSTRACT_PAGE, AGENDA_PAGE, HELP_PAGE, REGISTER_PAGE } from '~/utils/routes'
 
 defineProps<{
   visible: boolean
@@ -57,9 +57,14 @@ const route = useRoute()
         Help
       </AppNavbarLink>
 
-      <AppButton style-class="bg-custom-red border text-white hover:bg-white hover:text-custom-red hover:border-custom-red my-6">
-        GET TICKETS NOW
-      </AppButton>
+      <NuxtLink
+        :to="REGISTER_PAGE"
+        @click="hideModal"
+      >
+        <AppButton style-class="bg-custom-red border text-white hover:bg-white hover:text-custom-red hover:border-custom-red my-6">
+          GET TICKETS NOW
+        </AppButton>
+      </NuxtLink>
     </ul>
   </div>
 </template>

@@ -6,7 +6,7 @@
           src="/logo-white.png"
           provider="sirv"
           alt="logo"
-          height="56"
+          class="h-16 md:h-20"
         />
       </div>
 

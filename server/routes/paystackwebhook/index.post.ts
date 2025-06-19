@@ -26,7 +26,7 @@ export default defineEventHandler(async (event) => {
         amountPaid: parsedPrice,
         paidAt: data.paid_at,
       }
-
+      console.log(config.strapiUrl)
       const response = await $fetch(`${config.strapiUrl}/api/auth/local/register`, {
         method: 'POST',
         headers: {
@@ -42,7 +42,8 @@ export default defineEventHandler(async (event) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   catch (e: any) {
     console.log(`An error occured\n${e}`)
-    console.log(e!.data!.error!.details!.errors)
+    console.log(e!.data!.error)
+    // console.log(e!.data!.error!.details!.errors)
   }
 
   setResponseStatus(event, 200)

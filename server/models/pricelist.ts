@@ -29,6 +29,6 @@ export const PriceList = [
     price: '$150',
     discount: '$150',
     currencyCode: 'USD',
-    percent: '20%',
+    percent: '0%',
   },
 ]

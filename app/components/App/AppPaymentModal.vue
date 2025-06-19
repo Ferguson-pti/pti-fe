@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { object, string } from 'zod'
+import { isEarlyBird } from '~~/helpers/functions'
 import { useShowConfirmPaymentModal } from '~~/stores/useShowConfirmPaymentModal'
 import { useShowPaymentModalStore } from '~~/stores/useShowPaymentModalStore'
 
@@ -62,7 +63,7 @@ onMounted(async () => {
 const onSubmit = handleSubmit(async (values) => {
   loading.value = true
   paymentModal.setEmail(values.email)
-
+  console.log(values)
   const response: PaystackResponseSuccess | PaystackResponseError = await $fetch('/pay', {
     method: 'POST',
     body: values,
@@ -86,7 +87,12 @@ watch(category, () => {
   const found = categories.value.find(item => item.id === category.value)
 
   if (found) {
-    price.value = found.price
+    if (isEarlyBird) {
+      price.value = found.discount
+    }
+    else {
+      price.value = found.price
+    }
   }
   else {
     price.value = null
