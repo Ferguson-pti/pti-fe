@@ -26,7 +26,7 @@
           drive impactful change across Africa’s energy landscape.
         </p>
 
-        <div class="mt-20 text-white font-semibold text-3xl">
+        <div class="mt-20 text-white font-semibold text-xl md:text-3xl">
           To be revealed soon...
         </div>
       </div>
