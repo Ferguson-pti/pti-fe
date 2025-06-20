@@ -13,7 +13,7 @@
         </div>
 
         <p class="font-lexend font-medium text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl text-white">
-          Transforming Africa’s Hydrocarbon Sector: <span class="text-custom-red">Balancing Growth, Environment and Governance</span>
+          Transforming Africa’s Hydrocarbon Sector: <span class="text-[#cb1a23]">Balancing Growth, Environment and Governance</span>
         </p>
 
         <NuxtImg

@@ -49,7 +49,7 @@ const onSubmit = handleSubmit(async (values) => {
     loading.value = true
     const fileForm = new FormData()
     fileForm.append('files', values.upload[0])
-    console.log(config.public.strapiurl)
+
     const fileResponse: DocumentUploadResponse[] = await $fetch(`${config.public.strapiurl}/api/upload`, {
       method: 'POST',
       body: fileForm,
