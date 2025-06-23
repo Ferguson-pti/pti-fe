@@ -1,8 +1,8 @@
 <template>
   <AppSectionWrapper bg="bg-custom-cream">
     <section class="w-full h-auto py-14 md:py-20 bg-custom-cream flex flex-col items-start justify-start font-lexend">
-      <div class="w-full flex flex-col-reverse lg:flex-row items-start justify-between">
-        <div class="mt-10 lg:mt-0 w-full lg:w-[50%] flex flex-col items-start justify-start font-light">
+      <div class="w-full flex flex-col lg:flex-row items-start justify-between">
+        <div class="w-full lg:w-[50%] flex flex-col items-start justify-start font-light">
           <p class="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl font-medium mb-10 text-custom-green z-10">
             Call for Abstract
           </p>
@@ -37,7 +37,7 @@
           <span class="mt-8 text-custom-red font-normal text-sm md:text-base 2xl:text-xl z-10">ALL MANUSCRIPTS WILL UNDERGO A DOUBLE - BLIND REVIEW PROCESS.</span>
         </div>
 
-        <div class="w-full lg:w-[40%] z-10">
+        <div class="mt-10 lg:mt-0 w-full lg:w-[40%] z-10">
           <AbstractPageForm />
         </div>
       </div>
