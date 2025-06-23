@@ -23,7 +23,7 @@ const toggleFaq = () => {
     @click="toggleFaq"
   >
     <div class="w-full flex flex-row items-center justify-between">
-      <p class="h-10 md:h-auto flex flex-col items-center justify-center text-sm md:text-base px-2.5">
+      <p class="h-10 md:h-auto flex flex-col items-center justify-center text-base px-2.5">
         {{ question }}
       </p>
 
@@ -33,7 +33,7 @@ const toggleFaq = () => {
       />
     </div>
 
-    <div class="mt-3 font-light w-full bg-white p-3 text-sm leading-6 md:text-base md:leading-7">
+    <div class="mt-3 font-light w-full bg-white p-3 leading-6 text-base md:leading-7">
       {{ answer }}
 
       <ul class="list-disc pl-4">

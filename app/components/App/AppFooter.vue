@@ -79,7 +79,7 @@
         <p class="text-white font-medium text-xl">
           Stay ahead of what’s next. Get first access to ICHST news and updates.
         </p>
-        <p class="mt-4 text-custom-grey text-xs">
+        <p class="mt-4 text-custom-grey text-md md:text-sm">
           We’re committed to your privacy. PTI uses the information you provide to us to contact you about PTI content and events.
           You may unsubscribe from these communications at any time. For more information, check out our privacy policy below.
         </p>
@@ -87,13 +87,13 @@
     </div>
 
     <div class="mt-10 flex flex-col-reverse lg:flex-row w-full text-left font-lexend">
-      <p class="text-xs md:text-sm mb-7 lg:mb-0 text-custom-grey mr-5">
+      <p class="text-base md:text-sm mb-7 lg:mb-0 text-custom-grey mr-5">
         &copy; 2025 ICHST PTI
       </p>
 
-      <a class="text-xs md:text-sm mb-7 lg:mb-0 text-white underline cursor-pointer mr-5">PTDF Towers, Central Business District, Abuja, Nigeria</a>
+      <a class="text-base md:text-sm mb-7 lg:mb-0 text-white underline cursor-pointer mr-5">PTDF Towers, Central Business District, Abuja, Nigeria</a>
 
-      <a class="text-xs md:text-sm mb-7 lg:mb-0 text-white underline cursor-pointer mr-5">Privacy Policy</a>
+      <a class="text-base md:text-sm mb-7 lg:mb-0 text-white underline cursor-pointer mr-5">Privacy Policy</a>
     </div>
   </footer>
 </template>

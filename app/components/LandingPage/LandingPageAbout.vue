@@ -43,7 +43,7 @@ const renderedItems = data.map((item, index) =>
         <p class="w-full text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl font-medium mb-6 text-custom-green">
           What is ICHST?
         </p>
-        <p class="font-light text-black text-sm md:text-base 2xl:text-xl">
+        <p class="font-light text-black text-base 2xl:text-xl">
           <strong class="font-semibold">International Conference on Hydrocarbon Science and Technology (ICHST)</strong> is where subject matter
           experts, leading researchers, academicians, and top players in the oil and gas industry come together to examine topical issues of great
           relevance to the present and future development of the sector, with a focus on technological advancements and breakthroughs. The first and

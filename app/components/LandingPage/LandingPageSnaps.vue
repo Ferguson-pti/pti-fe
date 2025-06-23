@@ -44,7 +44,7 @@ const renderedItems2 = urls.map((url, index) =>
         Snaps from ICHST 2023
       </p>
 
-      <p class="w-full mt-6 text-sm md:text-base 2xl:text-xl text-custom-grey z-10">
+      <p class="w-full mt-6 text-base 2xl:text-xl text-custom-grey z-10">
         Relive yourself with some favorite moments from ICHST 2023
       </p>
 

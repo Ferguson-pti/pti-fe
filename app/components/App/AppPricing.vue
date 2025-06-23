@@ -76,7 +76,7 @@ onMounted(() => {
         </div>
       </div>
 
-      <a class="text-custom-green underline text-sm md:text-base 2xl:text-xl mx-auto mt-6 cursor-pointer">Refund Policy</a>
+      <a class="text-custom-green underline text-base 2xl:text-xl mx-auto mt-6 cursor-pointer">Refund Policy</a>
     </div>
 
     <NuxtImg
