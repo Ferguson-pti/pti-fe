@@ -11,7 +11,7 @@
             Join the Energy Evolution
           </p>
 
-          <p class="mb-10 text-white text-sm md:text-base 2xl:text-xl leading-6 md:leading-7">
+          <p class="mb-10 text-white text-base 2xl:text-xl leading-6 md:leading-7">
             Abuja is calling. Join fellow change-makers for two high-impact days of powerful insights and real connections.
             Leave with proven tactics and strategies that drive results.
           </p>

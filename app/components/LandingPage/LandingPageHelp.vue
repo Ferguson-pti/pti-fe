@@ -11,7 +11,7 @@
             Help Center
           </p>
 
-          <p class="mb-10 text-white text-sm md:text-base 2xl:text-xl">
+          <p class="mb-10 text-white text-base 2xl:text-xl">
             Have questions about ICHST? Check out our Help Center for everything you need to know about joining us in Abuja.
           </p>
 

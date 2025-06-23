@@ -3,13 +3,13 @@
     <section class="w-full h-auto py-14 md:py-20 bg-custom-cream flex flex-col items-start justify-start font-lexend">
       <div class="w-full flex flex-col lg:flex-row items-start justify-between">
         <div class="w-full lg:w-[50%] flex flex-col items-start justify-start font-light">
-          <p class="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl font-medium mb-10 text-custom-green z-10">
+          <p class="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl font-medium mb-6 text-custom-green z-10">
             Call for Abstract
           </p>
 
-          <span class="text-sm md:text-base 2xl:text-xl z-10">We invite you to submit papers in the following categories</span>
-
-          <p class="w-full text-sm md:text-base 2xl:text-xl z-10">
+          <span class="text-base 2xl:text-xl z-10">We invite you to submit papers in the following categories</span>
+          <br/>
+          <p class="w-full text-base 2xl:text-xl z-10">
             We are excited to invite researchers, practitioners, and thought leaders to submit original papers for
             <span class="text-custom-red font-medium">ICHST 2025</span>, taking place on
             <span class="text-custom-red font-medium">22-23 OCTOBER 2025</span>. This is your opportunity to contribute to the conversation,
@@ -30,9 +30,9 @@
           </a>
 
           <span class="text-custom-red underline mt-8 font-normal text-base md:text-lg 2xl:text-xl z-10">DEADLINES</span>
-          <span class="mt-2 text-sm md:text-base 2xl:text-xl z-10">Deadline for Abstract submission - June 26th, 2025</span>
-          <span class="mt-2 text-sm md:text-base 2xl:text-xl z-10">Deadline for Full paper submission -July 15th, 2025</span>
-          <span class="mt-2 text-sm md:text-base 2xl:text-xl z-10">Notice of acceptance - August 30th, 2025</span>
+          <span class="mt-2 text-base 2xl:text-xl z-10">Deadline for Abstract submission<br/><strong>June 26th, 2025</strong></span>
+          <span class="mt-2 text-base 2xl:text-xl z-10">Deadline for Full paper submission<br/><strong>July 15th, 2025</strong></span>
+          <span class="mt-2 text-base 2xl:text-xl z-10">Notice of acceptance<br/><strong>August 30th, 2025</strong></span>
 
           <span class="mt-8 text-custom-red font-normal text-sm md:text-base 2xl:text-xl z-10">ALL MANUSCRIPTS WILL UNDERGO A DOUBLE - BLIND REVIEW PROCESS.</span>
         </div>

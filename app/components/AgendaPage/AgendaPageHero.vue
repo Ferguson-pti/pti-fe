@@ -11,7 +11,7 @@
             Agenda & Speakers
           </p>
 
-          <p class="mb-10 text-white text-sm md:text-base 2xl:text-xl font-light">
+          <p class="mb-10 text-white text-base 2xl:text-xl font-light">
             Dive into ICHST's most powerful moments—where extraordinary voices share groundbreaking strategies. As we prepare to bring this
             transformative energy to San Francisco in September, get inspired by the world-class speakers who have shared the INBOUND stage and see
             why leaders across industries choose INBOUND as their launchpad for what’s next.

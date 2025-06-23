@@ -54,7 +54,7 @@ renderedItems.push(
         Tracks
       </h1>
 
-      <p class="text-black w-[90%] md:w-[70%] mt-4 font-light text-sm md:text-base 2xl:text-xl z-10">
+      <p class="text-black w-[90%] md:w-[70%] mt-4 font-light text-base 2xl:text-xl z-10">
         Get a first look at the tracks to be touched by industry experts during the course of this conference session. These topics are all
         high impact that play a key role affect Africa's Hydrocarbon Sector.
       </p>
