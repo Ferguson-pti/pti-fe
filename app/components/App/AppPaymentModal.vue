@@ -1,12 +1,11 @@
 <script lang="ts" setup>
 import { object, string } from 'zod'
 import { isEarlyBird } from '~~/helpers/functions'
-import { useShowConfirmPaymentModal } from '~~/stores/useShowConfirmPaymentModal'
 import { useShowPaymentModalStore } from '~~/stores/useShowPaymentModalStore'
 
 const paymentModal = useShowPaymentModalStore()
-const confirmPaymentModal = useShowConfirmPaymentModal()
 const toast = useToast()
+const route = useRoute()
 
 const categories = ref<{ id: string, value: string, placeholder: string, price: string, discount: string }[]>([])
 const price = ref<string | null>(null)
@@ -66,7 +65,7 @@ const onSubmit = handleSubmit(async (values) => {
   console.log(values)
   const response: PaystackResponseSuccess | PaystackResponseError = await $fetch('/pay', {
     method: 'POST',
-    body: values,
+    body: { ...values, callback_url: window.location.origin + route.fullPath },
   })
 
   if (isPaystackErrorResponse(response)) {
@@ -74,10 +73,9 @@ const onSubmit = handleSubmit(async (values) => {
   }
 
   if (isPaystackSuccessResponse(response)) {
-    window.open(response.data.authorization_url, '_blank')
+    window.location.href = response.data.authorization_url
     paymentModal.hideModal()
     paymentModal.setCard(null)
-    confirmPaymentModal.showModal()
   }
 
   loading.value = false

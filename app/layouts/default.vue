@@ -22,6 +22,7 @@ const color = ref('bg-custom-green')
 
 watch(route, () => {
   console.log(route.path)
+  // Switch background color depending on the route
   switch (route.path) {
     case '/':
     case '/agenda':
@@ -32,6 +33,18 @@ watch(route, () => {
     case '/about':
     case '/abstract':
       color.value = 'bg-custom-cream'
+      break
+    default:
+      break
+  }
+
+  console.log(Object.keys(route.query).length)
+  const queryKeys = Object.keys(route.query)
+  const arg = queryKeys.includes('trxref') && queryKeys.includes('reference')
+
+  switch (arg) {
+    case true:
+      confirmPaymentModal.showModal()
       break
     default:
       break
