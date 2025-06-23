@@ -2,12 +2,15 @@
 import { useShowConfirmPaymentModal } from '~~/stores/useShowConfirmPaymentModal'
 import { useShowPaymentModalStore } from '~~/stores/useShowPaymentModalStore'
 
+const route = useRoute()
+const router = useRouter()
 const paymentModal = useShowPaymentModalStore()
 const confirmPaymentModal = useShowConfirmPaymentModal()
 
 const closeModal = () => {
   paymentModal.setEmail(null)
   confirmPaymentModal.hideModal()
+  router.push(route.path)
 }
 </script>
 

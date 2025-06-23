@@ -16,7 +16,7 @@ const hide = () => {
       :deadline="new Date(2025, 9, 22).getTime() /*22nd October 2025*/"
       late-text="THE CONFERENCE HAS BEGUN!!!"
       container-class="text-wrap w-auto text-[13px] flex flex-col md:flex-row items-center justify-center"
-      title-class="w-auto md:mr-2 text-sm 2xl:text-lg text-nowrap"
+      title-class="hidden md:flex w-auto md:mr-2 text-sm 2xl:text-lg text-nowrap"
       time-container-class="w-auto flex flex-row items-center justify-center md:justify-start"
       time-unit-class="flex flex-row justify-center items-center gap-0.5 md:gap-1 mx-0"
       text-color="w-full mt-1 md:mt-0 text-white"

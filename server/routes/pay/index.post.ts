@@ -9,11 +9,13 @@ interface FormData {
   nationality: string
   affiliation: string
   category: string // price ID
+  callback_url: string
 }
 // paystackSecretKey
 
 export default defineEventHandler(async (event) => {
-  const { name, email, phone, nationality, affiliation, category } = await readBody<FormData>(event)
+  const { name, email, phone, nationality, affiliation, category, callback_url } = await readBody<FormData>(event)
+
   const config = useRuntimeConfig()
 
   // Get price and create a paystack ticket
@@ -32,6 +34,7 @@ export default defineEventHandler(async (event) => {
     email: email,
     amount: parsedPrice, // '50000',
     currency: priceData.currencyCode,
+    callback_url: callback_url,
     metadata: {
       name, email, phone, nationality, affiliation,
       priceId: priceData.id,
@@ -50,8 +53,6 @@ export default defineEventHandler(async (event) => {
     },
   }
 
-  console.log(1)
-
   return new Promise((resolve) => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const request = https.request(options, (response: any) => {
@@ -63,7 +64,6 @@ export default defineEventHandler(async (event) => {
       })
 
       response.on('end', () => {
-        console.log('end')
         try {
           resolve({ ...JSON.parse(data) })
         }
