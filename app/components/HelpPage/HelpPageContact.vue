@@ -19,10 +19,12 @@ const { value: email } = useField<string>('email')
 const { value: message } = useField<string>('message')
 
 const onSubmit = handleSubmit(async (values) => {
+  const config = useRuntimeConfig()
+
   try {
     loading.value = true
 
-    const { data: result }: MessagePostResponse = await $fetch('http://localhost:1337/api/messages', {
+    const { data: result }: MessagePostResponse = await $fetch(`${config.public.strapiurl}/api/messages`, {
       method: 'POST',
       body: {
         data: {
