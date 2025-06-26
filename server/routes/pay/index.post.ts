@@ -35,6 +35,7 @@ export default defineEventHandler(async (event) => {
     amount: parsedPrice, // '50000',
     currency: priceData.currencyCode,
     callback_url: callback_url,
+    channels: ['card', 'bank', 'ussd'],
     metadata: {
       name, email, phone, nationality, affiliation,
       priceId: priceData.id,

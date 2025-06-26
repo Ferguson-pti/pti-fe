@@ -37,7 +37,7 @@ export default defineEventHandler(async (event) => {
 
   const mailOptions = {
     from: config.resendEmail, // 'venturestudio@cyphercrescent.com',
-    to: config.resendEmail, // 'venturestudio@cyphercrescent.com',
+    to: [config.resendEmail, 'ichst@pti.edu.ng'], // 'venturestudio@cyphercrescent.com',
     subject: `New Abstract Submission from ${name}`,
     html: templateHtml,
     text: templateText,
