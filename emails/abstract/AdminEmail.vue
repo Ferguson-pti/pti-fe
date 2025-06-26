@@ -86,7 +86,7 @@ const footerText = {
         </Section>
         <Section :style="footer">
           <Text :style="footerText">
-            ICHST © 2025 | PTDF TOWERS, CENTRAL BUSINESS DISTRICT, ABUJA, NIGERIA. | https://pti-906t.onrender.com
+            ICHST © 2025 | PTDF TOWERS, CENTRAL BUSINESS DISTRICT, ABUJA, NIGERIA. | https://ichst.com/
           </Text>
         </Section>
       </Container>
