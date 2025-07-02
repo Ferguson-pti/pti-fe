@@ -11,7 +11,7 @@ export default defineEventHandler(async (event) => {
       const data = body.data
       const parsedPrice = data.currency + ' ' + data.amount.toString().slice(0, -2)
 
-      const nano_password = nanoid()
+      const nano_password = nanoid(8)
 
       const payload = {
         transactionRef: data.reference,
