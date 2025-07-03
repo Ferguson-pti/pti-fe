@@ -8,14 +8,14 @@
       <span class="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl font-medium text-custom-green">Host</span>
       <div class="mt-6 flex flex-col items-center justify-center">
         <NuxtImg
-          src="/pti.webp"
+          src="/ptilogo.webp"
           provider="sirv"
           alt="logo"
-          class="h-20 md:h-32 xl:h-32"
+          class="h-24 md:h-36 xl:h-36"
         />
       </div>
 
-      <span class="mt-12 text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl font-medium text-custom-green">Partners</span>
+      <span class="mt-8 md:mt-12 text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl font-medium text-custom-green">Partners</span>
 
       <div class="mt-6 w-full flex flex-col items-center justify-start gap-4 md:gap-10 flex-wrap lg:px-20 xl:px-40">
         <div class="flex flex-row items-center justify-center gap-4 md:gap-10 flex-wrap">
