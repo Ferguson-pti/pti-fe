@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { useShowPaymentModalStore } from '~~/stores/useShowPaymentModalStore'
 
+const router = useRouter()
+
 const { name, price, discount } = defineProps<{
   name: string
   price: string
@@ -13,7 +15,7 @@ const paymentModal = useShowPaymentModalStore()
 
 const showDetailsForm = () => {
   paymentModal.setCard({ price: price, name: name })
-  paymentModal.showModal()
+  router.push(PAYMENT_PAGE)
 }
 </script>
 

@@ -40,6 +40,7 @@ const { handleSubmit, errors/* , resetForm */ } = useForm({
   validationSchema,
 })
 
+const { value: title } = useField<string>('title')
 const { value: name } = useField<string>('name')
 const { value: email } = useField<string>('email')
 const { value: phone } = useField<string>('phone')
@@ -105,28 +106,22 @@ watch(category, () => {
 
 <template>
   <div
-    class="w-[100vw] h-[100vh] fixed top-0 left-0 z-50 flex flex-row items-center justify-center bg-[#00000090] font-lexend"
+    class="w-full flex flex-row items-center justify-center font-lexend py-10"
   >
     <form
-      class="relative w-full md:w-[400px] h-auto bg-white rounded-lg p-8 flex flex-col items-start justify-start"
+      class="relative w-full md:w-[400px] h-auto rounded-lg p-8 flex flex-col items-start justify-start"
       @submit.prevent="onSubmit"
       @click.stop
     >
       <p class="w-full flex flex-row items-center justify-between font-bold text-xl mb-6">
-        Payment: User Details
-
-        <Icon
-          name="fa6-solid:xmark"
-          class="size-4 text-black cursor-pointer"
-          @click="paymentModal.hideModal()"
-        />
+        User Payment Details
       </p>
 
       <div class="w-full flex flex-row items-start gap-2">
         <div class="w-[25%]">
           <label class="text-xs">Title</label>
           <AppSelect
-            v-model="category"
+            v-model="title"
             style-class="font-light text-sm"
             type="text"
             :options="titles"
@@ -170,7 +165,7 @@ watch(category, () => {
       />
       <span class="mt-1 text-red-700 text-xs">{{ errors.nationality }}</span>
 
-      <label class="text-xs mt-4">Affiliation</label>
+      <label class="text-xs mt-4">Affiliation (Job Title)</label>
       <AppInput
         v-model="affiliation"
         style-class="font-light text-sm"
@@ -193,7 +188,7 @@ watch(category, () => {
       <span class="mt-1 text-red-700 text-xs">{{ errors.category }}</span>
 
       <AppButton
-        style-class="w-full mt-8 bg-white border border-custom-red text-custom-red hover:bg-custom-red hover:text-white flex flex-row items-center justify-center"
+        style-class="w-full mt-8 border border-custom-red text-custom-red hover:bg-custom-red hover:text-white flex flex-row items-center justify-center"
         @click.stop
       >
         <span v-show="!loading">PROCEED TO PAYMENT</span>

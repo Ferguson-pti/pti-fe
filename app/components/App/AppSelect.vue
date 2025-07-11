@@ -30,6 +30,7 @@ function onChange(event: Event) {
     @change="onChange"
   >
     <option
+      v-show="placeholder!==''"
       value=""
       disabled
       selected

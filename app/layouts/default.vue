@@ -28,6 +28,7 @@ watch(route, () => {
     case '/agenda':
       color.value = 'bg-custom-green'
       break
+    case '/payment':
     case '/register':
     case '/help':
     case '/about':

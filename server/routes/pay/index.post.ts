@@ -3,6 +3,7 @@ import { isEarlyBird } from '~~/helpers/functions'
 import { PriceList } from '~~/server/models/pricelist'
 
 interface FormData {
+  title: string
   name: string
   email: string
   phone: string
@@ -14,7 +15,7 @@ interface FormData {
 // paystackSecretKey
 
 export default defineEventHandler(async (event) => {
-  const { name, email, phone, nationality, affiliation, category, callback_url } = await readBody<FormData>(event)
+  const { title, name, email, phone, nationality, affiliation, category, callback_url } = await readBody<FormData>(event)
 
   const config = useRuntimeConfig()
 
@@ -37,7 +38,7 @@ export default defineEventHandler(async (event) => {
     callback_url: callback_url,
     channels: ['card', 'bank', 'ussd'],
     metadata: {
-      name, email, phone, nationality, affiliation,
+      title, name, email, phone, nationality, affiliation,
       priceId: priceData.id,
       priceTier: priceData.name,
     },
