@@ -8,7 +8,7 @@
           </p>
 
           <span class="text-base 2xl:text-xl z-10">We invite you to submit papers in the following categories</span>
-          <br/>
+          <br>
           <p class="w-full text-base 2xl:text-xl z-10">
             We are excited to invite researchers, practitioners, and thought leaders to submit original papers for
             <span class="text-custom-red font-medium">ICHST 2025</span>, taking place on
@@ -30,9 +30,9 @@
           </a>
 
           <span class="text-custom-red underline mt-8 font-normal text-base md:text-lg 2xl:text-xl z-10">DEADLINES</span>
-          <span class="mt-2 text-base 2xl:text-xl z-10">Deadline for Abstract submission<br/><strong>June 26th, 2025</strong></span>
-          <span class="mt-2 text-base 2xl:text-xl z-10">Deadline for Full paper submission<br/><strong>July 15th, 2025</strong></span>
-          <span class="mt-2 text-base 2xl:text-xl z-10">Notice of acceptance<br/><strong>August 30th, 2025</strong></span>
+          <span class="mt-2 text-base 2xl:text-xl z-10">Deadline for Abstract submission<br><strong>June 26th, 2025</strong></span>
+          <span class="mt-2 text-base 2xl:text-xl z-10">Deadline for Full paper submission<br><strong>July 15th, 2025</strong></span>
+          <span class="mt-2 text-base 2xl:text-xl z-10">Notice of acceptance<br><strong>August 30th, 2025</strong></span>
 
           <span class="mt-8 text-custom-red font-normal text-sm md:text-base 2xl:text-xl z-10">ALL MANUSCRIPTS WILL UNDERGO A DOUBLE - BLIND REVIEW PROCESS.</span>
         </div>

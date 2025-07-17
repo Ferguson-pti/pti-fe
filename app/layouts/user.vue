@@ -1,17 +1,9 @@
 <script setup lang="ts">
 import { useScroll } from '@vueuse/core'
-import { AppFooter } from '#components'
-import { useShowPaymentModalStore } from '~~/stores/useShowPaymentModalStore'
-import { useShowConfirmPaymentModal } from '~~/stores/useShowConfirmPaymentModal'
-
-const paymentmodal = useShowPaymentModalStore()
-const confirmPaymentModal = useShowConfirmPaymentModal()
 
 const el = useTemplateRef<HTMLElement>('el')
 const { y } = useScroll(el)
 const navbarVisible = ref(true)
-
-console.log('<>' + paymentmodal.visible)
 
 useHead({
   title: 'ICHST',
@@ -21,7 +13,6 @@ const route = useRoute()
 const color = ref('bg-custom-green')
 
 watch(route, () => {
-  console.log(route.path)
   // Switch background color depending on the route
   switch (route.path) {
     case '/':
@@ -33,19 +24,8 @@ watch(route, () => {
     case '/help':
     case '/about':
     case '/abstract':
+    case '/dashboard':
       color.value = 'bg-custom-cream'
-      break
-    default:
-      break
-  }
-
-  console.log(Object.keys(route.query).length)
-  const queryKeys = Object.keys(route.query)
-  const arg = queryKeys.includes('trxref') && queryKeys.includes('reference')
-
-  switch (arg) {
-    case true:
-      confirmPaymentModal.showModal()
       break
     default:
       break
@@ -78,13 +58,5 @@ watch(y, (newValue, oldValue) => {
     <AppNavbar :visible="navbarVisible" />
     <slot />
     <AppFooter />
-
-    <AppPaymentModal
-      v-if="paymentmodal.visible"
-    />
-
-    <AppConfirmPaymentModal
-      v-show="confirmPaymentModal.visible"
-    />
   </div>
 </template>

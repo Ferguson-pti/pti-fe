@@ -15,6 +15,7 @@ export default defineEventHandler(async (event) => {
 
       const payload = {
         transactionRef: data.reference,
+        title: data.metadata.title,
         email: data.metadata.email,
         password: nano_password,
         passcode: nano_password,

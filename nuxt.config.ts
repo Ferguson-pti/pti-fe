@@ -16,6 +16,7 @@ export default defineNuxtConfig({
     '@vue-email/nuxt',
     '@nuxtjs/ngrok',
     '@pinia/nuxt',
+    'shadcn-nuxt',
   ],
 
   devtools: { enabled: true },
@@ -82,5 +83,17 @@ export default defineNuxtConfig({
 
   ngrok: {
     authtoken: process.env.NGROK_AUTHTOKEN,
+  },
+
+  shadcn: {
+    /**
+     * Prefix for all the imported component
+     */
+    prefix: '',
+    /**
+     * Directory that the component lives in.
+     * @default "./components/ui"
+     */
+    componentDir: './components/ui',
   },
 })
