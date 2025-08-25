@@ -13,7 +13,7 @@ const { deadline, timeUnitClass = 'default', textColor = 'text-black' } = define
 
 const now = ref(Date.now())
 
-const { remaining, start } = useCountdown(Math.floor((deadline - now.value) / 1000))
+const { remaining, start, stop } = useCountdown(Math.floor((deadline - now.value) / 1000))
 
 const isMounted = ref(false)
 const isLate = ref(false)
