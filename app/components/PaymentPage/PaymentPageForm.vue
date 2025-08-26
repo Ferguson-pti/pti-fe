@@ -31,7 +31,7 @@ const validationSchema = toTypedSchema(object({
 
   affiliation: string({ message: 'Affiliation field is required' }).nonempty('Affiliation field is required')
     .min(6, { message: 'Affiliation must be at least 6 characters long' })
-    .max(50, { message: 'Affiliation must be at most 50 characters long' }).regex(/^[a-zA-Z\s]+$/, { message: 'Only letters, spaces, and hyphens allowed' }),
+    .max(50, { message: 'Affiliation must be at most 50 characters long' }),
 
   category: string({ message: 'Category field is required' }).nonempty('Category field is required'),
 }))
@@ -49,14 +49,11 @@ const { value: affiliation } = useField<string>('affiliation')
 const { value: category } = useField<string>('category')
 
 onMounted(async () => {
-  console.log('mounted')
   const priceListData = await $fetch('/pricelist')
   categories.value = priceListData.data
 
   // Check if there is already an active
   if (paymentModal.card) {
-    console.log(paymentModal.card)
-    console.log(priceListData.data)
     const validCard = priceListData.data.find(data => data.placeholder === paymentModal.card!.name)
 
     if (validCard) {
@@ -68,7 +65,7 @@ onMounted(async () => {
 const onSubmit = handleSubmit(async (values) => {
   loading.value = true
   paymentModal.setEmail(values.email)
-  console.log(values)
+
   const response: PaystackResponseSuccess | PaystackResponseError = await $fetch('/pay', {
     method: 'POST',
     body: { ...values, callback_url: window.location.origin + route.fullPath },

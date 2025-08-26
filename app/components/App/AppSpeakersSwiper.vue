@@ -37,8 +37,6 @@ const items = SPEAKERS.map((speaker, index) =>
 )
 
 function onSwiper(swiper: any) {
-  console.log('hey')
-  console.log(swiper)
   swiperRef.value = swiper
 }
 
@@ -62,7 +60,6 @@ function goToSlide(event: MouseEvent) {
 }
 
 function onSlideChange(swiper: any) {
-  console.log('Active index:', swiper.activeIndex)
   activeIndex.value = parseInt(swiper.activeIndex)
   // you can store it in a ref too if needed
 }

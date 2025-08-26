@@ -11,8 +11,6 @@ const el = useTemplateRef<HTMLElement>('el')
 const { y } = useScroll(el)
 const navbarVisible = ref(true)
 
-console.log('<>' + paymentmodal.visible)
-
 useHead({
   title: 'ICHST',
 })
@@ -21,7 +19,6 @@ const route = useRoute()
 const color = ref('bg-custom-green')
 
 watch(route, () => {
-  console.log(route.path)
   // Switch background color depending on the route
   switch (route.path) {
     case '/':
@@ -39,7 +36,6 @@ watch(route, () => {
       break
   }
 
-  console.log(Object.keys(route.query).length)
   const queryKeys = Object.keys(route.query)
   const arg = queryKeys.includes('trxref') && queryKeys.includes('reference')
 
