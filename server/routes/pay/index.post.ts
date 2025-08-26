@@ -9,13 +9,14 @@ interface FormData {
   phone: string
   nationality: string
   affiliation: string
+  jobTitle: string
   category: string // price ID
   callback_url: string
 }
 // paystackSecretKey
 
 export default defineEventHandler(async (event) => {
-  const { title, name, email, phone, nationality, affiliation, category, callback_url } = await readBody<FormData>(event)
+  const { title, name, email, phone, nationality, affiliation, category, jobTitle, callback_url } = await readBody<FormData>(event)
 
   const config = useRuntimeConfig()
 
@@ -38,7 +39,7 @@ export default defineEventHandler(async (event) => {
     callback_url: callback_url,
     channels: ['card', 'bank', 'ussd'],
     metadata: {
-      title, name, email, phone, nationality, affiliation,
+      title, name, email, phone, nationality, affiliation, jobTitle,
       priceId: priceData.id,
       priceTier: priceData.name,
     },

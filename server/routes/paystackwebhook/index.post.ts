@@ -1,53 +1,48 @@
 import { nanoid } from 'nanoid'
 
 export default defineEventHandler(async (event) => {
-  console.log(`Entry detected`)
+  const config = useRuntimeConfig()
+  const body = await readBody(event)
+
+  if (body.event !== 'charge.success') {
+    throw createError({
+      statusCode: 404,
+      statusMessage: 'Charge not successful',
+    })
+  }
+
+  const data = body.data
+  const parsedPrice = data.currency + ' ' + data.amount.toString().slice(0, -2)
+
+  const nano_password = nanoid(8)
+
+  const payload = {
+    transactionRef: data.reference,
+    title: data.metadata.title,
+    email: data.metadata.email,
+    password: nano_password,
+    passcode: nano_password,
+    phone: data.metadata.phone,
+    username: data.metadata.name,
+    affiliation: data.metadata.affiliation,
+    jobTitle: data.metadata.jobTitle,
+    nationality: data.metadata.nationality,
+    category: data.metadata.priceTier,
+    amountPaid: parsedPrice,
+    paidAt: data.paid_at,
+  }
+  console.log(payload)
 
   try {
-    const config = useRuntimeConfig()
-    const body = await readBody(event)
-
-    if (body.event === 'charge.success') {
-      const data = body.data
-      const parsedPrice = data.currency + ' ' + data.amount.toString().slice(0, -2)
-
-      const nano_password = nanoid(8)
-
-      const payload = {
-        transactionRef: data.reference,
-        title: data.metadata.title,
-        email: data.metadata.email,
-        password: nano_password,
-        passcode: nano_password,
-        phone: data.metadata.phone,
-        username: data.metadata.name,
-        affiliation: data.metadata.affiliation,
-        nationality: data.metadata.nationality,
-        category: data.metadata.priceTier,
-        amountPaid: parsedPrice,
-        paidAt: data.paid_at,
-      }
-      console.log(payload)
-      console.log(config.strapiUrl)
-      const response = await $fetch(`${config.strapiUrl}/api/auth/local/register`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(payload),
-      })
-
-      // Send email
-      console.log(response)
-    }
+    await $fetch(`${config.strapiUrl}/api/auth/local/register`, { method: 'POST', body: payload })
   }
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  catch (e: any) {
+  catch (e) {
     console.log(`An error occured\n${e}`)
-    // console.log(e!.data!.error)
-    // console.log(e!.data!.error!.details!.errors)
+    throw createError({
+      statusCode: 400,
+      statusMessage: `An error occured`,
+    })
   }
 
-  setResponseStatus(event, 200)
-  return { message: 'Received' }
+  sendNoContent(event, 200)
 })

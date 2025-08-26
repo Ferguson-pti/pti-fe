@@ -27,7 +27,7 @@ const data = [
 ]
 
 const now = ref(Date.now())
-const deadline = new Date(2025, 7, 22).getTime() /* 22nd August 2025 */
+const deadline = new Date(2025, 8, 5).getTime() /* 5th September 2025 */
 
 const { remaining, start, stop } = useCountdown(Math.floor((deadline - now.value) / 1000))
 const isEarlyBird = ref(true)

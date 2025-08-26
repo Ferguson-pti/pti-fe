@@ -8,7 +8,7 @@ const toast = useToast()
 const route = useRoute()
 
 const titles = [
-  { value: 'Mr', placeholder: 'Mr' }, { value: 'Mrs', placeholder: 'Mrs' },
+  { value: 'Mr', placeholder: 'Mr' }, { value: 'Mrs', placeholder: 'Mrs' }, { value: 'Miss', placeholder: 'Miss' },
   { value: 'Dr', placeholder: 'Dr' }, { value: 'Engr', placeholder: 'Engr' }, { value: 'Prof', placeholder: 'Prof' },
 ]
 const categories = ref<{ id: string, value: string, placeholder: string, price: string, discount: string }[]>([])
@@ -33,6 +33,10 @@ const validationSchema = toTypedSchema(object({
     .min(6, { message: 'Affiliation must be at least 6 characters long' })
     .max(50, { message: 'Affiliation must be at most 50 characters long' }),
 
+  jobTitle: string({ message: 'Job title field is required' }).nonempty('Job title field is required')
+    .min(6, { message: 'Job title must be at least 6 characters long' })
+    .max(50, { message: 'Job title must be at most 50 characters long' }),
+
   category: string({ message: 'Category field is required' }).nonempty('Category field is required'),
 }))
 
@@ -46,6 +50,7 @@ const { value: email } = useField<string>('email')
 const { value: phone } = useField<string>('phone')
 const { value: nationality } = useField<string>('nationality')
 const { value: affiliation } = useField<string>('affiliation')
+const { value: jobTitle } = useField<string>('jobTitle')
 const { value: category } = useField<string>('category')
 
 onMounted(async () => {
@@ -162,13 +167,21 @@ watch(category, () => {
       />
       <span class="mt-1 text-red-700 text-xs">{{ errors.nationality }}</span>
 
-      <label class="text-xs mt-4">Affiliation (Job Title)</label>
+      <label class="text-xs mt-4">Affiliation</label>
       <AppInput
         v-model="affiliation"
         style-class="font-light text-sm"
         type="text"
       />
       <span class="mt-1 text-red-700 text-xs">{{ errors.affiliation }}</span>
+
+      <label class="text-xs mt-4">Job Title</label>
+      <AppInput
+        v-model="jobTitle"
+        style-class="font-light text-sm"
+        type="text"
+      />
+      <span class="mt-1 text-red-700 text-xs">{{ errors.jobTitle }}</span>
 
       <label class="text-xs mt-4">Price Category</label>
       <span class="w-full flex flex-row items-center justify-between">
