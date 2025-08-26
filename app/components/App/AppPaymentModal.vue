@@ -48,14 +48,11 @@ const { value: affiliation } = useField<string>('affiliation')
 const { value: category } = useField<string>('category')
 
 onMounted(async () => {
-  console.log('mounted')
   const priceListData = await $fetch('/pricelist')
   categories.value = priceListData.data
 
   // Check if there is already an active
   if (paymentModal.card) {
-    console.log(paymentModal.card)
-    console.log(priceListData.data)
     const validCard = priceListData.data.find(data => data.placeholder === paymentModal.card!.name)
 
     if (validCard) {
@@ -67,7 +64,7 @@ onMounted(async () => {
 const onSubmit = handleSubmit(async (values) => {
   loading.value = true
   paymentModal.setEmail(values.email)
-  console.log(values)
+
   const response: PaystackResponseSuccess | PaystackResponseError = await $fetch('/pay', {
     method: 'POST',
     body: { ...values, callback_url: window.location.origin + route.fullPath },

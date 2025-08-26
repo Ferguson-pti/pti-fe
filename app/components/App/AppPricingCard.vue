@@ -21,7 +21,9 @@ const showDetailsForm = () => {
 
 <template>
   <article class="rounded-xl h-auto bg-white p-10 lg:p-8 xl:p-10 flex flex-col items-center cursor-pointer hover:shadow-lg duration-300">
-    <span :class="`${isEarly && 'flex'} text-custom-gold mx-auto text-base md:text-sm font-medium mb-6 underline underline-offset-4`">DISCOUNT ACTIVE</span>
+    <span :class="`text-custom-gold mx-auto text-base md:text-sm font-medium mb-6 underline underline-offset-4`">
+      {{ isEarly ? 'DISCOUNT ACTIVE' : 'NO DISCOUNT' }}
+    </span>
 
     <h1 class="text-2xl lg:text-xl xl:text-2xl font-medium">
       {{ name }}

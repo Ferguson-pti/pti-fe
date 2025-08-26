@@ -52,7 +52,7 @@ const renderedItems2 = urls.map((url, index) =>
         <AppSwiper
           :items="renderedItems1"
           style-class=""
-          :slides-per-view="width<=400 ? 1.3 : width<=900 ? 2.3 : width<=1024 ? 3.2 : width<=1350 ? 3.6 : width<=1500 ? 3.8 : 4.2"
+          :slides-per-view="width<=400 ? 1.3 : width<=900 ? 2.3 : width<=1024 ? 3.2 : width<=1350 ? 3.6 : width<=1500 ? 4.1 : width<=2000 ? 5.2 : 5.8"
           :pagination="false"
           :autoplay="true"
           :speed="1000"
@@ -67,7 +67,7 @@ const renderedItems2 = urls.map((url, index) =>
         <AppSwiper
           :items="renderedItems2"
           style-class=""
-          :slides-per-view="width<=400 ? 1.3 : width<=900 ? 2.3 : width<=1024 ? 3.2 : width<=1350 ? 3.6 : width<=1500 ? 3.8 : 4.2"
+          :slides-per-view="width<=400 ? 1.3 : width<=900 ? 2.3 : width<=1024 ? 3.2 : width<=1350 ? 3.6 : width<=1500 ? 4.1 : width<=2000 ? 5.2 : 5.8"
           :pagination="false"
           :autoplay="true"
           :speed="1000"
