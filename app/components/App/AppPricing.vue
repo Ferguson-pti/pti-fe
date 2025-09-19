@@ -2,19 +2,19 @@
 const data = [
   {
     name: 'Academia',
-    price: '₦70,000',
+    price: '₦60,000',
     discount: '₦50,000',
     percent: '16%',
   },
   {
     name: 'Industry/Others',
-    price: '₦120,000',
+    price: '₦110,000',
     discount: '₦100,000',
     percent: '9%',
   },
   {
     name: 'Students',
-    price: '₦30,000',
+    price: '₦25,000',
     discount: '₦20,000',
     percent: '20%',
   },
