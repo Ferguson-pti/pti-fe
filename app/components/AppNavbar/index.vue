@@ -5,6 +5,7 @@ defineProps<{
   visible: boolean
 }>()
 
+const { showLoginModal } = useApp()
 const route = useRoute()
 const showMenuModal = ref(false)
 
@@ -73,13 +74,23 @@ const something = () => {
         </AppNavbarLink>
       </ul>
 
-      <NuxtLink :to="REGISTER_PAGE">
-        <AppButton
-          style-class="hidden lg:flex bg-custom-red border text-white hover:bg-white hover:text-custom-red hover:border-custom-red"
-        >
-          GET TICKETS NOW
-        </AppButton>
-      </NuxtLink>
+      <span class="flex gap-6 items-center">
+        <NuxtLink :to="REGISTER_PAGE">
+          <AppButton
+            style-class="hidden lg:flex bg-custom-red border text-white hover:bg-white hover:text-custom-red hover:border-custom-red"
+          >
+            GET TICKETS NOW
+          </AppButton>
+        </NuxtLink>
+
+        <div class="border-3 border-custom-red p-1.5 rounded-full cursor-pointer hidden">
+          <Icon
+            name="fa6-solid:user"
+            class="size-5 text-custom-red"
+            @click="showLoginModal"
+          />
+        </div>
+      </span>
 
       <Icon
         v-show="!showMenuModal"

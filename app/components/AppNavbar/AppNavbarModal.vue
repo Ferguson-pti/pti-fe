@@ -6,6 +6,7 @@ defineProps<{
   hideModal: () => void
 }>()
 
+const { showLoginModal } = useApp()
 const route = useRoute()
 </script>
 
@@ -65,6 +66,17 @@ const route = useRoute()
           GET TICKETS NOW
         </AppButton>
       </NuxtLink>
+
+      <div class="hidden items-center mt-2 mb-6 gap-4 text-custom-red font-medium tracking-wider text-lg" @click="() => { showLoginModal(); hideModal()  }">
+        <div class="border-3 border-custom-red p-2 rounded-full cursor-pointer">
+          <Icon
+            name="fa6-solid:user"
+            class="size-5 text-custom-red"
+          />
+        </div>
+
+        Login here
+      </div>
     </ul>
   </div>
 </template>

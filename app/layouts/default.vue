@@ -82,5 +82,7 @@ watch(y, (newValue, oldValue) => {
     <AppConfirmPaymentModal
       v-show="confirmPaymentModal.visible"
     />
+
+    <AppLoginModal/>
   </div>
 </template>

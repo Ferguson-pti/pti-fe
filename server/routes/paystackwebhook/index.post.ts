@@ -3,7 +3,8 @@ import { nanoid } from 'nanoid'
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
   const body = await readBody(event)
-
+  // console.log(body)
+  console.log(config.strapiUrl)
   if (body.event !== 'charge.success') {
     throw createError({
       statusCode: 404,
