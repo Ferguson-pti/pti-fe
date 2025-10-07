@@ -3,9 +3,9 @@ import { h } from 'vue'
 import { LandingPageAboutCard } from '#components'
 
 const data = [
-  'DSC_0078.webp',
-  'DSC_0731.webp',
-  'DSC_0486.webp',
+  'DSC_0078.jpg',
+  'DSC_0731.jpg',
+  'DSC_0486.jpg',
 ]
 
 // Create array of components manually

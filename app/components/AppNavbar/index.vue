@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { ABOUT_PAGE, ABSTRACT_PAGE, AGENDA_PAGE, HELP_PAGE, HOME_PAGE, REGISTER_PAGE } from '~/utils/routes'
+import { userAvatarText } from '~~/helpers/functions'
 
 defineProps<{
   visible: boolean
 }>()
 
 const { showLoginModal } = useApp()
+const { user, logout } = useAuth()
 const route = useRoute()
 const showMenuModal = ref(false)
 
@@ -74,20 +76,31 @@ const something = () => {
         </AppNavbarLink>
       </ul>
 
-      <span class="flex gap-6 items-center">
+      <div v-if="user" class="hidden lg:flex items-center gap-6">
+        <NuxtLink :to="DASHBOARD_PAGE">
+          <div class="w-10 h-10 bg-gray-200 flex items-center justify-center rounded-full font-semibold text-lg font-lexend">
+            {{ userAvatarText(user.username) }}
+          </div>
+        </NuxtLink>
+
+        <div @click="logout" class="underline font-medium cursor-pointer text-custom-red">
+          Logout
+        </div>
+      </div>
+
+      <span v-else class="hidden lg:flex gap-6 items-center">
         <NuxtLink :to="REGISTER_PAGE">
           <AppButton
-            style-class="hidden lg:flex bg-custom-red border text-white hover:bg-white hover:text-custom-red hover:border-custom-red"
+            style-class="bg-custom-red border text-white hover:bg-white hover:text-custom-red hover:border-custom-red"
           >
             GET TICKETS NOW
           </AppButton>
         </NuxtLink>
 
-        <div class="border-3 border-custom-red p-1.5 rounded-full cursor-pointer hidden">
+        <div class="border-3 border-custom-red p-1.5 rounded-full cursor-pointer" @click="showLoginModal">
           <Icon
             name="fa6-solid:user"
             class="size-5 text-custom-red"
-            @click="showLoginModal"
           />
         </div>
       </span>

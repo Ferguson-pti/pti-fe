@@ -23,7 +23,7 @@
         </div>
 
         <NuxtImg
-          src="DSC_0162.webp"
+          src="DSC_0162.jpg"
           provider="sirv"
           class="mt-10 lg:mt-0 w-full lg:w-[400px] xl:w-[500px] bg-custom-grey rounded-lg z-10"
         />

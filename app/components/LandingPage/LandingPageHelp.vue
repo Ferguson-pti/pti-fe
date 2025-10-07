@@ -23,7 +23,7 @@
         </div>
 
         <NuxtImg
-          src="johannes-plenio-JPZa7fltJ2Q-unsplash.webp"
+          src="johannes-plenio-JPZa7fltJ2Q-unsplash.jpg"
           provider="sirv"
           class="absolute top-0 w-auto lg:w-auto lg:h-full right-0 z-0"
         />

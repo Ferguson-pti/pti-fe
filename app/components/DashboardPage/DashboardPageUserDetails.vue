@@ -1,6 +1,15 @@
 <script setup lang="ts">
 import { Card, CardContent } from '../ui/card'
 import Badge from '../ui/badge/Badge.vue'
+
+const { user } = useAuth()
+const router = useRouter()
+
+watch(user, (newValue) => {
+  if (newValue === null) {
+    router.push(HOME_PAGE)
+  }
+})
 </script>
 
 <template>
@@ -22,14 +31,14 @@ import Badge from '../ui/badge/Badge.vue'
           <Icon
             name="material-symbols:person-rounded"
           />
-          <div class="text-sm">Mr Rophi Chukwu</div>
+          <div class="text-sm">{{ `${user?.title} ${user?.username}` }}</div>
         </span>
 
         <span class="flex flex-row items-center gap-2">
           <Icon
             name="material-symbols:mail-rounded"
           />
-          <div class="text-sm">chukwurophi@gmail.com</div>
+          <div class="text-sm">{{ user?.email }}</div>
         </span>
       </div>
 
@@ -38,14 +47,14 @@ import Badge from '../ui/badge/Badge.vue'
           <Icon
             name="material-symbols:call"
           />
-          <div class="text-sm">07069651848</div>
+          <div class="text-sm">{{ user?.phone }}</div>
         </span>
 
         <span class="flex flex-row items-center gap-2">
           <Icon
             name="material-symbols:location-on-rounded"
           />
-          <div class="text-sm">Nigeria</div>
+          <div class="text-sm">{{ user?.nationality }}</div>
         </span>
       </div>
 
@@ -54,7 +63,7 @@ import Badge from '../ui/badge/Badge.vue'
           <Icon
             name="material-symbols:card-travel-rounded"
           />
-          <div class="text-sm">Developer</div>
+          <div class="text-sm">{{ user?.jobTitle }}</div>
         </span>
 
         <span class="flex flex-row items-center gap-2">

@@ -77,7 +77,7 @@ export default defineNuxtConfig({
 
   image: {
     sirv: {
-      baseURL: 'https://rophi-ccl.sirv.com/pti/',
+      baseURL: 'https://pti-ichst.sirv.com/pti/',
     },
   },
 

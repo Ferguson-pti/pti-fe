@@ -22,7 +22,7 @@
         </div>
 
         <NuxtImg
-          src="pexels-jakub-pabis-147246622-15970032.webp"
+          src="pexels-jakub-pabis-147246622-15970032.jpg"
           provider="sirv"
           class="absolute top-0 w-auto lg:w-auto lg:h-full right-0 z-0 bg-custom-grey"
         />

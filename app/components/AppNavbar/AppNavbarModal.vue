@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ABOUT_PAGE, ABSTRACT_PAGE, AGENDA_PAGE, HELP_PAGE, REGISTER_PAGE } from '~/utils/routes'
+import { userAvatarText } from '~~/helpers/functions'
 
 defineProps<{
   visible: boolean
@@ -8,6 +9,7 @@ defineProps<{
 
 const { showLoginModal } = useApp()
 const route = useRoute()
+const { user, logout } = useAuth()
 </script>
 
 <template>
@@ -58,24 +60,39 @@ const route = useRoute()
         Help
       </AppNavbarLink>
 
-      <NuxtLink
-        :to="REGISTER_PAGE"
-        @click="hideModal"
-      >
-        <AppButton style-class="bg-custom-red border text-white hover:bg-white hover:text-custom-red hover:border-custom-red my-6">
-          GET TICKETS NOW
-        </AppButton>
-      </NuxtLink>
+      <div v-if="user" class="mt-6 mb-6 flex flex-col gap-4">
+        <NuxtLink :to="DASHBOARD_PAGE" class="flex items-center gap-2">
+          <div class="w-10 h-10 bg-gray-200 flex items-center justify-center rounded-full font-semibold text-lg font-lexend">
+            {{ userAvatarText(user.username) }}
+          </div>
+          <p>{{ user.email }}</p>
+        </NuxtLink>
 
-      <div class="hidden items-center mt-2 mb-6 gap-4 text-custom-red font-medium tracking-wider text-lg" @click="() => { showLoginModal(); hideModal()  }">
-        <div class="border-3 border-custom-red p-2 rounded-full cursor-pointer">
-          <Icon
-            name="fa6-solid:user"
-            class="size-5 text-custom-red"
-          />
+        <div @click="logout" class="underline font-medium cursor-pointer text-custom-red">
+          Logout
         </div>
+      </div>
 
-        Login here
+      <div v-else>
+        <NuxtLink
+          :to="REGISTER_PAGE"
+          @click="hideModal"
+        >
+          <AppButton style-class="bg-custom-red border text-white hover:bg-white hover:text-custom-red hover:border-custom-red my-6">
+            GET TICKETS NOW
+          </AppButton>
+        </NuxtLink>
+
+        <div class="flex items-center mt-2 mb-6 gap-4 text-custom-red font-medium tracking-wider text-lg" @click="() => { showLoginModal(); hideModal()  }">
+          <div class="border-3 border-custom-red p-2 rounded-full cursor-pointer">
+            <Icon
+              name="fa6-solid:user"
+              class="size-5 text-custom-red"
+            />
+          </div>
+
+          Login here
+        </div>
       </div>
     </ul>
   </div>

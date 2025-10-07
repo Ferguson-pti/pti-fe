@@ -6,14 +6,14 @@ import { LandingPageSnapCard } from '#components'
 const { width } = useWindowSize()
 
 const urls = [
-  'DSC_0265.webp',
-  'DSC_0731.webp',
-  'DSC_0018.webp',
-  'DSC_0101.webp',
-  'DSC_0078.webp',
-  'DSC_0122.webp',
-  'DSC_0162.webp',
-  'DSC_0300.webp',
+  'DSC_0265.jpg',
+  'DSC_0731.jpg',
+  'DSC_0018.jpg',
+  'DSC_0101.jpg',
+  'DSC_0078.jpg',
+  'DSC_0122.jpg',
+  'DSC_0162.jpg',
+  'DSC_0300.jpg',
 ]
 
 const renderedItems1 = urls.map((url, index) =>

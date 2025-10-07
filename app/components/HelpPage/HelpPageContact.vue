@@ -56,7 +56,7 @@ const onSubmit = handleSubmit(async (values) => {
     <div class="w-full h-auto py-10 lg:py-20 flex flex-col items-start justify-start font-lexend">
       <div class="w-full h-auto flex flex-col-reverse lg:flex-row items-center justify-between rounded-lg overflow-hidden p-0 md:p-10 lg:p-0 xl:p-10 gap-10">
         <NuxtImg
-          src="pexels-davidmcelwee-11142768.webp"
+          src="pexels-davidmcelwee-11142768.jpg"
           provider="sirv"
           class="hidden lg:flex mt-8 lg:mt-0 w-auto md:w-auto h-[700px] rounded-lg bg-custom-grey z-10"
         />

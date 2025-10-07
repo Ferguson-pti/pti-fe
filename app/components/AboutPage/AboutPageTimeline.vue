@@ -7,7 +7,7 @@
 
       <div class="mt-0 md:mt-10 w-full h-auto flex flex-row items-stretch justify-between">
         <NuxtImg
-          src="gabriel-xavier-ZdGNogZXBa0-unsplash.webp"
+          src="gabriel-xavier-ZdGNogZXBa0-unsplash.jpg"
           provider="sirv"
           class="hidden md:flex md:w-[350px] lg:w-[400px] xl:w-[480px] bg-custom-grey rounded-xl z-10"
         />
