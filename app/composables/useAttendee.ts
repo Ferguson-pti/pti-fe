@@ -15,6 +15,7 @@ export const useAttendees = defineQuery(() => {
   // const BE = useStrapiUrl()
   const token = useToken()
   const route = useRoute()
+  const toast = useToast()
 
   const isBigScreen = useMediaQuery('(min-width: 1700px)', { ssrWidth: 1024 })
 
@@ -64,8 +65,10 @@ export const useAttendees = defineQuery(() => {
           Authorization: `Bearer ${token.value}`,
         },
       },
-    ),
-    // enabled: () => token.value ? true : false,
+    ).catch(() => {
+      toast.error({ title: 'Unauthorized!', message: 'Invalid token provided.' })
+    }),
+    enabled: () => token.value ? true : false,
   })
 
   const goToPage = (page: number) => {
@@ -136,7 +139,7 @@ export const useAttendeeMutation = defineMutation(() => {
     },
     async onError() {
       activeAttendeeId.value = null
-      toast.success({ title: 'Error!', message: 'Checked in failed.' })
+      toast.error({ title: 'Error!', message: 'Checked in failed.' })
     },
   })
 
