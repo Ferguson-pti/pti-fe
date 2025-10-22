@@ -10,6 +10,19 @@ const { showLoginModal } = useApp()
 const { user, logout } = useAuth()
 const route = useRoute()
 const showMenuModal = ref(false)
+const protectedRoute = ref(false)
+
+watch(route, () => {
+  // Switch background color depending on the route
+  switch (route.path) {
+    case '/dashboard':
+    case '/admin/dashboard':
+      protectedRoute.value = true
+      break
+    default:
+      break
+  }
+}, { immediate: true })
 
 const toggleModal = () => {
   showMenuModal.value = !showMenuModal.value
@@ -39,7 +52,7 @@ const something = () => {
         />
       </NuxtLink>
 
-      <ul class="hidden lg:flex flex-row items-center justify-between font-lexend">
+      <ul :class="`${protectedRoute ? 'hidden' : 'hidden lg:flex'} flex-row items-center justify-between font-lexend`">
         <AppNavbarLink
           :to="REGISTER_PAGE"
           :active="route.path===REGISTER_PAGE"
@@ -97,7 +110,7 @@ const something = () => {
           </AppButton>
         </NuxtLink>
 
-        <div class="border-3 border-custom-red p-1.5 rounded-full cursor-pointer" @click="showLoginModal">
+        <div v-show="false" class="border-3 border-custom-red p-1.5 rounded-full cursor-pointer" @click="showLoginModal">
           <Icon
             name="fa6-solid:user"
             class="size-5 text-custom-red"

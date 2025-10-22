@@ -83,7 +83,7 @@ const { user, logout } = useAuth()
           </AppButton>
         </NuxtLink>
 
-        <div class="flex items-center mt-2 mb-6 gap-4 text-custom-red font-medium tracking-wider text-lg" @click="() => { showLoginModal(); hideModal()  }">
+        <div v-show="false" class="flex items-center mt-2 mb-6 gap-4 text-custom-red font-medium tracking-wider text-lg" @click="() => { showLoginModal(); hideModal()  }">
           <div class="border-3 border-custom-red p-2 rounded-full cursor-pointer">
             <Icon
               name="fa6-solid:user"

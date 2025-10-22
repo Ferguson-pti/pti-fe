@@ -1,5 +1,6 @@
 export function useApp() {
   const loginModal = useState('login-modal', () => false)
+  const tokenModal = useState('token-modal', () => false)
 
   const showLoginModal = () => {
     loginModal.value = true
@@ -9,5 +10,13 @@ export function useApp() {
     loginModal.value = false
   }
 
-  return { loginModal, hideLoginModal, showLoginModal }
+  const showTokenModal = () => {
+    tokenModal.value = true
+  }
+
+  const hideTokenModal = () => {
+    tokenModal.value = false
+  }
+
+  return { loginModal, hideLoginModal, showLoginModal, tokenModal, hideTokenModal, showTokenModal }
 }
