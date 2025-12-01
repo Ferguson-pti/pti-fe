@@ -82,6 +82,13 @@ const something = () => {
         </AppNavbarLink>
 
         <AppNavbarLink
+          :to="GALLERY_PAGE"
+          :active="route.path===GALLERY_PAGE"
+        >
+          Gallery
+        </AppNavbarLink>
+
+        <AppNavbarLink
           :to="HELP_PAGE"
           :active="route.path===HELP_PAGE"
         >

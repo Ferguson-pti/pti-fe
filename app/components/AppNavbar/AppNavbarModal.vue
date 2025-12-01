@@ -52,6 +52,15 @@ const { user, logout } = useAuth()
       </AppNavbarLink>
 
       <AppNavbarLink
+        :to="GALLERY_PAGE"
+        :mobile="true"
+        :active="route.path===GALLERY_PAGE"
+        @click="hideModal"
+      >
+        Gallery
+      </AppNavbarLink>
+
+      <AppNavbarLink
         :to="HELP_PAGE"
         :mobile="true"
         :active="route.path===HELP_PAGE"
