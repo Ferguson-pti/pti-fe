@@ -1,5 +1,7 @@
 <script setup lang="ts">
-
+definePageMeta({
+  redirect: HOME_PAGE,
+})
 </script>
 
 <template>
