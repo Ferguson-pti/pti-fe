@@ -6,6 +6,7 @@ defineProps<{
   visible: boolean
 }>()
 
+const toast = useToast()
 const { showLoginModal } = useApp()
 const { user, logout } = useAuth()
 const route = useRoute()
@@ -56,6 +57,7 @@ const something = () => {
         <AppNavbarLink
           :to="REGISTER_PAGE"
           :active="route.path===REGISTER_PAGE"
+          @click="() => { toast.info({ title: 'Info', message: 'Registration is currently closed' }) }"
         >
           Register
         </AppNavbarLink>
@@ -96,20 +98,32 @@ const something = () => {
         </AppNavbarLink>
       </ul>
 
-      <div v-if="user" class="hidden lg:flex items-center gap-6">
+      <div
+        v-if="user"
+        class="hidden lg:flex items-center gap-6"
+      >
         <NuxtLink :to="DASHBOARD_PAGE">
           <div class="w-10 h-10 bg-gray-200 flex items-center justify-center rounded-full font-semibold text-lg font-lexend">
             {{ userAvatarText(user.username) }}
           </div>
         </NuxtLink>
 
-        <div @click="logout" class="underline font-medium cursor-pointer text-custom-red">
+        <div
+          class="underline font-medium cursor-pointer text-custom-red"
+          @click="logout"
+        >
           Logout
         </div>
       </div>
 
-      <span v-else class="hidden lg:flex gap-6 items-center">
-        <NuxtLink :to="REGISTER_PAGE">
+      <span
+        v-else
+        class="hidden lg:flex gap-6 items-center"
+      >
+        <NuxtLink
+          :to="REGISTER_PAGE"
+          @click="() => { toast.info({ title: 'Info', message: 'Registration is currently closed' }) }"
+        >
           <AppButton
             style-class="bg-custom-red border text-white hover:bg-white hover:text-custom-red hover:border-custom-red"
           >
@@ -117,7 +131,11 @@ const something = () => {
           </AppButton>
         </NuxtLink>
 
-        <div v-show="false" class="border-3 border-custom-red p-1.5 rounded-full cursor-pointer" @click="showLoginModal">
+        <div
+          v-show="false"
+          class="border-3 border-custom-red p-1.5 rounded-full cursor-pointer"
+          @click="showLoginModal"
+        >
           <Icon
             name="fa6-solid:user"
             class="size-5 text-custom-red"

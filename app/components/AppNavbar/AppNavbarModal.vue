@@ -7,6 +7,7 @@ defineProps<{
   hideModal: () => void
 }>()
 
+const toast = useToast()
 const { showLoginModal } = useApp()
 const route = useRoute()
 const { user, logout } = useAuth()
@@ -19,7 +20,7 @@ const { user, logout } = useAuth()
         :to="REGISTER_PAGE"
         :mobile="true"
         :active="route.path===REGISTER_PAGE"
-        @click="hideModal"
+        @click="() => { hideModal(); toast.info({ title: 'Info', message: 'Registration is currently closed' }); }"
       >
         Register
       </AppNavbarLink>
@@ -85,7 +86,7 @@ const { user, logout } = useAuth()
       <div v-else>
         <NuxtLink
           :to="REGISTER_PAGE"
-          @click="hideModal"
+          @click="() => { hideModal(); toast.info({ title: 'Info', message: 'Registration is currently closed' }); }"
         >
           <AppButton style-class="bg-custom-red border text-white hover:bg-white hover:text-custom-red hover:border-custom-red my-6">
             GET TICKETS NOW
